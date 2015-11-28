@@ -12,10 +12,14 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     multiplayer: "Multiplayer" # Not currently shown on home page
     for_developers: "Pentru Dezvoltatori" # Not currently shown on home page.
     or_ipad: "Sau descarcă pentru iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Nivele" # The top nav bar entry where players choose which levels to play
     community: "Communitate"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
 
   play:
     play_as: "Alege-ți echipa" # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Spectator" # Ladder page
     players: "jucători" # Hover over a level on /play
     hours_played: "ore jucate" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     years: "ani"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Gata"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Acasă" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     victory_title_suffix: " Terminat"
     victory_sign_up: "Înscrie-te pentru a salva progresul"
     victory_sign_up_poke: "Vrei să-ți salvezi codul? Crează un cont gratis!"
-    victory_rate_the_level: "Apreciază nivelul: " # Only in old-style levels.
+    victory_rate_the_level: "Apreciază nivelul: " # {change}
     victory_return_to_ladder: "Înapoi la jocurile de clasament"
     victory_play_continue: "Continuă"
     victory_saving_progress: "Salvează Progresul"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     victory_new_item: "Item nou"
     victory_viking_code_school: "Wow, ăla a fost un nivel greu! Daca nu ești deja un dezvoltator de software, ar trebui să fi. Tocmai ai fost selectat pentru acceptare in Viking Code School, unde poți sa iți dezvolți abilitățile la nivelul următor și să devi un dezvoltator web profesionist în 14 săptămâni."
     victory_become_a_viking: "Devino Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Ghid"
     tome_minion_spells: "Vrăjile Minionilor tăi" # Only in old-style levels.
     tome_read_only_spells: "Vrăji Read-Only" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     auth_caption: "Salvează progresul."
 
   leaderboard:
-    leaderboard: "Tabel Clasificare"
     view_other_solutions: "Vizualizează Tabelul de Clasificare"
     scores: "Scoruri"
     top_players: "Top Jucători"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
     more_info: "Info pentru Educatori"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
     free_1: "Sunt 80+ de nivele GRATIS ce parcurg fiecare concept în programare." # {change}
     free_2: "Un abonament lunar oferă acces la tutoriale video si nivele extra pentru practică."
-    teacher_subs_title: "Educatori primesc abonamente gratuite!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "Educatori primesc abonamente gratuite!" # {change}
+#    teacher_subs_0: "We offer free trials to teachers."
     teacher_subs_1: "Te rugăm sa completezi"
     teacher_subs_2: "Chestionarul Educatorului"
-    teacher_subs_3: "pentru a configura abonamentul."
+    teacher_subs_3: "pentru a configura abonamentul." # {change}
     sub_includes_title: "Ce e inclus în abonament?"
     sub_includes_1: "Pe langă 80+ de nivele de bază, studenții cu un abonament lunar au acces la aceste servicii suplimentare:" # {change}
     sub_includes_2: "60+ nivele pentru practică" # {change}
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     title: "Chestionar Educatori"
     must_be_logged: "Mai întâi trebuie să fi logat. Te rugăm să faci un cont sau să te loghezi în meniul de mai sus."
     retrieving: "Se preiau informațiile..."
-    being_reviewed_1: "Cererea pentru un abonament trial gratis este în curs de"
+    being_reviewed_1: "Cererea pentru un abonament trial gratis este în curs de" # {change}
     being_reviewed_2: "examinare" # {change}
-    approved_1: "Cererea pentru un abonament trial gratis a fost"
+    approved_1: "Cererea pentru un abonament trial gratis a fost" # {change}
     approved_2: "aprobată." # {change}
     approved_3: "Mai multe instrucțiuni au fost timiste la"
-    denied_1: "Cererea pentru un abonament trial gratis a fost"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+    denied_1: "Cererea pentru un abonament trial gratis a fost" # {change}
     denied_2: "refuzată" # {change}
     contact_1: "Contactează-ne"
     contact_2: "dacă ai alte întrebări."
-    description_1: "Oferim abonamente gratis Educatorilor pentru evaluare. Poți găsi mai multe informați pe"
+    description_1: "Oferim abonamente gratis Educatorilor pentru evaluare. Poți găsi mai multe informați pe" # {change}
+#    description_1b: "You can find more information on our"
     description_2: "pagina"
     description_3: "educatorilor."
     description_4: "Te rugăm să completezi acest formular rapid si îți vom trimite un email cu instrucțiuni."
@@ -721,13 +740,16 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
 #    wrong_password: "Wrong Password"
     upload_picture: "Uploadează o imagine"
     delete_this_account: "Ștergere permanetă a acestui cont"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
     password_tab: "Parolă"
     emails_tab: "Email-uri"
     admin: "Admin"
     new_password: "Parolă nouă"
     new_password_verify: "Verifică"
-    type_in_email: "Scrie adresa de email ca să confirmi ștergerea" # {change}
+    type_in_email: "Scrie adresa de email ca să confirmi ștergerea"
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "Subscripție Email"
     email_subscriptions_none: "Nu ai subscripții Email."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     social_facebook: "Lasă un Like pentru CodeCombat pe facebook"
     social_twitter: "Urmărește CodeCombat pe Twitter"
     social_gplus: "Alăturăte pe Google+"
-    social_hipchat: "Vorbește cu noi pe chatul public HipChat camera CodeCombat"
+    social_hipchat: "Vorbește cu noi pe chatul public Slack camera CodeCombat"
     contribute_to_the_project: "Contribuie la proiect"
 
   clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     join_desc_3: ", sau găsește-ne în "
     join_desc_4: "și pornim de acolo!"
     join_url_email: "Trimite-ne Email"
-    join_url_hipchat: "public HipChat room"
+    join_url_hipchat: "public Slack channel"
     archmage_subscribe_desc: "Primește email-uri despre noi oportunități de progrmare și anunțuri."
     artisan_introduction_pref: "Trebuie să construim nivele adiționale! Oamenii sunt nerăbdători pentru mai mult conținut, și noi putem face doar atât singuri. Momentan editorul de nivele abia este utilizabil până și de creatorii lui, așa că aveți grijă. Dacă ai viziuni cu campanii care cuprind loop-uri for pentru"
     artisan_introduction_suf: ", atunci aceasta ar fi clasa pentru tine."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     last_earned: "Ultimul câstigat"
     amount_achieved: "Sumă"
     achievement: "Achievement"
-    category_contributor: "Contribuitor"
-    category_ladder: "Ladder"
-    category_level: "Nivel"
-    category_miscellaneous: "Diverse"
-    category_levels: "Nivele"
-    category_undefined: "Necategorizate"
     current_xp_prefix: ""
     current_xp_postfix: " în total"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
     left_xp_postfix: ""
 
   account:
-    recently_played: "Recent Jucat"
-    no_recent_games: "Nici-un joc jucat de 2 săptămâni."
     payments: "Plăți"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Cumpărate"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "limba română", englishDescription: "Roman
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Eroare la încărcarea pe server"

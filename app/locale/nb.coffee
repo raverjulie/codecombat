@@ -12,10 +12,14 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     multiplayer: "Flerspiller" # Not currently shown on home page
     for_developers: "For Utviklere" # Not currently shown on home page.
     or_ipad: "Eller last ned til iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Spill" # The top nav bar entry where players choose which levels to play
     community: "Fellesskap"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blogg"
     forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 
   play:
     play_as: "Spill som" # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Vær tilskuer" # Ladder page
     players: "Spillere" # Hover over a level on /play
     hours_played: "Timer spilt" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     years: "år"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Ferdig"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Hjem" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     victory_title_suffix: " Ferdig"
     victory_sign_up: "Tegn deg på for Oppdateringer"
     victory_sign_up_poke: "Vil du ha siste nytt på epost? Opprett en gratis konto, så vil vi holde deg oppdatert!"
-    victory_rate_the_level: "Bedøm nivået: " # Only in old-style levels.
+    victory_rate_the_level: "Bedøm nivået: " # {change}
     victory_return_to_ladder: "Tilbake til stige"
     victory_play_continue: "Fortsett"
     victory_saving_progress: "Lagrer framskritt"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    victory_new_item: "New Item"
 #    victory_viking_code_school: "Holy smokes, that was a hard level you just beat! If you aren't already a software developer, you should be. You just got fast-tracked for acceptance with Viking Code School, where you can take your skills to the next level and become a professional web developer in 14 weeks."
 #    victory_become_a_viking: "Become a Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Guide"
     tome_minion_spells: "Din Minions' Trylleformularer" # Only in old-style levels.
     tome_read_only_spells: "Kun-Lesbare Trylleformularer" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     auth_caption: "Lagre din fremgang."
 
   leaderboard:
-    leaderboard: "Topplisten"
     view_other_solutions: "Sen andre løsninger" # {change}
     scores: "Poeng"
 #    top_players: "Top Players by"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
 #    more_info: "More Info for Teachers"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
 #    free_1: "There are 110+ FREE levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+#    teacher_subs_title: "Teachers get a free trial!"
+#    teacher_subs_0: "We offer free trials to teachers."
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    wrong_password: "Wrong Password"
     upload_picture: "Last opp bilde"
 #    delete_this_account: "Delete this account permanently"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
     password_tab: "Passord"
     emails_tab: "Epost"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     new_password: "Nytt Passord"
     new_password_verify: "Bekreft passord"
 #    type_in_email: "Type in your email to confirm account deletion."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "Epost Abonnement"
     email_subscriptions_none: "Ingen Epost Abonnement."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     social_facebook: "Lik CodeCombat på Facebook"
     social_twitter: "Følg CodeCombat på Twitter"
     social_gplus: "Følg CodeCombat på Google+"
-    social_hipchat: "Chat med oss i det åpne CodeCombat rommet på HipChat"
+    social_hipchat: "Chat med oss i det åpne CodeCombat rommet på Slack"
     contribute_to_the_project: "Bidra på prosjektet"
 
 #  clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     join_desc_3: ", eller finn oss i vårt "
     join_desc_4: "så tar vi det derfra!"
     join_url_email: "Send oss en epost"
-    join_url_hipchat: "offentlige HipChat rom"
+    join_url_hipchat: "offentlige Slack rom"
     archmage_subscribe_desc: "Få epost om nye muligheter til å kode og kunngjøringer."
     artisan_introduction_pref: "Vi må konstruere flere nye brett! Folk skriker etter mer innhold, og vi klarer bare å bygge så mange selv. Akkurat nå er arbeidsverktøyet ditt bare på nivå 1; brett-editoren vår er bare såvidt brukbar, selv for de som har laget den, så vær forberedt. Hvis du har visjoner om kampanjer med alt fra for-løkker til"
     artisan_introduction_suf: ", da er denne klassen kanskje for deg."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     artisan_join_desc: "Brett-editoren brukes omtrent på følgende måte"
     artisan_join_step1: "Les dokumentasjonen."
     artisan_join_step2: "Lag et nytt brett og utforsk eksisterende brett."
-    artisan_join_step3: "Finn oss i det offentlige HipChat rommet vårt for å få hjelp."
+    artisan_join_step3: "Finn oss i det offentlige Slack rommet vårt for å få hjelp."
     artisan_join_step4: "Legg ut brettene dine på forumet for å få tilbakemeldinger."
     artisan_subscribe_desc: "Få epost om oppdateringer i brett-editoren og kunngjøringer."
     adventurer_introduction: "La oss være tydelige på hva din rolle er: du må ta støyten. Du kommer til å få mye juling. Vi trenger folk som kan prøve helt nye brett og hjelpe oss å finne ut hvordan de kan gjøres bedre. Smerten vil bli enorm; å lage gode spill er en lang prosess og ingen får ting riktig første gangen. Hvis du kan holde ut og tåler en støyt, da er kanskje denne klassen for deg."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     last_earned: "Sist oppnådd"
     amount_achieved: "Mengde"
     achievement: "Prestasjon"
-    category_contributor: "Bidragsyter"
-    category_ladder: "Stige"
-    category_level: "Brett"
-    category_miscellaneous: "Forskjellig"
-    category_levels: "Brett"
-    category_undefined: "Ukategorisert"
     current_xp_prefix: ""
     current_xp_postfix: " totalt"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
     left_xp_postfix: ""
 
   account:
-    recently_played: "Nylig Spilt"
-    no_recent_games: "Ingen spill spilt de siste to ukene."
     payments: "Betalinger"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Kjøpt"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "Norsk Bokmål", englishDescription: "Norweg
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Feil ved lasting fra server"

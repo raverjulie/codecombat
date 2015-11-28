@@ -12,10 +12,14 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     multiplayer: "Multijogador" # Not currently shown on home page
     for_developers: "Para Desenvolvedores" # Not currently shown on home page.
     or_ipad: "Ou baixe para iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Jogar" # The top nav bar entry where players choose which levels to play
     community: "Comunidade"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Fórum"
@@ -31,7 +35,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     contact: "Contate-nos"
     twitter_follow: "Seguir"
     teachers: "Professores"
-#    careers: "Careers"
+    careers: "Carreiras"
 
   modal:
     close: "Fechar"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
 
   play:
     play_as: "Jogar Como " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Assistir" # Ladder page
     players: "Jogadores" # Hover over a level on /play
     hours_played: "Horas jogadas" # Hover over a level on /play
@@ -159,9 +164,9 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     accepted: "Aceito"
     rejected: "Rejeitado"
     withdrawn: "Retirado"
-#    accept: "Accept"
-#    reject: "Reject"
-#    withdraw: "Withdraw"
+    accept: "Aceitar"
+    reject: "Rejeitar"
+    withdraw: "Recuar"
     submitter: "Enviar"
     submitted: "Enviado"
     commit_msg: "Mensagem de Submissão"
@@ -216,9 +221,12 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     years: "anos"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Pronto"
-#    next_game: "Next game"
-#    show_menu: "Show game menu"
+#    next_level: "Next Level:"
+    next_game: "Próximo jogo"
+    show_menu: "Mostrar menu do jogo"
     home: "Início" # Not used any more, will be removed soon.
     level: "Fase" # Like "Level: Dungeons of Kithgard"
     skip: "Pular"
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     victory_title_suffix: " Completado!"
     victory_sign_up: "Assine para receber atualizações"
     victory_sign_up_poke: "Quer receber as últimas novidades por email? Crie uma conta grátis e nós o manteremos informado!"
-    victory_rate_the_level: "Avalie o estágio: " # Only in old-style levels.
+    victory_rate_the_level: "Avalie o estágio: " # {change}
     victory_return_to_ladder: "Retornar para a progressão"
     victory_play_continue: "Continue"
     victory_saving_progress: "Salvando Progresso"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     victory_new_item: "Novo item"
     victory_viking_code_school: "Pelas barbas do profeta, esse foi um nível difícil! Se você ainda não é um desenvolvedor de software, você deveria ser. Você acaba de ser priorizado para aceitação na Viking Code School, onde você pode aprender mais e se tornar um desenvolvedor web profissional em 14 semanas."
     victory_become_a_viking: "Torne-se um viking"
-    victory_bloc: "Ótimo trabalho! Suas habilidades estão melhorando, e alguém está tomando conhecimento. Se você já pensou em se tornar um desenvolvedor de software, este pode ser o seu dia de sorte. Bloc é um campo de treinamento online em pares 1-a-1, você e um experiente mentor que irá lhe ajudar e treinar como um desenvolvedor profissional! Ao bater A Mayhem of Munchkins, você está elegível por uma redução de preço de U$500 com o código: CCRULES"
-    victory_bloc_cta: "Conheça seu mentor - aprenda sobre Bloc"
     guide_title: "Guia"
     tome_minion_spells: "Magias dos seus subordinados" # Only in old-style levels.
     tome_read_only_spells: "Magias não editáveis" # Only in old-style levels.
@@ -343,7 +349,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     tip_free_your_mind: "Você tem que deixar isso tudo passar, Neo. O medo, a dúvida e a descrença. Liberte sua mente - Morpheus"
     tip_strong_opponents: "Mesmo o mais forte dos adversários tem sua fraqueza. - Itachi Uchiha"
     tip_paper_and_pen: "Antes de começar a programar, você sempre deve planejar com papel e caneta."
-#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
+    tip_solve_then_write: "Primeiro, resolva o problema. Então, escreva o código. - John Johnson"
 
   game_menu:
     inventory_tab: "Inventário"
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     auth_caption: "Salve seu progresso."
 
   leaderboard:
-    leaderboard: "Líderança"
     view_other_solutions: "Ver Outras Soluções" # {change}
     scores: "Pontuação"
     top_players: "Top Jogadores por"
@@ -413,7 +418,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     feature7: "<strong>Clãs</strong> Privados"
     free: "Grátis"
     month: "mês"
-#    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
+    must_be_logged: "Você deve estar logado primeiro. Por gentileza crie uma conta ou faça o log in no menu acima."
     subscribe_title: "Inscrever-se"
     unsubscribe: "Desinscrever-se"
     confirm_unsubscribe: "Confirmar Desinscrição"
@@ -456,7 +461,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     sale_limited_time: "Oferta por tempo limitado!"
     sale_new_heroes: "Novos heróis!"
     sale_title: "Promoção de volta às aulas"
-#    sale_view_button: "Buy 1 year subscription for"
+    sale_view_button: "Compre uma assinatura de 1 ano por"
     stripe_description: "Inscrição Mensal"
     stripe_description_year_sale: "Assinatura de 1 Ano (35% de desconto"
     subscription_required_to_play: "Você precisará se inscrever para jogar este nível."
@@ -530,8 +535,8 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
   skill_docs:
     writable: "gravável" # Hover over "attack" in Your Skills while playing a level to see most of this
     read_only: "apenas leitura"
-#    action: "Action"
-#    spell: "Spell"
+    action: "Ação"
+    spell: "Feitiço"
     action_name: "nome"
     action_cooldown: "Demora"
     action_specific_cooldown: "Recarregando"
@@ -601,20 +606,30 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     jose_blurb: "Sou descolado"
     retrostyle_title: "Ilustração"
     retrostyle_blurb: "Games estilo Retrô"
+    rob_title: "Engenheiro Compilador"
+    rob_blurb: "Os paranauês dos códigos"
+    josh_c_title: "Game Designer"
+    josh_c_blurb: "Desenha jogos"
+    carlos_title: "Gerente Regional, Brasil"
+    carlos_blurb: "O Homem Célere"
 
   teachers:
     more_info: "Informações para Professores"
     intro_1: "CodeCombat é um jogo online que ensina programação. Estudantes criam código em linguagens de programação usadas na vida real."
     intro_2: "Não é necessário ter experiência!"
     free_title: "Quanto custa?"
-#    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
+    cost_premium_server: "CodeCombat é gratuito para os primeiros cinco níveis, depois disso custa $9.99 USD por mês para ter acesso aos nossos outros 190+ níveis em nossos servidores exclusivos por países."
     free_1: "CodeCombat Basic é gratuito! Há mais de 80 níveis gratuitos que cobrem todos os conceitos." # {change}
     free_2: "Uma assinatura mensal dá acesso aos vídeos tutoriais e mais níveis para praticar."
-    teacher_subs_title: "Professores recebem assinaturas gratuitas!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "Professores recebem assinaturas gratuitas!" # {change}
+#    teacher_subs_0: "We offer free trials to teachers."
     teacher_subs_1: "Por favor contate" # {change}
     teacher_subs_2: "para organizar uma assinatura mensal." # {change}
-    teacher_subs_3: "para configurar sua assinatura"
+    teacher_subs_3: "para configurar sua assinatura" # {change}
     sub_includes_title: "O que está incluído na assinatura?"
     sub_includes_1: "Além dos mais de 80 níveis básicos, estudantes com uma assinatura mensal têm acesso aos seguintes recursos:" # {change}
     sub_includes_2: "Mais de 60 níveis para praticar" # {change}
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     title: "Pesquisa de professor"
     must_be_logged: "Você precisa fazer login primeiro. Por favor, crie uma conta ou faça login no menu acima."
     retrieving: "Recuperando informações..."
-    being_reviewed_1: "Sua solicitação de teste grátis de assinatura está sendo"
+    being_reviewed_1: "Sua solicitação de teste grátis de assinatura está sendo" # {change}
     being_reviewed_2: "revisada."
-    approved_1: "Sua solicitação de teste grátis de assinatura foi"
+    approved_1: "Sua solicitação de teste grátis de assinatura foi" # {change}
     approved_2: "aprovada."
     approved_3: "Mais intruções foram enviadas para"
-    denied_1: "Sua solicitação de teste grátis de assinatura foi"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+    denied_1: "Sua solicitação de teste grátis de assinatura foi" # {change}
     denied_2: "negada."
     contact_1: "Por favor, entre em contato"
     contact_2: "caso você tenha dúvidas no futuro."
-    description_1: "Nós oferecemos assinaturas grátis à professores para fins de avaliação. Você pode encontrar mais informações na nossa"
+    description_1: "Nós oferecemos assinaturas grátis à professores para fins de avaliação. Você pode encontrar mais informações na nossa" # {change}
+#    description_1b: "You can find more information on our"
     description_2: "professores"
     description_3: "página."
     description_4: "Por favor, preencha esta rápida pesquisa e nós o enviaremos as intruções de instalação por email."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     wrong_password: "Senha Incorreta"
     upload_picture: "Enviar uma foto"
     delete_this_account: "Excluir essa conta definitivamente"
+    reset_progress_tab: "Resetar Todo o Progresso"
+    reset_your_progress: "Apaga todo seu progresso e começa novamente"
     god_mode: "Modo Deus"
     password_tab: "Senha"
     emails_tab: "Emails"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     new_password: "Nova Senha"
     new_password_verify: "Confirmação"
     type_in_email: "Digite seu e-mail para confirmar a exclusão" # {change}
+    type_in_email_progress: "Escreva seu email para confirmar que está apagando seu progresso."
     type_in_password: "Digite sua senha."
     email_subscriptions: "Assinaturas para Notícias por Email"
     email_subscriptions_none: "Sem Assinaturas de Email"
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     social_facebook: "Curta o CodeCombat no Facebook"
     social_twitter: "Siga o CodeCombat no Twitter"
     social_gplus: "Ingresse no CodeCombat no Google+"
-    social_hipchat: "Converse conosco na sala pública do CodeCombat no HipChat"
+    social_hipchat: "Converse conosco na sala pública do CodeCombat no Slack"
     contribute_to_the_project: "Contribuir para o projeto"
 
   clans:
@@ -839,44 +861,44 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     playtime: "Tempo de Jogo"
     last_played: "Último Jogo"
     leagues_explanation: "Jogar em um campeonato contra outros membros do clã nestes casos de arena multiplayer."
-#    track_concepts1: "Track concepts"
-#    track_concepts2a: "learned by each student"
-#    track_concepts2b: "learned by each member"
-#    track_concepts3a: "Track levels completed for each student"
-#    track_concepts3b: "Track levels completed for each member"
-#    track_concepts4a: "See your students'"
-#    track_concepts4b: "See your members'"
-#    track_concepts5: "solutions"
-#    track_concepts6a: "Sort students by name or progress"
-#    track_concepts6b: "Sort members by name or progress"
-#    track_concepts7: "Requires invitation"
-#    track_concepts8: "to join"
-#    private_require_sub: "Private clans require a subscription to create or join."
+    track_concepts1: "Rastrear conceitos"
+    track_concepts2a: "aprendido por cada estudante"
+    track_concepts2b: "aprendido por cada membro"
+    track_concepts3a: "Rastrear níveis completados por cada estudante"
+    track_concepts3b: "Rastrear níveis completados por cada membro"
+    track_concepts4a: "Ver seus alunos'"
+    track_concepts4b: "Ver seus membros'"
+    track_concepts5: "soluções"
+    track_concepts6a: "Classificar alunos por nome ou progresso"
+    track_concepts6b: "Classificar membros por nome ou progresso"
+    track_concepts7: "Requer convite"
+    track_concepts8: "para se juntar"
+    private_require_sub: "Clãs particulares requerem uma assinatura para criar ou juntar-se."
 
-#  courses:
-#    course: "Course"
-#    courses: "courses"
-#    not_enrolled: "You are not enrolled in this course."
-#    visit_pref: "Please visit the"
-#    visit_suf: "page to enroll."
-#    select_class: "Select one of your classes"
-#    unnamed: "*unnamed*"
-#    select: "Select"
-#    unnamed_class: "Unnamed Class"
-#    edit_settings: "edit class settings"
-#    edit_settings1: "Edit Class Settings"
-#    progress: "Class Progress"
-#    add_students: "Add Students"
-#    stats: "Statistics"
-#    total_students: "Total students:"
-#    average_time: "Average level play time:"
-#    total_time: "Total play time:"
-#    average_levels: "Average levels completed:"
-#    total_levels: "Total levels completed:"
-#    furthest_level: "Furthest level completed:"
-#    concepts_covered: "Concepts Covered"
-#    students: "Students"
-#    students1: "students"
+  courses:
+    course: "Curso"
+    courses: "cursos"
+    not_enrolled: "Você não está matriculado nesse curso."
+    visit_pref: "Por gentileza, visite a"
+    visit_suf: "página para matricular-se."
+    select_class: "Selecione uma de suas classes"
+    unnamed: "*sem nome*"
+    select: "Selecionar"
+    unnamed_class: "Classe Sem Nome"
+    edit_settings: "editar configurações da classe"
+    edit_settings1: "Editar Configurações da Classe"
+    progress: "Progresso da Classe"
+    add_students: "Adicionar Alunos"
+    stats: "Estatísticas"
+    total_students: "Total de Alunos:"
+    average_time: "Average level play time:"
+    total_time: "Total play time:"
+    average_levels: "Média de níveis completados:"
+    total_levels: "Total de níveis completados:"
+    furthest_level: "Maior nível alcançado:"
+    concepts_covered: "Conceitos Abordados"
+    students: "Estudantes"
+    students1: "estudantes"
 #    expand_details: "Expand details"
 #    concepts: "Concepts"
 #    levels: "levels"
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -936,10 +955,10 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
 #    enroll: "Enroll"
 #    pick_from_classes: "Pick from your current classes"
 #    enter: "Enter"
-#    or: "Or"
-#    topics: "Topics"
-#    hours_content: "Hours of content:"
-#    get_free: "Get FREE course"
+    or: "Ou"
+    topics: "Tópicos"
+    hours_content: "Horas de conteúdo:"
+    get_free: "Obtenha um curso GRÁTIS"
 
   classes:
     archmage_title: "Arquimago"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     join_desc_3: ", ou encontre-nos em nosso "
     join_desc_4: "e começaremos a partir de lá!"
     join_url_email: "Envie-nos um email"
-    join_url_hipchat: "Sala de bate-papo pública no HipChat"
+    join_url_hipchat: "Sala de bate-papo pública no Slack"
     archmage_subscribe_desc: "Receba email sobre novas oportunidades para codificar e anúncios."
     artisan_introduction_pref: "Nós devemos contruir níveis adicionais! Pessoas estão clamando por mais conteúdo, e só podemos contruir tantos de nós mesmos. Agora sua estação de trabalho é o nível um; nosso Editor de Níveis é pouco utilizável até mesmo para seus criadores, então fique esperto. Se você tem visões de campanhas abrangendo for-loops para"
     artisan_introduction_suf: ", esta classe pode ser para você."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     artisan_join_desc: "Use o Editor de Níveis nestas etapas, mais ou menos:"
     artisan_join_step1: "Leia a documentação."
     artisan_join_step2: "Crie um novo nível e explore os níveis existentes."
-    artisan_join_step3: "Encontre-nos na nossa sala pública no HipChat para ajuda."
+    artisan_join_step3: "Encontre-nos na nossa sala pública no Slack para ajuda."
     artisan_join_step4: "Publique seus níveis no fórum para avaliação."
     artisan_subscribe_desc: "Receba emails com novidades sobre o editor de níveis e anúncios."
     adventurer_introduction: "Vamos ser claros sobre o seu papel: você é o tanque. Você vai tomar dano pesado. Precisamos de pessoas para experimentar níveis inéditos e ajudar a identificar como fazer as coisas melhorarem. A dor será enorme, fazer bons jogos é um processo longo e ninguém acerta na primeira vez. Se você pode suportar e ter uma alta pontuação de constituição, então esta classe pode ser para você."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     last_earned: "Últimos Ganhos"
     amount_achieved: "Montante"
     achievement: "Conquista"
-    category_contributor: "Cotribuidor"
-    category_ladder: "Progressão"
-    category_level: "Nível"
-    category_miscellaneous: "Diversos"
-    category_levels: "Níveis"
-    category_undefined: "Sem categoria"
     current_xp_prefix: ""
     current_xp_postfix: " no total"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
     left_xp_postfix: ""
 
   account:
-    recently_played: "Jogos Recentes"
-    no_recent_games: "Não foram feitos jogos durante duas semanas."
     payments: "Pagamentos"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Comprado"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "Português do Brasil", englishDescription: 
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Erro ao carregar do servidor"

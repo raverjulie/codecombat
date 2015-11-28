@@ -12,10 +12,14 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     multiplayer: "Multiplayer" # Not currently shown on home page
     for_developers: "For Udviklere" # Not currently shown on home page.
     or_ipad: "Eller download til iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Spil" # The top nav bar entry where players choose which levels to play
     community: "Fællesskab"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Forum"
@@ -31,7 +35,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     contact: "Kontakt"
     twitter_follow: "Følg"
     teachers: "Lærere"
-#    careers: "Careers"
+    careers: "Karrierer"
 
   modal:
     close: "Luk"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 
   play:
     play_as: "Spil Som " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Observér" # Ladder page
     players: "spillere" # Hover over a level on /play
     hours_played: "timer spillet" # Hover over a level on /play
@@ -80,7 +85,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     adjust_volume: "Indstil lydstyrke"
     campaign_multiplayer: "Multiplayer Arenaer"
     campaign_multiplayer_description: "... hvor du koder ansigt-til-ansigt imod andre spillere."
-#    campaign_old_multiplayer: "(Deprecated) Old Multiplayer Arenas"
+    campaign_old_multiplayer: "(Forældet) Gammel version af Multiplayer Arenaer"
 #    campaign_old_multiplayer_description: "Relics of a more civilized age. No simulations are run for these older, hero-less multiplayer arenas."
 
   share_progress_modal:
@@ -159,7 +164,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     accepted: "Accepteret"
     rejected: "Afvist"
     withdrawn: "Trukket tilbage"
-#    accept: "Accept"
+    accept: "Accepter"
 #    reject: "Reject"
 #    withdraw: "Withdraw"
     submitter: "Indsender"
@@ -196,7 +201,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     player: "Spiller"
     player_level: "Niveau" # Like player level 5, not like level: Dungeons of Kithgard
     warrior: "Krigsherre"
-#    ranger: "Ranger"
+    ranger: "Bueskytte"
     wizard: "Troldmand"
 
   units:
@@ -216,9 +221,12 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     years: "år"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Færdig"
-#    next_game: "Next game"
-#    show_menu: "Show game menu"
+#    next_level: "Next Level:"
+    next_game: "Næste spil"
+    show_menu: "Vis spil menu"
     home: "Hjem" # Not used any more, will be removed soon.
     level: "Bane" # Like "Level: Dungeons of Kithgard"
     skip: "Spring over"
@@ -245,13 +253,13 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     victory_title_suffix: " Færdig"
     victory_sign_up: "Opret dig for at gemme dit fremskridt"
     victory_sign_up_poke: "Ønsker du at gemme din kode? Opret en gratis konto!"
-    victory_rate_the_level: "Bedøm denne bane: " # Only in old-style levels.
+    victory_rate_the_level: "Bedøm denne bane: " # {change}
     victory_return_to_ladder: "Returner til rangstige"
     victory_play_continue: "Fortsæt"
     victory_saving_progress: "Gemmer fremskridt"
     victory_go_home: "Gå hjem"
     victory_review: "Fortæl os mere!"
-#    victory_review_placeholder: "How was the level?"
+    victory_review_placeholder: "Hvordan var levelet?"
     victory_hour_of_code_done: "Er du færdig?"
     victory_hour_of_code_done_yes: "Ja, jeg er færdig med min Kodetime!"
     victory_experience_gained: "XP tjent"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     victory_new_item: "Nyt udstyr"
     victory_viking_code_school: "For dælen det var en svær bane du lige slog! Hvis ikke du allerede er softwareudvikler, så burde du blive det. Du er lige kommet foran i køen til at blive accepteret hos Viking Code School, du kan tage dine evner til det næste niveau og blive en professionel webudvikler på 14 uger."
     victory_become_a_viking: "Bliv en Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Instruktioner"
     tome_minion_spells: "Dine Minions' besværgelser" # Only in old-style levels.
     tome_read_only_spells: "Læsebesværgelser" # Only in old-style levels.
@@ -298,7 +304,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     tip_scrub_shortcut: "Brug Ctrl+[ og Ctrl+] til at spole tilbage og frem."
     tip_guide_exists: "Klik på guiden i spilmenuen (i toppen af siden) for brugbar info."
     tip_open_source: "CodeCombat er 100% open source!"
-#    tip_tell_friends: "Enjoying CodeCombat? Tell your friends about us!"
+    tip_tell_friends: "Kan du lide CodeCombat? Fortæl dine venner om os!"
     tip_beta_launch: "CodeCombat søsatte sin beta i oktober, 2013."
     tip_think_solution: "Tænk på løsningen, ikke problemet."
     tip_theory_practice: "I teorien er der ingen forskel på teori og praksis. Men i praksis er der. - Yogi Bjørn"
@@ -327,23 +333,23 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    tip_extrapolation: "There are only two kinds of people: those that can extrapolate from incomplete data..."
 #    tip_superpower: "Coding is the closest thing we have to a superpower."
 #    tip_control_destiny: "In real open source, you have the right to control your own destiny. - Linus Torvalds"
-#    tip_no_code: "No code is faster than no code."
-#    tip_code_never_lies: "Code never lies, comments sometimes do. — Ron Jeffries"
-#    tip_reusable_software: "Before software can be reusable it first has to be usable."
+    tip_no_code: "Ingen kode er hurtigerer end ingen kode."
+    tip_code_never_lies: "Kode lyver aldrig, kommentarer gør nogle gange. - Ron Jeffries"
+    tip_reusable_software: "Før software kan være genbrugeligt skal det først være brugbart."
 #    tip_optimization_operator: "Every language has an optimization operator. In most languages that operator is ‘//’"
 #    tip_lines_of_code: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight. — Bill Gates"
 #    tip_source_code: "I want to change the world but they would not give me the source code."
 #    tip_javascript_java: "Java is to JavaScript what Car is to Carpet. - Chris Heilmann"
-#    tip_move_forward: "Whatever you do, keep moving forward. - Martin Luther King Jr."
+    tip_move_forward: "Hvad end du gør, så bliv ved med at rykke fremad. - Martin Luther King Jr."
     tip_google: "Har du et problem du ikke kan løse? Google det!"
     tip_adding_evil: "Tilføjer et strejf af ondskab.."
 #    tip_hate_computers: "That's the thing about people who think they hate computers. What they really hate is lousy programmers. - Larry Niven"
 #    tip_open_source_contribute: "You can help CodeCombat improve!"
 #    tip_recurse: "To iterate is human, to recurse divine. - L. Peter Deutsch"
 #    tip_free_your_mind: "You have to let it all go, Neo. Fear, doubt, and disbelief. Free your mind. - Morpheus"
-#    tip_strong_opponents: "Even the strongest of opponents always has a weakness. - Itachi Uchiha"
+    tip_strong_opponents: "Selv de stærkeste modstandere har en svaghed. - Itachi Uchiha"
     tip_paper_and_pen: "Før du starter med at programmere, kan du altid sætte dig ned med et stykke papir og blyant."
-#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
+    tip_solve_then_write: "Først, løs problemet, derefter skriv koden. - John Johnson"
 
   game_menu:
     inventory_tab: "Dine ting"
@@ -363,18 +369,17 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     auth_caption: "Gem dit spil."
 
   leaderboard:
-#    leaderboard: "Leaderboard"
 #    view_other_solutions: "View Leaderboards"
 #    scores: "Scores"
 #    top_players: "Top Players by"
-#    day: "Today"
-#    week: "This Week"
+    day: "Idag"
+    week: "Denne uge"
 #    all: "All-Time"
-#    time: "Time"
+    time: "Tid"
 #    damage_taken: "Damage Taken"
 #    damage_dealt: "Damage Dealt"
     difficulty: "Sværhedsgrad"
-#    gold_collected: "Gold Collected"
+    gold_collected: "Guld samlet"
 
 #  inventory:
 #    choose_inventory: "Equip Items"
@@ -489,43 +494,43 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    subscribe_prepaid: "Click Subscribe to use prepaid code"
 #    using_prepaid: "Using prepaid code for monthly subscription"
 
-#  choose_hero:
-#    choose_hero: "Choose Your Hero"
-#    programming_language: "Programming Language"
-#    programming_language_description: "Which programming language do you want to use?"
-#    default: "Default"
-#    experimental: "Experimental"
-#    python_blurb: "Simple yet powerful, great for beginners and experts."
-#    javascript_blurb: "The language of the web. (Not the same as Java.)"
-#    coffeescript_blurb: "Nicer JavaScript syntax."
-#    clojure_blurb: "A modern Lisp."
-#    lua_blurb: "Game scripting language."
+  choose_hero:
+    choose_hero: "Vælg din helt"
+    programming_language: "Programmerings sprog"
+    programming_language_description: "Hvilket programmerings sprog har du lyst til at bruge?"
+    default: "Standard"
+    experimental: "Experimental"
+    python_blurb: "Simplet, dog stærkt, godt for begyndere og eksperter."
+    javascript_blurb: "Internettets sprog. (Ikke det samme som Java.)"
+    coffeescript_blurb: "Pænere JavaScript syntax."
+    clojure_blurb: "En moderne version af Lisp."
+    lua_blurb: " Spil scripting sprog."
 #    io_blurb: "Simple but obscure."
-#    status: "Status"
-#    hero_type: "Type"
-#    weapons: "Weapons"
-#    weapons_warrior: "Swords - Short Range, No Magic"
-#    weapons_ranger: "Crossbows, Guns - Long Range, No Magic"
-#    weapons_wizard: "Wands, Staffs - Long Range, Magic"
+    status: "Status"
+    hero_type: "Type"
+    weapons: "Våben"
+    weapons_warrior: "Sværd - Kort afstand, Ingen Magi"
+    weapons_ranger: "Armbryst, Skydevåben - Lang afstand, Ingen Magi"
+    weapons_wizard: "Tryllestave, Stave - Lang afstand, Magi"
 #    attack: "Damage" # Can also translate as "Attack"
-#    health: "Health"
-#    speed: "Speed"
-#    regeneration: "Regeneration"
+    health: "Liv"
+    speed: "Fart"
+    regeneration: "Regeneration"
 #    range: "Range" # As in "attack or visual range"
 #    blocks: "Blocks" # As in "this shield blocks this much damage"
 #    backstab: "Backstab" # As in "this dagger does this much backstab damage"
-#    skills: "Skills"
+    skills: "Færdigheder"
 #    attack_1: "Deals"
 #    attack_2: "of listed"
 #    attack_3: "weapon damage."
 #    health_1: "Gains"
 #    health_2: "of listed"
 #    health_3: "armor health."
-#    speed_1: "Moves at"
-#    speed_2: "meters per second."
-#    available_for_purchase: "Available for Purchase" # Shows up when you have unlocked, but not purchased, a hero in the hero store
-#    level_to_unlock: "Level to unlock:" # Label for which level you have to beat to unlock a particular hero (click a locked hero in the store to see)
-#    restricted_to_certain_heroes: "Only certain heroes can play this level."
+    speed_1: "Rykker med"
+    speed_2: "meter i sekundet."
+    available_for_purchase: "Kan nu blive købt" # Shows up when you have unlocked, but not purchased, a hero in the hero store
+    level_to_unlock: "Level for at låse op:" # Label for which level you have to beat to unlock a particular hero (click a locked hero in the store to see)
+    restricted_to_certain_heroes: "Kun visse helt kan spille dette level."
 
 #  skill_docs:
 #    writable: "writable" # Hover over "attack" in Your Skills while playing a level to see most of this
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
 #  teachers:
 #    more_info: "More Info for Teachers"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
 #    free_1: "There are 110+ FREE levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+#    teacher_subs_title: "Teachers get a free trial!"
+#    teacher_subs_0: "We offer free trials to teachers."
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    wrong_password: "Wrong Password"
 #    upload_picture: "Upload a picture"
 #    delete_this_account: "Delete this account permanently"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
     password_tab: "Password"
     emails_tab: "Emails"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
     new_password: "Nyt Password"
     new_password_verify: "Bekræft"
 #    type_in_email: "Type in your email to confirm account deletion."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "Emailtilmeldinger"
 #    email_subscriptions_none: "No Email Subscriptions."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    social_facebook: "Like CodeCombat on Facebook"
 #    social_twitter: "Follow CodeCombat on Twitter"
 #    social_gplus: "Join CodeCombat on Google+"
-#    social_hipchat: "Chat with us in the public CodeCombat HipChat room"
+#    social_hipchat: "Chat with us in the public CodeCombat Slack channel"
 #    contribute_to_the_project: "Contribute to the project"
 
 #  clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    join_desc_3: ", or find us in our "
 #    join_desc_4: "and we'll go from there!"
     join_url_email: "Skriv til os"
-#    join_url_hipchat: "public HipChat room"
+#    join_url_hipchat: "public Slack channel"
 #    archmage_subscribe_desc: "Get emails on new coding opportunities and announcements."
 #    artisan_introduction_pref: "We must construct additional levels! People be clamoring for more content, and we can only build so many ourselves. Right now your workstation is level one; our level editor is barely usable even by its creators, so be wary. If you have visions of campaigns spanning for-loops to"
 #    artisan_introduction_suf: ", then this class might be for you."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    artisan_join_desc: "Use the Level Editor in these steps, give or take:"
     artisan_join_step1: "Læs dokumentationen."
     artisan_join_step2: "Lav en ny bane og udforsk eksisterende baner."
-#    artisan_join_step3: "Find us in our public HipChat room for help."
+#    artisan_join_step3: "Find us in our public Slack channel for help."
 #    artisan_join_step4: "Post your levels on the forum for feedback."
 #    artisan_subscribe_desc: "Get emails on level editor updates and announcements."
 #    adventurer_introduction: "Let's be clear about your role: you are the tank. You're going to take heavy damage. We need people to try out brand-new levels and help identify how to make things better. The pain will be enormous; making good games is a long process and no one gets it right the first time. If you can endure and have a high constitution score, then this class might be for you."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    last_earned: "Last Earned"
 #    amount_achieved: "Amount"
 #    achievement: "Achievement"
-#    category_contributor: "Contributor"
-#    category_ladder: "Ladder"
-#    category_level: "Level"
-#    category_miscellaneous: "Miscellaneous"
-#    category_levels: "Levels"
-#    category_undefined: "Uncategorized"
 #    current_xp_prefix: ""
 #    current_xp_postfix: " in total"
 #    new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    left_xp_postfix: ""
 
 #  account:
-#    recently_played: "Recently Played"
-#    no_recent_games: "No games played during the past two weeks."
 #    payments: "Payments"
 #    prepaid_codes: "Prepaid Codes"
 #    purchased: "Purchased"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "dansk", englishDescription: "Danish", trans
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
 #  loading_error:
 #    could_not_load: "Error loading from server"

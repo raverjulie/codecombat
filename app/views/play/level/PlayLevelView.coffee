@@ -94,8 +94,8 @@ module.exports = class PlayLevelView extends RootView
     console.profile?() if PROFILE_ME
     super options
 
-    @courseID = options.courseID
-    @courseInstanceID = options.courseInstanceID
+    @courseID = options.courseID or @getQueryVariable 'course'
+    @courseInstanceID = options.courseInstanceID or @getQueryVariable 'course-instance'
 
     @isEditorPreview = @getQueryVariable 'dev'
     @sessionID = @getQueryVariable 'session'
@@ -133,7 +133,7 @@ module.exports = class PlayLevelView extends RootView
   load: ->
     @loadStartTime = new Date()
     @god = new God debugWorker: true
-    @levelLoader = new LevelLoader supermodel: @supermodel, levelID: @levelID, sessionID: @sessionID, opponentSessionID: @opponentSessionID, team: @getQueryVariable('team'), observing: @observing
+    @levelLoader = new LevelLoader supermodel: @supermodel, levelID: @levelID, sessionID: @sessionID, opponentSessionID: @opponentSessionID, team: @getQueryVariable('team'), observing: @observing, courseID: @courseID
     @listenToOnce @levelLoader, 'world-necessities-loaded', @onWorldNecessitiesLoaded
 
   trackLevelLoadEnd: ->
@@ -155,7 +155,7 @@ module.exports = class PlayLevelView extends RootView
   afterRender: ->
     super()
     window.onPlayLevelViewLoaded? @  # still a hack
-    @insertSubView @loadingView = new LevelLoadingView autoUnveil: @options.autoUnveil or @observing, level: @levelLoader?.level ? @level  # May not have @level loaded yet
+    @insertSubView @loadingView = new LevelLoadingView autoUnveil: @options.autoUnveil or @observing, level: @levelLoader?.level ? @level, session: @levelLoader?.session ? @session  # May not have @level loaded yet
     @$el.find('#level-done-button').hide()
     $('body').addClass('is-playing')
     $('body').bind('touchmove', false) if @isIPadApp()
@@ -177,7 +177,6 @@ module.exports = class PlayLevelView extends RootView
     @initVolume()
     @listenTo(@session, 'change:multiplayer', @onMultiplayerChanged)
 
-    @originalSessionState = $.extend(true, {}, @session.get('state'))
     @register()
     @controlBar.setBus(@bus)
     @initScriptManager()
@@ -241,7 +240,7 @@ module.exports = class PlayLevelView extends RootView
     @god.setGoalManager @goalManager
 
   insertSubviews: ->
-    @insertSubView @tome = new TomeView levelID: @levelID, session: @session, otherSession: @otherSession, thangs: @world.thangs, supermodel: @supermodel, level: @level, observing: @observing
+    @insertSubView @tome = new TomeView levelID: @levelID, session: @session, otherSession: @otherSession, thangs: @world.thangs, supermodel: @supermodel, level: @level, observing: @observing, courseID: @courseID, courseInstanceID: @courseInstanceID
     @insertSubView new LevelPlaybackView session: @session, level: @level
     @insertSubView new GoalsView {}
     @insertSubView new LevelFlagsView levelID: @levelID, world: @world if @$el.hasClass 'flags'
@@ -284,9 +283,12 @@ module.exports = class PlayLevelView extends RootView
     else if e.level.get('slug') is 'ace-of-coders'
       goliath = '55e1a6e876cb0948c96af9f8'
       e.session.set 'heroConfig', {"thangType":goliath,"inventory":{"eyes":"53eb99f41a100989a40ce46e","neck":"54693274a2b1f53ce79443c9","wrists":"54693797a2b1f53ce79443e9","feet":"546d4d8e9df4a17d0d449acd","minion":"54eb5bf649fa2d5c905ddf4a","programming-book":"557871261ff17fef5abee3ee"}}
+    else if e.level.get('slug') is 'assembly-speed'
+      raider = '55527eb0b8abf4ba1fe9a107'
+      e.session.set 'heroConfig', {"thangType":raider,"inventory":{}}
     else if e.level.get('type', true) in ['hero', 'hero-ladder', 'hero-coop'] and not _.size e.session.get('heroConfig')?.inventory ? {}
       @setupManager?.destroy()
-      @setupManager = new LevelSetupManager({supermodel: @supermodel, level: @level, levelID: @levelID, parent: @, session: @session})
+      @setupManager = new LevelSetupManager({supermodel: @supermodel, level: @level, levelID: @levelID, parent: @, session: @session, courseID: @courseID, courseInstanceID: @courseInstanceID})
       @setupManager.open()
 
     @onRealTimeMultiplayerLevelLoaded e.session if e.level.get('type') in ['hero-ladder', 'course-ladder']
@@ -341,14 +343,18 @@ module.exports = class PlayLevelView extends RootView
     if window.currentModal and not window.currentModal.destroyed and window.currentModal.constructor isnt VictoryModal
       return Backbone.Mediator.subscribeOnce 'modal:closed', @onLevelStarted, @
     @surface.showLevel()
-    if @isEditorPreview or @observing
+    Backbone.Mediator.publish 'level:set-time', time: 0
+    if (@isEditorPreview or @observing) and not @getQueryVariable('intro')
       @loadingView.startUnveiling()
-      @loadingView.unveil()
+      @loadingView.unveil true
+    else
+      @scriptManager.initializeCamera()
 
   onLoadingViewUnveiling: (e) ->
-    @restoreSessionState()
+    @selectHero()
 
   onLoadingViewUnveiled: (e) ->
+    Backbone.Mediator.publish 'level:set-playing', playing: true if @level.get('type') in ['course-ladder', 'hero-ladder']  # We used to autoplay by default, but now we only do it if the level says to in the introduction script.
     @loadingView.$el.remove()
     @removeSubView @loadingView
     @loadingView = null
@@ -372,21 +378,11 @@ module.exports = class PlayLevelView extends RootView
     @ambientSound = createjs.Sound.play src, loop: -1, volume: 0.1
     createjs.Tween.get(@ambientSound).to({volume: 1.0}, 10000)
 
-  restoreSessionState: ->
-    return if @alreadyLoadedState
-    @alreadyLoadedState = true
-    state = @originalSessionState
-    if not @level or @level.get('type', true) in ['hero', 'hero-ladder', 'hero-coop', 'course', 'course-ladder']
-      Backbone.Mediator.publish 'level:suppress-selection-sounds', suppress: true
-      Backbone.Mediator.publish 'tome:select-primary-sprite', {}
-      Backbone.Mediator.publish 'level:suppress-selection-sounds', suppress: false
-      @surface.focusOnHero()
-      Backbone.Mediator.publish 'level:set-time', time: 0
-      Backbone.Mediator.publish 'level:set-playing', playing: true
-    else
-      if state.selected
-        # TODO: Should also restore selected spell here by saving spellName
-        Backbone.Mediator.publish 'level:select-sprite', thangID: state.selected, spellName: null
+  selectHero: ->
+    Backbone.Mediator.publish 'level:suppress-selection-sounds', suppress: true
+    Backbone.Mediator.publish 'tome:select-primary-sprite', {}
+    Backbone.Mediator.publish 'level:suppress-selection-sounds', suppress: false
+    @surface.focusOnHero()
 
   # callbacks
 

@@ -12,10 +12,14 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     multiplayer: "Multijugador" # Not currently shown on home page
     for_developers: "Para Desarrolladores" # Not currently shown on home page.
     or_ipad: "O descargar para iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Jugar" # The top nav bar entry where players choose which levels to play
     community: "Comunidad"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Foro"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
 
   play:
     play_as: "Jugar Como " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Observar" # Ladder page
     players: "Jugadores" # Hover over a level on /play
     hours_played: "horas jugadas" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     years: "años"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Listo"
+#    next_level: "Next Level:"
     next_game: "Siguiente juego"
     show_menu: "Mostrar menú de juego"
     home: "Inicio" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     victory_title_suffix: " Completo!"
     victory_sign_up: "Regístrate para recibir actualizaciones"
     victory_sign_up_poke: "¿Quieres recibir las ultimas noticias por correo? ¡Crea una cuenta gratuita y te mantendremos informado!"
-    victory_rate_the_level: "Valora el nivel: " # Only in old-style levels.
+    victory_rate_the_level: "Valora el nivel: " # {change}
     victory_return_to_ladder: "Volver a la escalera"
     victory_play_continue: "Continuar"
     victory_saving_progress: "Guardando Progreso"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     victory_new_item: "Objeto Nuevo"
     victory_viking_code_school: "¡Changos macacos!, el nivel que acabas de pasar era dificil! Si todavía no eres un desarrollador de software, deberías serlo. Acabas de conseguir una aceptación por vía rápida con la Escuela Vikinga de Có, donde tú puedes llevar tus habilidades al siguiente nivel y convertirteen un desarrollador web profesional en 14 semanas."
     victory_become_a_viking: "Conviértete en un Vikingo"
-    victory_bloc: "¡Buen trabajo! Tus habilidades están mejorando, y alguien ya se dió cuenta. Si has considerado convertirte en un desarrollador de software, este podría ser tu día de suerte. Bloc es un campo de entrenamiento online que te conecta 1 a 1 con un mentor experto que te ayudará a entrenarte para convertirte ¡En un desarrollador profesional! Al vencer A Mayhem of Munchkins, eres elegible para una reducción de $500 USD usando el código: CCRULES"
-    victory_bloc_cta: "Conoce a tu mentor – aprende acerca de Bloc"
     guide_title: "Guía"
     tome_minion_spells: "Hechizos de tus Secuaces" # Only in old-style levels.
     tome_read_only_spells: "Hechizos de Sólo Lectura" # Only in old-style levels.
@@ -343,7 +349,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     tip_free_your_mind: "Tienes que dejar ir todo, Neo. Miedo, duda, e incredulidad. Libera tu mente. - Morpheus"
     tip_strong_opponents: "Hasta los oponentes mas fuertes siempre tienen una debilidad. - Itachi Uchiha"
     tip_paper_and_pen: "Antes de comenzar a codificar, siempre puedes planear con una hoja de papel y un lapicero."
-#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
+    tip_solve_then_write: "Primero, resuelve el problema. Entonces, escribe el código. - John Johnson"
 
   game_menu:
     inventory_tab: "Inventario"
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     auth_caption: "Guarda tu progreso."
 
   leaderboard:
-    leaderboard: "Tabla de Posiciones"
     view_other_solutions: "Ver la Tabla de Posiciones"
     scores: "Puntajes"
     top_players: "Mejores jugadores"
@@ -443,12 +448,12 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     payment_methods_blurb2: "Si necesitas una forma alternativa de pago, por favor contactarse"
     sale_already_subscribed: "¡Ya estás subscrito!"
     sale_blurb1: "Ahorra 35%"
-    sale_blurb2: "de descuento en el precio regular de una subscripción de $120 USD por un año completo!"
+    sale_blurb2: "de descuento en el precio regular de una suscripción de $120 USD por un año completo!"
     sale_button: "Venta!"
-    sale_button_title: "Ahorra 35% al adquirir una subscripción por 1 año"
+    sale_button_title: "Ahorra 35% al adquirir una suscripción por 1 año"
     sale_click_here: "Haz Click Aquí"
     sale_ends: "Termina"
-    sale_extended: "*Las subscripciones existentes se extenderán por un año."
+    sale_extended: "*Las suscripciones existentes se extenderán por un año."
     sale_feature_here: "Esto es lo que obtendrás:"
     sale_feature2: "¡Acceso a 9 poderosos <strong>nuevos héroes</strong> con habilidades únicas!"
     sale_feature4: "¡Una bonificación inmediata de <strong>42,000 gemas</strong>!"
@@ -456,9 +461,9 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     sale_limited_time: "¡Oferta por tiempo limitado!"
     sale_new_heroes: "¡Nuevos héroes!"
     sale_title: "Venta de regreso a clases"
-    sale_view_button: "Compra la subscripción de 1 año por"
+    sale_view_button: "Compra la suscripción de 1 año por"
     stripe_description: "Suscripción Mensual"
-    stripe_description_year_sale: "Subscripción por 1 año (35% descuento)"
+    stripe_description_year_sale: "Suscripción por 1 año (35% descuento)"
     subscription_required_to_play: "Necesitas una suscripción para jugar este nivel."
     unlock_help_videos: "Suscríbete para desbloquear todos los video tutoriales."
     personal_sub: "Suscripción Personal" # Accounts Subscription View below
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     jose_blurb: "Despegar"
     retrostyle_title: "Ilustración"
     retrostyle_blurb: "Juegos con estilo Retro"
+    rob_title: "Ingeniero de Compilación"
+    rob_blurb: "Hace código y demás"
+    josh_c_title: "Diseñador de Juegos"
+    josh_c_blurb: "Diseña juegos"
+    carlos_title: "Manager de Región, Brasil"
+    carlos_blurb: "Hombre apio"
 
   teachers:
     more_info: "Información para profesores"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     cost_premium_server: "CodeCombat es gratis para lso primeros 5 niveles, después de ellos cuesta $9.99 USD mensuales para accesar a nuestros otros más de 190 niveles en nuestraos exclusivos servidores específicos para cada país."
     free_1: "Hay más de 110 niveles gratis que cubren cada concepto."
     free_2: "Una suscripción mensual le da acceso a tutoriales en vídeo y niveles extra para practicar."
-    teacher_subs_title: "¡Los amestros obtienen subscripciones gratuitas!"
-    teacher_subs_0: "Ofrecemos subscripciones gratuitas a profesores con propósitos de evaluación."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "¡Los amestros obtienen suscripciones gratuitas!" # {change}
+    teacher_subs_0: "Ofrecemos suscripciones gratuitas a profesores con propósitos de evaluación." # {change}
     teacher_subs_1: "Por favor llene nuestra"
     teacher_subs_2: "Encuesta para maestros"
-    teacher_subs_3: "para configurar su suscripción."
+    teacher_subs_3: "para configurar su suscripción." # {change}
     sub_includes_title: "¿Qué se incluye en la suscripción?"
     sub_includes_1: "Adicionalmente a los más de 70 niveles básicos, los estudiantes con una suscripción mensual obtienen acceso a estas características adicionales:" # {change}
     sub_includes_2: "Más de 70 niveles de práctica" # {change}
@@ -639,7 +654,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     material_premium_server: "Aproximadamente 22 horas de juego repartidas en más de 120 niveles sólo para suscriptores, con cinco nueveos niveles cada semana." # {change}
     material_1: "Aproximadamente 8 horas de contenido gratis y un adicional de 14 horas de contenido de suscriptores, con cinco nueveos niveles cada semana." # {change}
     concepts_title: "¿Qué conceptos están cubiertos?"
-    how_much_title: "¿Cuánto cuesta una subscripción mensual?"
+    how_much_title: "¿Cuánto cuesta una suscripción mensual?"
     how_much_1: "una"
     how_much_2: "suscribción mensual"
     how_much_3: "Cuesta u$s9.99, y puede ser cancelada en cualquier momento."
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     title: "Encuesta de Maestros"
     must_be_logged: "Debes ingresar primero. Por favor, crea una cuenta o ingresa desde el menú de arriba."
     retrieving: "Obteniendo información..."
-    being_reviewed_1: "Su aplicación a una suscripción gratuita está siendo"
+    being_reviewed_1: "Su aplicación a una suscripción gratuita está siendo" # {change}
     being_reviewed_2: "revisada."
-    approved_1: "Su aplicación a una suscripción gratuita fue"
+    approved_1: "Su aplicación a una suscripción gratuita fue" # {change}
     approved_2: "aprobada."
     approved_3: "Más instrucciones han sido enviadas a"
-    denied_1: "Su aplicación a una suscripción gratuita ha sido"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+    denied_1: "Su aplicación a una suscripción gratuita ha sido" # {change}
     denied_2: "denegada."
     contact_1: "Por favor contactarse"
     contact_2: "si tiene más preguntas."
-    description_1: "Ofrecemos suscripciones gratuitas a maestros con propósitos de evaluación. Puede hallar más información en nuestra"
+    description_1: "Ofrecemos suscripciones gratuitas a maestros con propósitos de evaluación. Puede hallar más información en nuestra" # {change}
+#    description_1b: "You can find more information on our"
     description_2: "página"
     description_3: "de maestros."
     description_4: "Por favor llene esta encuesta rápida y le mandaremos por email las instrucciones de configuración."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     wrong_password: "Contraseña incorrecta"
     upload_picture: "Sube una imagen"
     delete_this_account: "Borrar esta cuenta permanentemente"
+    reset_progress_tab: "Reiniciar Todo Progreso"
+    reset_your_progress: "Limpiar todo tu progreso y comenzar de nuevo"
     god_mode: "Modo Dios"
     password_tab: "Contraseña"
     emails_tab: "Correos"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     new_password: "Nueva Contraseña"
     new_password_verify: "Verificar"
     type_in_email: "Ingrese su correo electrónico para confirmar la eliminación de su cuenta."
+    type_in_email_progress: "Ingrese su correo para confirmar la eliminación de su progreso."
     type_in_password: "Asimismo, ingrese su contraseña."
     email_subscriptions: "Suscripciones de Email"
     email_subscriptions_none: "No tienes suscripciones."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     social_facebook: "Me Gusta CodeCombat en Facebook"
     social_twitter: "Sigue a CodeCombat en Twitter"
     social_gplus: "Únete a CodeCombat con Google+"
-    social_hipchat: "Chatea con nosotros en el chat público de CodeCombat en la sala HipChat"
+    social_hipchat: "Chatea con nosotros en el chat público de CodeCombat en la sala Slack"
     contribute_to_the_project: "Contribuir al proyecto"
 
   clans:
@@ -839,19 +861,19 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     playtime: "Tiempo de juego"
     last_played: "Último jugado"
     leagues_explanation: "Juega en una liga contra otros miembros del clan en estas instancias de arena multijugador."
-#    track_concepts1: "Track concepts"
-#    track_concepts2a: "learned by each student"
-#    track_concepts2b: "learned by each member"
-#    track_concepts3a: "Track levels completed for each student"
-#    track_concepts3b: "Track levels completed for each member"
-#    track_concepts4a: "See your students'"
-#    track_concepts4b: "See your members'"
-#    track_concepts5: "solutions"
-#    track_concepts6a: "Sort students by name or progress"
-#    track_concepts6b: "Sort members by name or progress"
-#    track_concepts7: "Requires invitation"
-#    track_concepts8: "to join"
-#    private_require_sub: "Private clans require a subscription to create or join."
+    track_concepts1: "Haga un seguimiento de los conceptos"
+    track_concepts2a: "aprendidos por cada estudiante"
+    track_concepts2b: "aprendidos por cada miembro"
+    track_concepts3a: "Haga un seguimiento de los niveles completados por cada estudiante"
+    track_concepts3b: "Haga un seguimiento de los niveles completados por cada miembro"
+    track_concepts4a: "Ve a tus estudiantes'"
+    track_concepts4b: "Ve a tus miembros'"
+    track_concepts5: "soluciones"
+    track_concepts6a: "Ordene a sus estudiantes por nombre o progreso"
+    track_concepts6b: "Ordene a sus miembros por nombre o progreso"
+    track_concepts7: "Requiere invitación"
+    track_concepts8: "para unirse"
+    private_require_sub: "Los clanes privados requieren una suscripción para crearlos o unírseles."
 
   courses:
     course: "Curso"
@@ -886,15 +908,12 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     invite_students: "Invite a sus estudiantes a unirse a este grupo."
     invite_link_header: "Enlace para unirse al curso"
     invite_link_p_1: "Proporciones este enalce a los estudiantes que desee que se unan al curso."
-#    invite_link_p_2: "Or have us email them directly:"
+    invite_link_p_2: "O envíenoslos directamente mediante el correo electrónico:"
     capacity_used: "Espacios de curso usados:"
     enter_emails: "Introducir los emails de los estudiantes a invitar, uno por línea"
     send_invites: "¿Mandar Invitaciones?"
     title: "Título"
     description: "Descripción"
-    languages_available: "Seleccione los languajes de programación disponibles para el grupo:"
-    all_lang: "Todos los Lenguajes"
-    show_progress: "Mostrar el progreso de los estudiantes a cualquiera en el grupo"
     creating_class: "Creando clase..."
     purchasing_course: "Adquiriendo curso..."
     buy_course: "Comprar Curso"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     join_desc_3: ", o encuéntranos en "
     join_desc_4: "y ahí empezaremos!"
     join_url_email: "Escríbenos"
-    join_url_hipchat: "chat público HipChat"
+    join_url_hipchat: "chat público Slack"
     archmage_subscribe_desc: "Obten correos de nuevas oportunidades y anuncios."
     artisan_introduction_pref: "¡Debemos construir niveles adicionales! La gente ruega por más contenido, y podemos hacer tanto por nosotros mismos. De momento tu estación de trabajo es nivel 1 ; Nuestro editor de niveles es apenas útil incluso para sus creadores, así que sea cauteloso. Si tuviera visiones de campañas apareciendo para ciclos for"
     artisan_introduction_suf: ", entonces esta lase es ideal para ti."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     artisan_join_desc: "Sigue las siguientes indicaciones para usar el editor de niveles. Tómalo o déjalo:"
     artisan_join_step1: "Lee la documentación."
     artisan_join_step2: "Crea un nuevo nivel y explora los niveles existentes."
-    artisan_join_step3: "Busca nuestra sala pública de HipChat en busca de ayuda."
+    artisan_join_step3: "Busca nuestra sala pública de Slack en busca de ayuda."
     artisan_join_step4: "Publica tus niveles en el foro para recibir comentarios críticos."
     artisan_subscribe_desc: "Recibe correos sobre actualizaciones del editor de niveles y anuncios."
     adventurer_introduction: "Hablemos claro sobre tu papel: eres el tanque. Vas a recibir fuertes daños. Necesitamos gente para probar nuestros flamantes niveles y ayudar a mejorarlos. El dolor será enorme; hacer buenos juegos es un proceso largo y nadie lo consigue a la primera. Si puedes resistir y tener una puntuación alta en resistencia, entonces esta clase es para ti."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     last_earned: "Último Ganado"
     amount_achieved: "Cantidad"
     achievement: "Logros"
-    category_contributor: "Contribuidor"
-    category_ladder: "Escalera"
-    category_level: "nivel"
-    category_miscellaneous: "Misceláneo"
-    category_levels: "Niveles"
-    category_undefined: "Sin Categoría"
     current_xp_prefix: ""
     current_xp_postfix: " en total"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     left_xp_postfix: ""
 
   account:
-    recently_played: "Recientemente jugado"
-    no_recent_games: "No juegos jugados duramente las últimas dos semanas."
     payments: "Pagos"
     prepaid_codes: "Códigos Prepagados"
     purchased: "Comprado"
@@ -1259,23 +1270,26 @@ module.exports = nativeDescription: "Español (América Latina)", englishDescrip
     success: "Listo, fue cobrado. Gracias!"
 
   account_prepaid:
-    purchase_code: "Adquirir un Código de Subscripción"
-#    purchase_code1: "Subscription Codes can be redeemed to add premium subscription time to one or more CodeCombat accounts."
-#    purchase_code2: "Each CodeCombat account can only redeem a particular Subscription Code once."
-#    purchase_code3: "Subscription Code months will be added to the end of any existing subscription on the account."
-#    users: "Users"
-#    months: "Months"
+    purchase_code: "Adquirir un Código de Suscripción"
+    purchase_code1: "Los códigos de suscripción pueden ser canjeados para agregar tiempo de suscripción premium para una o más cuentas CodeCombat."
+    purchase_code2: "Cada cuenta CodeCombat puede canjear una sola vez un Código de Suscripción en particular."
+    purchase_code3: "Los meses del Código de Suscripción serán agregados al final de la suscripción existente de la cuenta."
+    users: "Usuarios"
+    months: "Meses"
     purchase_total: "Total"
     purchase_button: "Enviar Adquisición"
     your_codes: "Tus Códigos:" # {change}
-    redeem_codes: "Reclamar un Código de Subscripción"
-#    prepaid_code: "Prepaid Code"
-#    lookup_code: "Lookup prepaid code"
-#    apply_account: "Apply to your account"
-#    copy_link: "You can copy the code's link and send it to someone."
-#    quantity: "Quantity"
-#    redeemed: "Redeemed"
-#    no_codes: "No codes yet!"
+    redeem_codes: "Reclamar un Código de Suscripción"
+    prepaid_code: "Código Prepagado"
+    lookup_code: "Buscar código prepagado"
+    apply_account: "Aplicara tu cuenta"
+    copy_link: "Puedes copiarl el enlace del código y enviarlo a alguien."
+    quantity: "Cantidad"
+    redeemed: "Reclamado"
+    no_codes: "¡Aún sin códigos!"
+    you_can1: "Puedes"
+    you_can2: "comprar un código prepagado"
+    you_can3: "que puede ser aplicado a tu propia cuenta o regalado a otros."
 
   loading_error:
     could_not_load: "Error cargando del servidor"

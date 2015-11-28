@@ -12,10 +12,14 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     multiplayer: "Multiplayer" # Not currently shown on home page
     for_developers: "Voor ontwikkelaars" # Not currently shown on home page.
     or_ipad: "Of download voor iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Levels" # The top nav bar entry where players choose which levels to play
     community: "Gemeenschap"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
 
   play:
     play_as: "Speel als " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Toeschouwen" # Ladder page
     players: "Spelers" # Hover over a level on /play
     hours_played: "Speeltijd" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     years: "jaren"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Klaar"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Home" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     victory_title_suffix: " Compleet"
     victory_sign_up: "Schrijf je in om je vooruitgang op te slaan"
     victory_sign_up_poke: "Wil je jouw code opslaan? Maak een gratis account aan!"
-    victory_rate_the_level: "Beoordeel het level: " # Only in old-style levels.
+    victory_rate_the_level: "Beoordeel het level: " # {change}
     victory_return_to_ladder: "Keer terug naar de ladder"
     victory_play_continue: "Ga door"
     victory_saving_progress: "Voortgang opslaan"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     victory_new_item: "Nieuw Item"
     victory_viking_code_school: "Wow, jij hebt net een moeilijk level gehaald! Als je nog geen programmeur was, zou je er een moeten worden! Je hebt net versneld toegang gekregen voor de Viking programmeerSchool, waar je je vaardigheden kan opkrikken en binnen 14 weken een professionele webontwikkelaar kunt worden."
     victory_become_a_viking: "Word een Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-    victory_bloc_cta: "Ontmoet je mentor – leer over Bloc"
     guide_title: "Handleiding"
     tome_minion_spells: "Jouw Minions' Spreuken" # Only in old-style levels.
     tome_read_only_spells: "Read-Only Spreuken" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     auth_caption: "Bewaar je voortgang."
 
   leaderboard:
-    leaderboard: "Klassement"
     view_other_solutions: "Bekijk Klassement"
     scores: "Scores"
 #    top_players: "Top Players by"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
 #    jose_blurb: "Taking Off"
     retrostyle_title: "Illustraties"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
     more_info: "Info voor Leerkrachten"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
     free_1: "Er zijn meer dan 110 GRATIS levels, welke alle concepten omvatten."
     free_2: "Een maandelijkse inschrijving bied toegang tot video tutorials en extra oefenlevels."
-    teacher_subs_title: "Leerkrachten krijgen een gratis abonnement!"
-    teacher_subs_0: "Wij bieden gratis inschrijvingen aan leerkrachten voor evaluatiedoeleinden."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "Leerkrachten krijgen een gratis abonnement!" # {change}
+    teacher_subs_0: "Wij bieden gratis inschrijvingen aan leerkrachten voor evaluatiedoeleinden." # {change}
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
 #    title: "Teacher Survey"
     must_be_logged: "Je moet eerst ingelogd zijn. Maak een account aan of log in in het menu hierboven."
     retrieving: "Informatie ophalen..."
-    being_reviewed_1: "Je aanvraag voor een gratis proefabonnement wordt"
+    being_reviewed_1: "Je aanvraag voor een gratis proefabonnement wordt" # {change}
     being_reviewed_2: "beoordeeld."
-    approved_1: "Je aanvraag voor een gratis proefabonnement is"
+    approved_1: "Je aanvraag voor een gratis proefabonnement is" # {change}
     approved_2: "goedgekeurd."
     approved_3: "Meer informatie is verzonden naar"
-    denied_1: "Uw aanvraag voor een testaccount is"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+    denied_1: "Uw aanvraag voor een testaccount is" # {change}
     denied_2: "afgewezen."
     contact_1: "Neem contact op"
     contact_2: "als u meer vragen heeft."
-    description_1: "We bieden gratis abbonnementen aan, aan leerkrachten voor evaluatiedoeleinden. Meer informatie kan worden gevonden op onze"
+    description_1: "We bieden gratis abbonnementen aan, aan leerkrachten voor evaluatiedoeleinden. Meer informatie kan worden gevonden op onze" # {change}
+#    description_1b: "You can find more information on our"
     description_2: "leerkrachten"
     description_3: "pagina."
     description_4: "Vul alstublieft onze korte vragenlijst in en we zullen u instructies sturen om te beginnen."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     wrong_password: "Verkeerd wachtwoord"
     upload_picture: "Je afbeelding opsturen"
     delete_this_account: "Verwijder dit account voor altijd"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
     password_tab: "Wachtwoord"
     emails_tab: "Emails"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     new_password: "Nieuw Wachtwoord"
     new_password_verify: "Verifieer"
     type_in_email: "Typ je email in om de verwijdering te bevestigen."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
     type_in_password: "Typ ook je wachtwoord in."
     email_subscriptions: "Email Abonnementen"
     email_subscriptions_none: "Geen Email Abonnementen."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     social_facebook: "Like CodeCombat op Facebook"
     social_twitter: "Volg CodeCombat op Twitter"
     social_gplus: "Join CodeCombat op Google+"
-    social_hipchat: "Chat met ons in de publieke CodeCombat HipChat room"
+    social_hipchat: "Chat met ons in de publieke CodeCombat Slack channel"
     contribute_to_the_project: "Help mee met het project"
 
   clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     send_invites: "Verstuur uitnodigingen"
     title: "Titel"
     description: "beschrijving"
-    languages_available: "Selecteer beschikbare programmeertalen voor de klas:"
-    all_lang: "Alle programmeertalen"
-    show_progress: "Toon leerlingenvoortgang aan de hele klas"
     creating_class: "Aanmaken klas..."
     purchasing_course: "Aanschaffen cursus..."
     buy_course: "Cursus kopen"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     join_desc_3: ", of vind ons in "
     join_desc_4: "en we bekijken het verder vandaar!"
     join_url_email: "E-mail ons"
-    join_url_hipchat: "ons publiek (Engelstalig) HipChat kanaal"
+    join_url_hipchat: "ons publiek (Engelstalig) Slack kanaal"
     archmage_subscribe_desc: "Ontvang e-mails met nieuwe programmeer mogelijkheden en aankondigingen."
     artisan_introduction_pref: "We moeten meer levels bouwen! Mensen schreeuwen om meer inhoud, en er zijn ook maar zoveel levels dat wij kunnen maken. Momenteel is jouw werkplaats level een; onze level editor wordt zelfs door ons amper gebruikt, dus wees voorzichtig. Indien je een visie hebt van een campagne, gaande van for-loops tot"
     artisan_introduction_suf: ", dan is deze klasse waarschijnlijk iets voor jou."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     artisan_join_desc: "Gebruik de Level Editor min of meer in deze volgorde:"
     artisan_join_step1: "Lees de documentatie."
     artisan_join_step2: "Maak een nieuw level en bestudeer reeds bestaande levels."
-    artisan_join_step3: "Praat met ons in ons publieke (Engelstalige) HipChat kanaal voor hulp. (optioneel)"
+    artisan_join_step3: "Praat met ons in ons publieke (Engelstalige) Slack kanaal voor hulp. (optioneel)"
     artisan_join_step4: "Maak een bericht over jouw level op ons forum voor feedback."
     artisan_subscribe_desc: "Ontvang e-mails met nieuws over de Level Editor."
     adventurer_introduction: "Laten we duidelijk zijn over je rol: jij bent de tank. Jij krijgt de zware klappen te verduren. We hebben mensen nodig om spiksplinternieuwe levels uit te proberen en te kijken hoe deze beter kunnen. Je zult veel afzien.Het maken van een goede game is een lang proces en niemand doet het de eerste keer goed. Als jij dit kan verduren en een hoog uihoudingsvermogen hebt, dan is dit de klasse voor jou."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     last_earned: "Laatst verdiend"
     amount_achieved: "Hoeveelheid"
     achievement: "Prestatie"
-    category_contributor: "Meehelper"
-    category_ladder: "Stand"
-    category_level: "Level"
-    category_miscellaneous: "Diversen"
-    category_levels: "Levels"
-    category_undefined: "Geen categorie"
     current_xp_prefix: ""
     current_xp_postfix: " in totaal"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
     left_xp_postfix: ""
 
   account:
-    recently_played: "Onlangs gespeeld"
-    no_recent_games: "De afgelopen 2 weken geen spellen gespeeld."
     payments: "Betalingen"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Gekocht"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "Nederlands (Nederland)", englishDescription
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Fout bij het laden van de server"

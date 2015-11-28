@@ -1,6 +1,7 @@
 async = require 'async'
 Handler = require '../commons/Handler'
 Campaign = require '../campaigns/Campaign'
+Classroom = require '../classrooms/Classroom'
 Course = require './Course'
 CourseInstance = require './CourseInstance'
 LevelSession = require '../levels/sessions/LevelSession'
@@ -11,6 +12,7 @@ User = require '../users/User'
 UserHandler = require '../users/user_handler'
 utils = require '../../app/core/utils'
 sendwithus = require '../sendwithus'
+mongoose = require 'mongoose'
 
 CourseInstanceHandler = class CourseInstanceHandler extends Handler
   modelClass: CourseInstance
@@ -30,61 +32,85 @@ CourseInstanceHandler = class CourseInstanceHandler extends Handler
 
   getByRelationship: (req, res, args...) ->
     relationship = args[1]
-    return @createAPI(req, res) if relationship is 'create'
+    return @createHOCAPI(req, res) if relationship is 'create-for-hoc'
     return @getLevelSessionsAPI(req, res, args[0]) if args[1] is 'level_sessions'
+    return @addMember(req, res, args[0]) if req.method is 'POST' and args[1] is 'members'
     return @getMembersAPI(req, res, args[0]) if args[1] is 'members'
     return @inviteStudents(req, res, args[0]) if relationship is 'invite_students'
     return @redeemPrepaidCodeAPI(req, res) if args[1] is 'redeem_prepaid'
     super arguments...
 
-  createAPI: (req, res) ->
+  createHOCAPI: (req, res) ->
     return @sendUnauthorizedError(res) if not req.user?
-    return @sendUnauthorizedError(res) if req.user.isAnonymous() and not (req.body.hourOfCode and req.body.courseID is '560f1a9f22961295f9427742')
+    courseID = mongoose.Types.ObjectId('560f1a9f22961295f9427742')
+    CourseInstance.findOne { courseID: courseID, ownerID: req.user.get('_id'), hourOfCode: true }, (err, courseInstance) =>
+      return @sendDatabaseError(res, err) if err
+      if courseInstance
+        console.log 'already made a course instance'
+      return @sendSuccess(res, courseInstance) if courseInstance
+      console.log 'making a new course instance'
+      courseInstance = new CourseInstance({
+        courseID: courseID
+        members: [req.user.get('_id')]
+        name: 'Single Player'
+        ownerID: req.user.get('_id')
+        aceConfig: { language: 'python' }
+        hourOfCode: true
+      })
+      courseInstance.save (err, courseInstance) =>
+        return @sendDatabaseError(res, err) if err
+        @sendCreated(res, courseInstance)
 
-    # Required Input
-    seats = req.body.seats
-    unless seats > 0
-      @logError(req.user, 'Course create API missing required seats count')
-      return @sendBadInputError(res, 'Missing required seats count')
-    # Optional - unspecified means create instances for all courses
-    courseID = req.body.courseID
-    # Optional
-    name = req.body.name
-    # Optional - as long as course(s) are all free
-    stripeToken = req.body.stripe?.token
-
-    query = if courseID? then {_id: courseID} else {}
-    Course.find query, (err, courses) =>
-      if err
-        @logError(user, "Find courses error: #{JSON.stringify(err)}")
-        return done(err)
-
-      PrepaidHandler.purchasePrepaidCourse req.user, courses, seats, new Date().getTime(), stripeToken, (err, prepaid) =>
-        if err
-          @logError(req.user, err)
-          return @sendBadInputError(res, err) if err is 'Missing required Stripe token'
-          return @sendDatabaseError(res, err)
-
-        courseInstances = []
-        makeCreateInstanceFn = (course, name, prepaid) =>
-          (done) =>
-            @createInstance req, course, name, prepaid, (err, newInstance)=>
-              courseInstances.push newInstance unless err
-              done(err)
-        tasks = (makeCreateInstanceFn(course, name, prepaid) for course in courses)
-        async.parallel tasks, (err, results) =>
+  addMember: (req, res, courseInstanceID) ->
+    userID = req.body.userID
+    return @sendBadInputError(res, 'Input must be a MongoDB ID') unless utils.isID(userID)
+    CourseInstance.findById courseInstanceID, (err, courseInstance) =>
+      return @sendDatabaseError(res, err) if err
+      return @sendNotFoundError(res, 'Course instance not found') unless courseInstance
+      Classroom.findById courseInstance.get('classroomID'), (err, classroom) =>
+        return @sendDatabaseError(res, err) if err
+        return @sendNotFoundError(res, 'Classroom referenced by course instance not found') unless classroom
+        return @sendForbiddenError(res) unless _.any(classroom.get('members'), (memberID) -> memberID.toString() is userID)
+        ownsCourseInstance = courseInstance.get('ownerID').equals(req.user.get('_id'))
+        addingSelf = userID is req.user.id
+        return @sendForbiddenError(res) unless ownsCourseInstance or addingSelf
+        alreadyInCourseInstance = _.any courseInstance.get('members') or [], (memberID) -> memberID.toString() is userID
+        return @sendSuccess(res, @formatEntity(req, courseInstance)) if alreadyInCourseInstance
+        Prepaid.find({ 'redeemers.userID': mongoose.Types.ObjectId(userID) }).count (err, userIsPrepaid) =>
           return @sendDatabaseError(res, err) if err
-          @sendCreated(res, courseInstances)
+          Course.findById courseInstance.get('courseID'), (err, course) =>
+            return @sendDatabaseError(res, err) if err
+            return @sendNotFoundError(res, 'Course referenced by course instance not found') unless course
+            if not (course.get('free') or userIsPrepaid)
+              return @sendPaymentRequiredError(res, 'Cannot add this user to a course instance until they are added to a prepaid')
+            members = courseInstance.get('members')
+            members.push(userID)
+            courseInstance.set('members', members)
+            courseInstance.save (err, courseInstance) =>
+              return @sendDatabaseError(res, err) if err
+              User.update {_id: mongoose.Types.ObjectId(userID)}, {$addToSet: {courseInstances: courseInstance.get('_id')}}, (err) =>
+                return @sendDatabaseError(res, err) if err
+                @sendSuccess(res, @formatEntity(req, courseInstance))
 
-  createInstance: (req, course, name, prepaid, done) =>
-    courseInstance = new CourseInstance
-      courseID: course.get('_id')
-      members: [req.user.get('_id')]
-      name: name
+  post: (req, res) ->
+    return @sendBadInputError(res, 'No classroomID') unless req.body.classroomID
+    return @sendBadInputError(res, 'No courseID') unless req.body.courseID
+    Classroom.findById req.body.classroomID, (err, classroom) =>
+      return @sendDatabaseError(res, err) if err
+      return @sendNotFoundError(res, 'Classroom not found') unless classroom
+      return @sendForbiddenError(res) unless classroom.get('ownerID').equals(req.user.get('_id'))
+      Course.findById req.body.courseID, (err, course) =>
+        return @sendDatabaseError(res, err) if err
+        return @sendNotFoundError(res, 'Course not found') unless course
+        super(req, res)
+
+  makeNewInstance: (req) ->
+    doc = new CourseInstance({
+      members: []
       ownerID: req.user.get('_id')
-      prepaidID: prepaid.get('_id')
-    courseInstance.save (err, newInstance) =>
-      done(err, newInstance)
+    })
+    doc.set('aceConfig', {}) # constructor will ignore empty objects
+    return doc
 
   getLevelSessionsAPI: (req, res, courseInstanceID) ->
     CourseInstance.findById courseInstanceID, (err, courseInstance) =>
@@ -179,5 +205,29 @@ CourseInstanceHandler = class CourseInstanceHandler extends Handler
           async.parallel tasks, (err, results) =>
             return @sendDatabaseError(res, err) if err
             @sendSuccess(res, courseInstances)
+
+  get: (req, res) ->
+    if ownerID = req.query.ownerID
+      return @sendForbiddenError(res) unless req.user and (req.user.isAdmin() or ownerID is req.user.id)
+      return @sendBadInputError(res, 'Bad ownerID') unless utils.isID ownerID
+      CourseInstance.find {ownerID: mongoose.Types.ObjectId(ownerID)}, (err, courseInstances) =>
+        return @sendDatabaseError(res, err) if err
+        return @sendSuccess(res, (@formatEntity(req, courseInstance) for courseInstance in courseInstances))
+    else if memberID = req.query.memberID
+      return @sendForbiddenError(res) unless req.user and (req.user.isAdmin() or memberID is req.user.id)
+      return @sendBadInputError(res, 'Bad memberID') unless utils.isID memberID
+      CourseInstance.find {members: mongoose.Types.ObjectId(memberID)}, (err, courseInstances) =>
+        return @sendDatabaseError(res, err) if err
+        return @sendSuccess(res, (@formatEntity(req, courseInstance) for courseInstance in courseInstances))
+    else if classroomID = req.query.classroomID
+      return @sendForbiddenError(res) unless req.user
+      return @sendBadInputError(res, 'Bad memberID') unless utils.isID classroomID
+      Classroom.findById classroomID, (err, classroom) =>
+        return @sendForbiddenError(res) unless classroom.isMember(req.user._id) or classroom.isOwner(req.user._id)
+        CourseInstance.find {classroomID: mongoose.Types.ObjectId(classroomID)}, (err, courseInstances) =>
+          return @sendDatabaseError(res, err) if err
+          return @sendSuccess(res, (@formatEntity(req, courseInstance) for courseInstance in courseInstances))
+    else
+      super(arguments...)
 
 module.exports = new CourseInstanceHandler()

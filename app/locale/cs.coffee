@@ -12,10 +12,14 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     multiplayer: "Multiplayer" # Not currently shown on home page
     for_developers: "Pro vývojáře" # Not currently shown on home page.
     or_ipad: "Nebo stáhnout pro iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Úrovně" # The top nav bar entry where players choose which levels to play
     community: "Komunita"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Fórum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 
   play:
     play_as: "Hrát jako" # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Dívat se" # Ladder page
     players: "hráči" # Hover over a level on /play
     hours_played: "hodin nahráno" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     years: "roků"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Hotovo"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Domů" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     victory_title_suffix: " Hotovo"
     victory_sign_up: "Přihlásit se pro uložení postupu"
     victory_sign_up_poke: "Chcete uložit váš kód? Vytvořte si účet zdarma!"
-    victory_rate_the_level: "Ohodnoťte tuto úroveň: " # Only in old-style levels.
+    victory_rate_the_level: "Ohodnoťte tuto úroveň: " # {change}
     victory_return_to_ladder: "Vrátit se na Žebříček"
     victory_play_continue: "Pokračovat"
     victory_saving_progress: "Ukládání postupu"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 #    victory_new_item: "New Item"
 #    victory_viking_code_school: "Holy smokes, that was a hard level you just beat! If you aren't already a software developer, you should be. You just got fast-tracked for acceptance with Viking Code School, where you can take your skills to the next level and become a professional web developer in 14 weeks."
 #    victory_become_a_viking: "Become a Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Průvodce"
     tome_minion_spells: "Vaše oblíbená kouzla" # Only in old-style levels.
     tome_read_only_spells: "Kouzla jen pro čtení" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     auth_caption: "Uložte váš postup."
 
   leaderboard:
-    leaderboard: "Žebříčky"
     view_other_solutions: "Zobrazit jiné řešení" # {change}
     scores: "Skóre"
 #    top_players: "Top Players by"
@@ -601,20 +606,30 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
-#    more_info: "More Info for Teachers"  # Used to be: CodeCombat pro učitele
+#    more_info: "More Info for Teachers"
 #    intro_1: "CodeCombat is an online game that teaches programming. Students write code in real programming languages."
 #    intro_2: "No experience required!"
 #    free_title: "How much does it cost?"
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
 #    free_1: "There are 110+ FREE levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+#    teacher_subs_title: "Teachers get a free trial!"
+#    teacher_subs_0: "We offer free trials to teachers."
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 #    wrong_password: "Wrong Password"
     upload_picture: "Nahrát obrázek"
 #    delete_this_account: "Delete this account permanently"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
     password_tab: "Heslo"
     emails_tab: "Emaily"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     new_password: "Nové heslo"
     new_password_verify: "Potvrdit"
 #    type_in_email: "Type in your email to confirm account deletion."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "Odebírat emailem"
     email_subscriptions_none: "Žádné odebírání emailem."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     social_facebook: "Dejte Like CodeCombat na Facebooku"
     social_twitter: "Sledujte CodeCombat na Twitteru"
     social_gplus: "Připojte se k CodeCombat na Google+"
-    social_hipchat: "Chatujte s námi ve veřejné CodeCombat HipChat místnosti"
+    social_hipchat: "Chatujte s námi ve veřejné CodeCombat Slack místnosti"
     contribute_to_the_project: "Přispějte tomuto projektu"
 
 #  clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     join_desc_3: ", nebo se s námi spojte v naší "
     join_desc_4: "!"
     join_url_email: "Pošlete nám email"
-    join_url_hipchat: "veřejné HipChat chatovací místnosti"
+    join_url_hipchat: "veřejné Slack chatovací místnosti"
     archmage_subscribe_desc: "Dostávat emailem oznámení a informacemi nových programovacích příležitostech"
     artisan_introduction_pref: "Musíme vytvářet další úrovně! Lidé nás prosí o další obsah, ale sami zvládáme vytvořit jen málo. Naším prvním pracovním zastavením je první úroveň. Editor úrovní je tak-tak použitelný i pro jeho vlastní tvůrce. Máte-li vizi pro vytvoření vnořených úrovní alá "
     artisan_introduction_suf: "pak neváhejte, toto je vaše destinace."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     artisan_join_desc: "Použijte editor úrovní v těchto postupných krocích:"
     artisan_join_step1: "Přečtěte si dokumentaci."
     artisan_join_step2: "Vytvořte novou úroveň a prozkoumejte existující úrovně."
-    artisan_join_step3: "Požádejte nás o pomoc ve veřejné  HipChat místnosti."
+    artisan_join_step3: "Požádejte nás o pomoc ve veřejné  Slack místnosti."
     artisan_join_step4: "Zveřejněte vaši úroveň na fóru pro připomínkování."
     artisan_subscribe_desc: "Dostávat emailem oznámení a informace o aktualizacích editoru úrovní."
     adventurer_introduction: "Ujasněme si dopředu jednu věc o vaší roli: budete jako tank. Projdete ohněm. Potřebujeme někoho, kdo odzkouší zbrusu nové úrovně a pomůže identifikovat kde je možno je zlepšit. Ten boj bude ohromný - tvorba her je dlouhý proces, který nikdo nezvládne na první pokus. Máte-li na to a vydržíte-li to, pak toto je vaše skupina."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     last_earned: "Poslední obdržený"
     amount_achieved: "Množství"
     achievement: "Úspěch"
-    category_contributor: "Přispěvatel"
-    category_ladder: "Žebříček"
-    category_level: "Úroveň"
-    category_miscellaneous: "Ostatní"
-    category_levels: "Úrovně"
-    category_undefined: "Nezařazeno"
     current_xp_prefix: ""
     current_xp_postfix: " celkem"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
     left_xp_postfix: ""
 
   account:
-    recently_played: "Nedávno zaplaceno"
-    no_recent_games: "Žádné hry během posledních dvou týdnů."
     payments: "Platby"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Zaplaceno"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "čeština", englishDescription: "Czech", tr
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Chyba při načítání ze serveru"

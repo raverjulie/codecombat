@@ -12,10 +12,14 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     multiplayer: "Multijoueurs" # Not currently shown on home page
     for_developers: "Pour développeurs" # Not currently shown on home page.
     or_ipad: "Ou télécharger pour iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Jouer" # The top nav bar entry where players choose which levels to play
     community: "Communauté"
+#    courses: "Courses"
     editor: "Éditeur"
     blog: "Blog"
     forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
 
   play:
     play_as: "Jouer comme " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Spectateur" # Ladder page
     players: "Joueurs" # Hover over a level on /play
     hours_played: "Heures jouées" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     years: "années"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Fait"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Accueil" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     victory_title_suffix: " Terminé"
     victory_sign_up: "Inscrivez-vous pour recevoir les mises à jour"
     victory_sign_up_poke: "Vous voulez recevoir les dernières actualités par e-mail ? Créez un compte gratuitement et nous vous tiendrons informés !"
-    victory_rate_the_level: "Notez ce niveau: " # Only in old-style levels.
+    victory_rate_the_level: "Notez ce niveau: " # {change}
     victory_return_to_ladder: "Retourner à l'échelle"
     victory_play_continue: "Continuer"
     victory_saving_progress: "Sauvegarder la progression"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     victory_new_item: "Nouvel item"
     victory_viking_code_school: "Par la barbe d'Odin, c'est un niveau difficile que tu viens de compléter! Si tu n'est pas un développeur de logiciel, tu devrais l'être ! Ceci vient de te propulser dans l'école de Code Vikings où tu pourras amener tes habilités au prochain niveau et devenir un développer web profesionnel en deux semaines."
     victory_become_a_viking: "Devenez un viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Guide"
     tome_minion_spells: "Les sorts de vos soldats" # Only in old-style levels.
     tome_read_only_spells: "Sorts en lecture-seule" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     auth_caption: "Sauvegarder votre progression."
 
   leaderboard:
-    leaderboard: "Classement"
     view_other_solutions: "Voir les autres solutions" # {change}
     scores: "Scores"
     top_players: "Classement des meilleurs joueurs"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     jose_blurb: "Décollage"
     retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
 #    more_info: "More Info for Teachers"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
     free_1: "La version de base de CodeCombat est gratuite ! Il y a 70+ niveaux gratuits qui couvrent chaque concepts." # {change}
     free_2: "Un abonnement mensuel fournit l'accès à des vidéos de tutoriels ainsi qu'à des niveaux d'entraînement supplémentaires."
-    teacher_subs_title: "Les enseignants reçoivent un abonnement gratuit !"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "Les enseignants reçoivent un abonnement gratuit !" # {change}
+#    teacher_subs_0: "We offer free trials to teachers."
     teacher_subs_1: "Merci de nous contacter" # {change}
     teacher_subs_2: "pour obtenir un abonnement mensuel gratuit." # {change}
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
     sub_includes_title: "Qu'y a t-il d'inclus dans cet abonnement ?"
     sub_includes_1: "En plus des 70+ niveaux de base, les élèves avec un abonnement mensuel ont accès à ces fonctionnalités supplémentaires :" # {change}
     sub_includes_2: "40+ niveaux d'entrainement" # {change}
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,13 +740,16 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     wrong_password: "Mauvais mot de passe"
     upload_picture: "Télécharger une image"
     delete_this_account: "Supprimer votre compte définitivement"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
     god_mode: "Puissance Divine"
     password_tab: "Mot de passe"
     emails_tab: "E-mails"
     admin: "Admin"
     new_password: "Nouveau mot de passe"
     new_password_verify: "Vérifier"
-    type_in_email: "Entrez votre adresse e-mail pour confirmer la supression de votre compte" # {change}
+    type_in_email: "Entrez votre adresse e-mail pour confirmer la supression de votre compte"
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "Abonnements"
     email_subscriptions_none: "Aucun e-mail d'abonnement."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     social_facebook: "Aimer CodeCombat sur Facebook"
     social_twitter: "Suivre CodeCombat sur Twitter"
     social_gplus: "Rejoindre CodeCombat sur Google+"
-    social_hipchat: "Chattez avec nous dans la salle HipChat publique CodeCombat"
+    social_hipchat: "Chattez avec nous dans la salle Slack publique CodeCombat"
     contribute_to_the_project: "Contribuer au projet"
 
   clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     join_desc_3: ", ou trouvez-nous dans nos "
     join_desc_4: "et nous partirons de là !"
     join_url_email: "Contactez-nous"
-    join_url_hipchat: "conversation publique HipChat"
+    join_url_hipchat: "conversation publique Slack"
     archmage_subscribe_desc: "Recevoir un e-mail sur les nouvelles possibilités de développement et des annonces."
     artisan_introduction_pref: "Nous devons créer des niveaux additionnels ! Les gens veulent plus de contenu, et nous ne pouvons pas tous les créer nous-même. Maintenant votre station de travail est au niveau un ; notre éditeur de niveaux est à peine utilisable même par ses créateurs, donc méfiez-vous. Si vous avez des idées sur la boucle for de"
     artisan_introduction_suf: ", cette classe est faite pour vous."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     artisan_join_desc: "Utilisez le créateur de niveaux pour à peu près ces étapes :"
     artisan_join_step1: "Lire la documentation."
     artisan_join_step2: "Crééz un nouveau niveau et explorez les niveaux existants."
-    artisan_join_step3: "Retrouvez-nous dans notre conversation HipChat pour obtenir de l'aide."
+    artisan_join_step3: "Retrouvez-nous dans notre conversation Slack pour obtenir de l'aide."
     artisan_join_step4: "Postez vos niveaux dans le forum pour avoir des retours."
     artisan_subscribe_desc: "Recevoir un e-mail sur les annonces et mises à jour de l'éditeur de niveaux."
     adventurer_introduction: "Soyons clair à propos de votre rôle : vous êtes le tank. Vous allez subir beaucoup de dégâts. Nous avons besoin de gens pour essayer les nouveaux niveaux et aider à identifier comment améliorer les choses. La douleur sera énorme; faire de bons jeux est une longue tâche et personne n'y arrive du premier coup. Si vous pouvez résister et avez un gros score de constitution, alors cette classe est faite pour vous."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     last_earned: "Dernièrement gagné"
     amount_achieved: "Quantité"
     achievement: "Succès"
-    category_contributor: "Contributeur"
-    category_ladder: "Echelon"
-    category_level: "Niveau"
-    category_miscellaneous: "Divers"
-    category_levels: "Niveaux"
-    category_undefined: "Non classé"
     current_xp_prefix: ""
     current_xp_postfix: " au total"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
     left_xp_postfix: ""
 
   account:
-    recently_played: "Joué récemment"
-    no_recent_games: "Aucune partie jouée au cours des deux dernières semaines."
     payments: "Paiements"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Acheté"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "français", englishDescription: "French", t
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Erreur de chargement du serveur"

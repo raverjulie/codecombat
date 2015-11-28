@@ -9,6 +9,7 @@ SpellDebugView = require './SpellDebugView'
 SpellToolbarView = require './SpellToolbarView'
 LevelComponent = require 'models/LevelComponent'
 UserCodeProblem = require 'models/UserCodeProblem'
+utils = require 'core/utils'
 
 module.exports = class SpellView extends CocoView
   id: 'spell-view'
@@ -17,14 +18,6 @@ module.exports = class SpellView extends CocoView
   controlsEnabled: true
   eventsSuppressed: true
   writable: true
-
-  @editModes:
-    'javascript': 'ace/mode/javascript'
-    'coffeescript': 'ace/mode/coffee'
-    'python': 'ace/mode/python'
-    'clojure': 'ace/mode/clojure'
-    'lua': 'ace/mode/lua'
-    'io': 'ace/mode/text'
 
   keyBindings:
     'default': null
@@ -75,6 +68,7 @@ module.exports = class SpellView extends CocoView
     super()
     @createACE()
     @createACEShortcuts()
+    @hookACECustomBehavior()
     @fillACE()
     @createOnCodeChangeHandlers()
     @lockDefaultCode()
@@ -92,7 +86,7 @@ module.exports = class SpellView extends CocoView
     @aceSession = @ace.getSession()
     @aceDoc = @aceSession.getDocument()
     @aceSession.setUseWorker false
-    @aceSession.setMode SpellView.editModes[@spell.language]
+    @aceSession.setMode utils.aceEditModes[@spell.language]
     @aceSession.setWrapLimitRange null
     @aceSession.setUseWrapMode true
     @aceSession.setNewLineMode 'unix'
@@ -105,6 +99,7 @@ module.exports = class SpellView extends CocoView
     @ace.setAnimatedScroll true
     @ace.setShowFoldWidgets false
     @ace.setKeyboardHandler @keyBindings[aceConfig.keyBindings ? 'default']
+    @ace.$blockScrolling = Infinity
     @toggleControls null, @writable
     @aceSession.selection.on 'changeCursor', @onCursorActivity
     $(@ace.container).find('.ace_gutter').on 'click mouseenter', '.ace_error, .ace_warning, .ace_info', @onAnnotationClick
@@ -257,6 +252,15 @@ module.exports = class SpellView extends CocoView
           @ace.remove "left"
 
 
+  hookACECustomBehavior: ->
+    @ace.commands.on 'exec', (e) =>
+      # When pressing enter with an active selection, just make a new line under it.
+      if e.command.name is 'enter-skip-delimiters'
+        selection = @ace.selection.getRange()
+        unless selection.start.column is selection.end.column and selection.start.row is selection.end.row
+          e.editor.execCommand 'gotolineend'
+          return true
+
   fillACE: ->
     @ace.setValue @spell.source
     @aceSession.setUndoManager(new UndoManager())
@@ -398,6 +402,7 @@ module.exports = class SpellView extends CocoView
       autoLineEndings:
         javascript: ';'
       popupFontSizePx: popupFontSizePx
+      popupLineHeightPx: 1.5 * popupFontSizePx
       popupWidthPx: 380
 
   updateAutocomplete: (@autocomplete) ->
@@ -424,6 +429,7 @@ module.exports = class SpellView extends CocoView
           return true if doc.owner is owner
           return (owner is 'this' or owner is 'more') and (not doc.owner? or doc.owner is 'this')
         if doc?.snippets?[e.language]
+          name = doc.name
           content = doc.snippets[e.language].code
           if /loop/.test(content) and @options.level.get 'moveRightLoopSnippet'
             # Replace default loop snippet with an embedded moveRight()
@@ -431,24 +437,46 @@ module.exports = class SpellView extends CocoView
               when 'python' then 'loop:\n    self.moveRight()\n    ${1:}'
               when 'javascript' then 'loop {\n    this.moveRight();\n    ${1:}\n}'
               else content
+          if /loop/.test(content) and @options.level.get('type') in ['course', 'course-ladder']
+            # Temporary hackery to make it look like we meant while True: in our loop snippets until we can update everything
+            content = switch e.language
+              when 'python' then content.replace /loop:/, 'while True:'
+              when 'javascript' then content.replace /loop/, 'while (true)'
+              when 'clojure' then content.replace /dotimes \[n 1000\]/, '(while true'
+              when 'lua' then content.replace /loop/, 'while true then'
+              when 'coffeescript' then content
+              when 'io' then content.replace /loop/, 'while true,'
+              else content
+            name = switch e.language
+              when 'python' then 'while True'
+              when 'coffeescript' then 'loop'
+              else 'while true'
           entry =
             content: content
             meta: $.i18n.t('keyboard_shortcuts.press_enter', defaultValue: 'press enter')
-            name: doc.name
+            name: name
             tabTrigger: doc.snippets[e.language].tab
             importance: doc.autoCompletePriority ? 1.0
-          haveFindNearestEnemy ||= doc.name is 'findNearestEnemy'
-          haveFindNearest ||= doc.name is 'findNearest'
-          if doc.name is 'attack'
+          haveFindNearestEnemy ||= name is 'findNearestEnemy'
+          haveFindNearest ||= name is 'findNearest'
+          if name is 'attack'
             # Postpone this until we know if findNearestEnemy is available
             attackEntry = entry
           else
             snippetEntries.push entry
 
+          if doc.userShouldCaptureReturn
+            varName = doc.userShouldCaptureReturn.variableName ? 'result'
+            entry.captureReturn = switch e.language
+              when 'io' then varName + ' := '
+              when 'javascript' then 'var ' + varName + ' = '
+              when 'clojure' then '(let [' + varName + ' '
+              else varName + ' = '
+
     # TODO: Generalize this snippet replacement
     # TODO: Where should this logic live, and what format should it be in?
     if attackEntry?
-      unless haveFindNearestEnemy or haveFindNearest or @options.level.get('slug') is 'known-enemy'
+      unless haveFindNearestEnemy or haveFindNearest or @options.level.get('slug') in ['known-enemy', 'course-known-enemy']
         # No findNearestEnemy, so update attack snippet to string-based target
         # (On Known Enemy, we are introducing enemy2 = "Gert", so we want them to do attack(enemy2).)
         attackEntry.content = attackEntry.content.replace '${1:enemy}', '"${1:Enemy Name}"'
@@ -459,7 +487,7 @@ module.exports = class SpellView extends CocoView
 
     # window.zatannaInstance = @zatanna  # For debugging. Make sure to not leave active when committing.
     # window.snippetEntries = snippetEntries
-    lang = SpellView.editModes[e.language].substr 'ace/mode/'.length
+    lang = utils.aceEditModes[e.language].substr 'ace/mode/'.length
     @zatanna.addSnippets snippetEntries, lang
     @editorLang = lang
 
@@ -1118,8 +1146,8 @@ module.exports = class SpellView extends CocoView
 
   onChangeLanguage: (e) ->
     return unless @spell.canWrite()
-    @aceSession.setMode SpellView.editModes[e.language]
-    @zatanna?.set 'language', SpellView.editModes[e.language].substr('ace/mode/')
+    @aceSession.setMode utils.aceEditModes[e.language]
+    @zatanna?.set 'language', utils.aceEditModes[e.language].substr('ace/mode/')
     wasDefault = @getSource() is @spell.originalSource
     @spell.setLanguage e.language
     @reloadCode true if wasDefault

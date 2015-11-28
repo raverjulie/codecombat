@@ -12,10 +12,14 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     multiplayer: "Flera spelare" # Not currently shown on home page
     for_developers: "För utvecklare" # Not currently shown on home page.
     or_ipad: "Eller ladda ner till iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Spela" # The top nav bar entry where players choose which levels to play
     community: "Community"
+#    courses: "Courses"
     editor: "Nivåredigerare"
     blog: "Blogg"
     forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 
   play:
     play_as: "Spela som " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Titta på" # Ladder page
     players: "spelare" # Hover over a level on /play
     hours_played: "timmar spelade" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     years: "år"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Klar"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Hem" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     victory_title_suffix: " Genomförd"
     victory_sign_up: "Registrera dig för att få uppdateringar"
     victory_sign_up_poke: "Vill du ha de senaste nyheterna via mejl? Skapa ett gratiskonto så håller vi dig informerad!"
-    victory_rate_the_level: "Betygsätt nivån: " # Only in old-style levels.
+    victory_rate_the_level: "Betygsätt nivån: " # {change}
     victory_return_to_ladder: "Gå tillbaka till stegen"
     victory_play_continue: "Fortsätt"
     victory_saving_progress: "Sparar framsteg"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     victory_new_item: "Nytt föremål"
     victory_viking_code_school: "Jösses vilken svår nivå du just klarade! Om du inte redan är en mjukvaruutvecklare så borde du vara det. Du bev precis fast-tracked för antagning vid Viking Code School, där du kan ta dina kunskaper till en ny nivå och bli en professionell webbutvecklare på 14 veckor."
     victory_become_a_viking: "Bli en Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Guide"
     tome_minion_spells: "Dina soldaters förmågor" # Only in old-style levels.
     tome_read_only_spells: "Skrivskyddade förmågor" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     auth_caption: "Spara dina framsteg."
 
   leaderboard:
-    leaderboard: "Topplista"
     view_other_solutions: "Visa topplistor"
     scores: "Poäng"
     top_players: "Toppspelare efter"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     jose_blurb: "Taking Off"
     retrostyle_title: "Illustration"
     retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
     more_info: "Info till lärare"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
     free_1: "CodeCombat Basic är GRATIS! Det finns över 80 gratis nivåer som täcker alla koncept." # {change}
     free_2: "En månadsprenumeration ger tillgång till videogenomgångar och fler övningsnivåer."
-    teacher_subs_title: "Lärare får gratis prenumerationer!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "Lärare får gratis prenumerationer!" # {change}
+#    teacher_subs_0: "We offer free trials to teachers."
     teacher_subs_1: "Kontakta" # {change}
     teacher_subs_2: "för att sätta upp en gratis månadsprenumeration." # {change}
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
     sub_includes_title: "Vad ingår i prenumerationen?"
     sub_includes_1: "Förutom de 80+ grundläggande nivåerna får elever med en månadsprenumeration tillgång till följande:" # {change}
     sub_includes_2: "60+ övningsnivåer" # {change}
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,13 +740,16 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 #    wrong_password: "Wrong Password"
     upload_picture: "Ladda upp en bild"
     delete_this_account: "Ta bort det här kontot för alltid"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
     password_tab: "Lösenord"
     emails_tab: "Mejladresser"
     admin: "Administratör"
     new_password: "Nytt lösenord"
     new_password_verify: "Verifiera"
-    type_in_email: "Skriv in din mejladress för att bekräfta borttagandet" # {change}
+    type_in_email: "Skriv in din mejladress för att bekräfta borttagandet"
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "Mejlprenumerationer"
     email_subscriptions_none: "Inga mejlprenumerationer."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     social_facebook: "Gilla CodeCombat på Facebook"
     social_twitter: "Följ CodeCombat på Twitter"
     social_gplus: "Följ CodeCombat på Google+"
-    social_hipchat: "Chatta med oss in det publika CodeCombat HipChatrummet"
+    social_hipchat: "Chatta med oss in det publika CodeCombat Slackrummet"
     contribute_to_the_project: "Bidra till projektet"
 
 #  clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     join_desc_3: ", eller hitta oss i vår "
     join_desc_4: "så tar vi det därifrån!"
     join_url_email: "Maila oss"
-    join_url_hipchat: "offentliga HipChat-rum"
+    join_url_hipchat: "offentliga Slack-rum"
     archmage_subscribe_desc: "Få mail om nya kodmöjligheter och tillkännagivanden."
     artisan_introduction_pref: "Vi måste bygga fler nivåer! Människor kräver mer innehåll, och vi kan bara bygga en viss mängd själva. Just nu är arbetsstation nivå ett; vår nivåredigerare är knappt användbar ens av dess skapare, så var uppmärksam. Om du har visioner av kampanjer som sträcker sig från for-loopar till"
     artisan_introduction_suf: ", är den här klassen kanske något för dig."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     artisan_join_desc: "Använd nivåredigeraren i dessa steg, mer eller mindre:"
     artisan_join_step1: "Läs dokumentationen."
     artisan_join_step2: "Skapa en ny nivå och utforska existerande nivåer."
-    artisan_join_step3: "Hitta oss i vårt offentliga HipChat-rum för hjälp."
+    artisan_join_step3: "Hitta oss i vårt offentliga Slack-rum för hjälp."
     artisan_join_step4: "Anslå dina nivåer på forumet för feedback."
     artisan_subscribe_desc: "Få mail om nivåredigeraruppdateringar och tillkännagivanden"
     adventurer_introduction: "Låt oss vara tydliga med din roll: du är tanken. Du kommer att ta stor skada. Vi behöver människor som kan testa splitternya nivåer och hjälpa till att identifiera hur man kan göra saker bättre. Smärtan kommer att vara enorm; att göra bra spel är en lång process och ingen gör rätt första gången. Om du kan härda ut och tål mycket stryk är det här klassen för dig."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
     last_earned: "Senast förvärvad den"
     amount_achieved: "Antal"
     achievement: "Prestation"
-#    category_contributor: "Contributor"
-#    category_ladder: "Ladder"
-    category_level: "Nivå"
-    category_miscellaneous: "Övrigt"
-    category_levels: "Nivåer"
-    category_undefined: "Okategoriserad"
 #    current_xp_prefix: ""
 #    current_xp_postfix: " in total"
 #    new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 #    left_xp_postfix: ""
 
   account:
-    recently_played: "Spelade nyligen"
-    no_recent_games: "Inga spel spelade de senaste två veckorna."
     payments: "Betalningar"
 #    prepaid_codes: "Prepaid Codes"
 #    purchased: "Purchased"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "Svenska", englishDescription: "Swedish", tr
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
 #  loading_error:
 #    could_not_load: "Error loading from server"

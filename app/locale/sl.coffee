@@ -12,10 +12,14 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    multiplayer: "Multiplayer" # Not currently shown on home page
 #    for_developers: "For Developers" # Not currently shown on home page.
 #    or_ipad: "Or download for iPad"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
 #  nav:
 #    play: "Levels" # The top nav bar entry where players choose which levels to play
 #    community: "Community"
+#    courses: "Courses"
 #    editor: "Editor"
 #    blog: "Blog"
 #    forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 
 #  play:
 #    play_as: "Play As" # Ladder page
+#    compete: "Compete!" # Course details page
 #    spectate: "Spectate" # Ladder page
 #    players: "players" # Hover over a level on /play
 #    hours_played: "hours played" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    years: "years"
 
 #  play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
 #    done: "Done"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
 #    home: "Home" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    victory_title_suffix: " Complete"
 #    victory_sign_up: "Sign Up to Save Progress"
 #    victory_sign_up_poke: "Want to save your code? Create a free account!"
-#    victory_rate_the_level: "Rate the level: " # Only in old-style levels.
+#    victory_rate_the_level: "How fun was this level?"
 #    victory_return_to_ladder: "Return to Ladder"
 #    victory_play_continue: "Continue"
 #    victory_saving_progress: "Saving Progress"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    victory_new_item: "New Item"
 #    victory_viking_code_school: "Holy smokes, that was a hard level you just beat! If you aren't already a software developer, you should be. You just got fast-tracked for acceptance with Viking Code School, where you can take your skills to the next level and become a professional web developer in 14 weeks."
 #    victory_become_a_viking: "Become a Viking"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
 #    guide_title: "Guide"
 #    tome_minion_spells: "Your Minions' Spells" # Only in old-style levels.
 #    tome_read_only_spells: "Read-Only Spells" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    auth_caption: "Save your progress."
 
 #  leaderboard:
-#    leaderboard: "Leaderboard"
 #    view_other_solutions: "View Leaderboards"
 #    scores: "Scores"
 #    top_players: "Top Players by"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
 #  teachers:
 #    more_info: "More Info for Teachers"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
 #    free_1: "There are 110+ FREE levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+#    teacher_subs_title: "Teachers get a free trial!"
+#    teacher_subs_0: "We offer free trials to teachers."
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    wrong_password: "Wrong Password"
 #    upload_picture: "Upload a picture"
 #    delete_this_account: "Delete this account permanently"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
 #    god_mode: "God Mode"
 #    password_tab: "Password"
 #    emails_tab: "Emails"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    new_password: "New Password"
 #    new_password_verify: "Verify"
 #    type_in_email: "Type in your email to confirm account deletion."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
 #    email_subscriptions: "Email Subscriptions"
 #    email_subscriptions_none: "No Email Subscriptions."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    social_facebook: "Like CodeCombat on Facebook"
 #    social_twitter: "Follow CodeCombat on Twitter"
 #    social_gplus: "Join CodeCombat on Google+"
-#    social_hipchat: "Chat with us in the public CodeCombat HipChat room"
+#    social_hipchat: "Chat with us in the public CodeCombat Slack channel"
 #    contribute_to_the_project: "Contribute to the project"
 
 #  clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    join_desc_3: ", or find us in our "
 #    join_desc_4: "and we'll go from there!"
 #    join_url_email: "Email us"
-#    join_url_hipchat: "public HipChat room"
+#    join_url_hipchat: "public Slack channel"
 #    archmage_subscribe_desc: "Get emails on new coding opportunities and announcements."
 #    artisan_introduction_pref: "We must construct additional levels! People be clamoring for more content, and we can only build so many ourselves. Right now your workstation is level one; our level editor is barely usable even by its creators, so be wary. If you have visions of campaigns spanning for-loops to"
 #    artisan_introduction_suf: ", then this class might be for you."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    artisan_join_desc: "Use the Level Editor in these steps, give or take:"
 #    artisan_join_step1: "Read the documentation."
 #    artisan_join_step2: "Create a new level and explore existing levels."
-#    artisan_join_step3: "Find us in our public HipChat room for help."
+#    artisan_join_step3: "Find us in our public Slack channel for help."
 #    artisan_join_step4: "Post your levels on the forum for feedback."
 #    artisan_subscribe_desc: "Get emails on level editor updates and announcements."
 #    adventurer_introduction: "Let's be clear about your role: you are the tank. You're going to take heavy damage. We need people to try out brand-new levels and help identify how to make things better. The pain will be enormous; making good games is a long process and no one gets it right the first time. If you can endure and have a high constitution score, then this class might be for you."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    last_earned: "Last Earned"
 #    amount_achieved: "Amount"
 #    achievement: "Achievement"
-#    category_contributor: "Contributor"
-#    category_ladder: "Ladder"
-#    category_level: "Level"
-#    category_miscellaneous: "Miscellaneous"
-#    category_levels: "Levels"
-#    category_undefined: "Uncategorized"
 #    current_xp_prefix: ""
 #    current_xp_postfix: " in total"
 #    new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    left_xp_postfix: ""
 
 #  account:
-#    recently_played: "Recently Played"
-#    no_recent_games: "No games played during the past two weeks."
 #    payments: "Payments"
 #    prepaid_codes: "Prepaid Codes"
 #    purchased: "Purchased"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "slovenščina", englishDescription: "Sloven
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
 #  loading_error:
 #    could_not_load: "Error loading from server"

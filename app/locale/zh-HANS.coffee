@@ -12,10 +12,14 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     multiplayer: "多人游戏" # Not currently shown on home page
     for_developers: "适合开发者" # Not currently shown on home page.
     or_ipad: "或下载iPad版本"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "关卡选择" # The top nav bar entry where players choose which levels to play
     community: "社区"
+#    courses: "Courses"
     editor: "编辑器"
     blog: "博客"
     forum: "论坛"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
 
   play:
     play_as: "扮演" # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "旁观他人的游戏" # Ladder page
     players: "玩家" # Hover over a level on /play
     hours_played: "游戏时长" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     years: "年"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "完成"
+#    next_level: "Next Level:"
     next_game: "下一场游戏"
     show_menu: "显示游戏菜单"
     home: "主页" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     victory_title_suffix: " 完成"
     victory_sign_up: "保存进度"
     victory_sign_up_poke: "想保存您的代码？创建一个免费账户吧！"
-    victory_rate_the_level: "评估关卡：" # Only in old-style levels.
+    victory_rate_the_level: "评估关卡：" # {change}
     victory_return_to_ladder: "返回"
     victory_play_continue: "继续游戏"
     victory_saving_progress: "保存进度"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     victory_new_item: "新的物品"
     victory_viking_code_school: "这关真的超难! 如果您想成为一个软件开发人员，您就应该去试一下Viking Code School。在这里您可以把您的知识增长到另一个台阶。只需要14周您就能成为一个专业的网页开发人员。"
     victory_become_a_viking: "成为一个维京人吧"
-    victory_bloc: "干得好! 你的技能正在提升, 并且已经有人注意着你了。如果你正考虑着当一名软件工程师, 现在可能就是你的幸运日。Bloc 是个能提供在线一对一专业指导的, 能锻炼你成为专业开发者的训练营! 通过 矮人骚乱 后, 你可以使用价值 $500 的优惠码: CCRULES"
-    victory_bloc_cta: "会晤你的导师 – 了解 Bloc"
     guide_title: "指南"
     tome_minion_spells: "助手的咒语" # Only in old-style levels.
     tome_read_only_spells: "只读的咒语" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     auth_caption: "保存进度"
 
   leaderboard:
-    leaderboard: "排行榜"
     view_other_solutions: "查看排行榜"
     scores: "分数"
     top_players: "顶尖玩家是"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     jose_blurb: "放轻松"
     retrostyle_title: "插画师"
     retrostyle_blurb: "复古风格的游戏"
+    rob_title: "编译器工程师"
+    rob_blurb: "编代码之类的"
+    josh_c_title: "游戏设计师"
+    josh_c_blurb: "设计游戏"
+    carlos_title: "地区经理, 巴西"
+    carlos_blurb: "食草男"
 
   teachers:
     more_info: "教师的说明"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     cost_premium_server: "CodeCombat的前5个关卡是免费的，在这之后需花费每月9.99美元来访问我们架设专属服务器上的190多个关卡。"
     free_1: "有110多个覆盖了所有理论的免费关卡。"
     free_2: "包月订阅可以访问视频教程和额外的练习关卡。"
-    teacher_subs_title: "教师可免费订阅!"
-    teacher_subs_0: "我们可为教师提供用于评估的免费订阅。"
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "教师可免费订阅!" # {change}
+    teacher_subs_0: "我们可为教师提供用于评估的免费订阅。" # {change}
     teacher_subs_1: "请填写我们的"
     teacher_subs_2: "教师调查"
-    teacher_subs_3: "建立您的订阅。"
+    teacher_subs_3: "建立您的订阅。" # {change}
     sub_includes_title: "订阅里包含了什么内容？"
     sub_includes_1: "除了110+个基础关卡，学生包月订阅还可以使用这些附加功能："
     sub_includes_2: "超过70个练习关卡" # {change}
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     title: "教师调查"
     must_be_logged: "您需要先登陆。请先注册或者在上方的目录中点击登陆。"
     retrieving: "检索信息中..."
-    being_reviewed_1: "您的免费订阅试用申请正在"
+    being_reviewed_1: "您的免费订阅试用申请正在" # {change}
     being_reviewed_2: "审核。"
-    approved_1: "您的免费订阅试用申请已被"
+    approved_1: "您的免费订阅试用申请已被" # {change}
     approved_2: "批准。"
     approved_3: "进一步的说明已被送往"
-    denied_1: "您的免费订阅试用申请已被"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+    denied_1: "您的免费订阅试用申请已被" # {change}
     denied_2: "拒绝。"
     contact_1: "如果你有进一步的问题, 请联系"
     contact_2: "。"
-    description_1: "我们可为教师提供用于评估的免费订阅。你可以在我们的"
+    description_1: "我们可为教师提供用于评估的免费订阅。你可以在我们的" # {change}
+#    description_1b: "You can find more information on our"
     description_2: "教师"
     description_3: "页面找到更多的信息。"
     description_4: "请填写此简单问卷，我们将会向您的电子邮件发送设置说明。"
@@ -721,13 +740,16 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     wrong_password: "密码错误"
     upload_picture: "上传一张图片"
     delete_this_account: "永久删除账户"
+    reset_progress_tab: "重置所有进度"
+    reset_your_progress: "清除记录并重新开始"
     god_mode: "上帝模式"
     password_tab: "密码"
     emails_tab: "邮件"
     admin: "管理"
     new_password: "新密码"
     new_password_verify: "再次输入密码"
-    type_in_email: "输入您的邮箱地址来确认删除"
+    type_in_email: "输入您的邮箱地址"
+    type_in_email_progress: "输入邮箱地址来确认删除"
     type_in_password: "同样的，输入您的密码。"
     email_subscriptions: "邮箱订阅"
     email_subscriptions_none: "取消订阅"
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     social_facebook: "关注CodeCombat的Facebook主页"
     social_twitter: "关注CodeCombat的Twitter"
     social_gplus: "关注CodeCombat的Google+主页"
-    social_hipchat: "在公共的CodeCombat HipChat聊天室与我们进行交流"
+    social_hipchat: "在公共的CodeCombat Slack聊天室与我们进行交流"
     contribute_to_the_project: "为项目做贡献"
 
   clans:
@@ -840,17 +862,17 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     last_played: "最后玩了"
     leagues_explanation: "在部落里与其他成员组成联盟一起参加下面的多人竞技场。"
 #    track_concepts1: "Track concepts"
-#    track_concepts2a: "learned by each student"
-#    track_concepts2b: "learned by each member"
-#    track_concepts3a: "Track levels completed for each student"
-#    track_concepts3b: "Track levels completed for each member"
-#    track_concepts4a: "See your students'"
-#    track_concepts4b: "See your members'"
-#    track_concepts5: "solutions"
-#    track_concepts6a: "Sort students by name or progress"
-#    track_concepts6b: "Sort members by name or progress"
-#    track_concepts7: "Requires invitation"
-#    track_concepts8: "to join"
+    track_concepts2a: "由每位学生学习"
+    track_concepts2b: "由每位成员学习"
+    track_concepts3a: "查看每位同学达到的等级"
+    track_concepts3b: "查看每位成员达到的等级"
+    track_concepts4a: "查看你的学生"
+    track_concepts4b: "查看你的成员"
+    track_concepts5: "解决方案"
+    track_concepts6a: "按姓名或进度排序学生"
+    track_concepts6b: "按姓名或进度排序成员"
+    track_concepts7: "需要邀请"
+    track_concepts8: "来加入"
 #    private_require_sub: "Private clans require a subscription to create or join."
 
   courses:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     send_invites: "发送邀请"
     title: "标题"
     description: "描述"
-    languages_available: "选择编程语言："
-    all_lang: "所有编程语言"
-    show_progress: "向所有该班级的人展示学生的进度"
     creating_class: "班级创建中..."
     purchasing_course: "购买课程中..."
     buy_course: "购买课程"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     join_desc_3: " 或者去我们的"
     join_desc_4: "，然后我们有话好说！"
     join_url_email: "给我们发邮件"
-    join_url_hipchat: " HipChat聊天室"
+    join_url_hipchat: " Slack聊天室"
     archmage_subscribe_desc: "通过电子邮件获得新的编码机会和公告。"
     artisan_introduction_pref: "我们必须设计更多的关卡! 大家为了更多的游戏内容在高声呐喊，但是我们靠自己只能创建这些。现在您的电脑就是第一关！我们的关卡编辑器刚刚完成了基本功能，所以创造关卡的时候请小心使用。只要您有制作关卡的灵感，不管是简单的for循环还是"
     artisan_introduction_suf: "这种东西，这个职业都很适合您。"
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     artisan_join_desc: "如下步骤使用关卡编辑器:"
     artisan_join_step1: "阅读文档。"
     artisan_join_step2: "创建一个新关卡 以及探索已经存在的关卡。"
-    artisan_join_step3: "来我们的HipChat聊天室寻求帮助。"
+    artisan_join_step3: "来我们的Slack聊天室寻求帮助。"
     artisan_join_step4: "把您的关卡发到论坛让别人给您评价。"
     artisan_subscribe_desc: "通过电子邮件获得关卡编辑器更新和公告。"
     adventurer_introduction: "现在就来了解您的角色吧：您是一辆战车，并将要承担沉重的攻击。我们需要人来尝试下我们新开的关卡以了解怎么样才能使每一样东西更美好。一开始虽然会非常辛苦；可是制造出一个最好的游戏是一个很长的过程，在这个过程中，没有人可以第一次就成功。如果您挺过去了并且自我感觉良好，那么这个位置就是为您而准备的。"
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     last_earned: "最近取得的"
     amount_achieved: "数量"
     achievement: "成就"
-    category_contributor: "贡献者"
-    category_ladder: "排行榜"
-    category_level: "等级"
-    category_miscellaneous: "其他"
-    category_levels: "等级"
-    category_undefined: "未分类"
     current_xp_prefix: ""
     current_xp_postfix: "当前总共"
     new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
     left_xp_postfix: ""
 
   account:
-    recently_played: "最近玩过的关卡"
-    no_recent_games: "最近两个星期没有玩过游戏。"
     payments: "支付方式"
     prepaid_codes: "预付费码"
     purchased: "已购买"
@@ -1263,24 +1274,27 @@ module.exports = nativeDescription: "简体中文", englishDescription: "Chinese
 #    purchase_code1: "Subscription Codes can be redeemed to add premium subscription time to one or more CodeCombat accounts."
 #    purchase_code2: "Each CodeCombat account can only redeem a particular Subscription Code once."
 #    purchase_code3: "Subscription Code months will be added to the end of any existing subscription on the account."
-#    users: "Users"
+    users: "玩家"
 #    months: "Months"
     purchase_total: "总共"
     purchase_button: "提交购买"
     your_codes: "你的订阅码：" # {change}
     redeem_codes: "兑换订阅码"
-#    prepaid_code: "Prepaid Code"
-#    lookup_code: "Lookup prepaid code"
-#    apply_account: "Apply to your account"
-#    copy_link: "You can copy the code's link and send it to someone."
-#    quantity: "Quantity"
-#    redeemed: "Redeemed"
-#    no_codes: "No codes yet!"
+    prepaid_code: "预购码"
+    lookup_code: "查看预购码"
+    apply_account: "使用到您的账户"
+    copy_link: "您可以复制此代码链接发送给别人。"
+    quantity: "数量"
+    redeemed: "兑换"
+    no_codes: "还没有兑换码！"
+    you_can1: "您可以"
+    you_can2: "购买一个预购码"
+    you_can3: "使用在您的账户或者给其他人。"
 
   loading_error:
     could_not_load: "载入失败"
     connection_failure: "连接失败。"
-    unauthorized: "您需要登录才行。 您是不是把 cookies 禁用了?"
+    unauthorized: "您需要登录才行。您是不是禁用了cookie？"
     forbidden: "您没有权限。"
     not_found: "没找到。"
     not_allowed: "方法不允许。"

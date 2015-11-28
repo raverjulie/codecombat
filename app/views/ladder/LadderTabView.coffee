@@ -150,7 +150,7 @@ module.exports = class LadderTabView extends CocoView
 
   refreshLadder: ->
     @supermodel.resetProgress()
-    @ladderLimit ?= parseInt @getQueryVariable('top_players', 20)
+    @ladderLimit ?= parseInt @getQueryVariable('top_players', if @options.league then 100 else 20)
     for team in @teams
       if oldLeaderboard = @leaderboards[team.id]
         @supermodel.removeModelResource oldLeaderboard
@@ -168,7 +168,8 @@ module.exports = class LadderTabView extends CocoView
       team = _.find @teams, name: histogramWrapper.data('team-name')
       histogramData = null
       $.when(
-        url = "/db/level/#{@level.get('slug')}/histogram_data?team=#{team.name.toLowerCase()}"
+        level = "#{@level.get('original')}.#{@level.get('version').major}"
+        url = "/db/level/#{level}/histogram_data?team=#{team.name.toLowerCase()}"
         url += '&leagues.leagueID=' + @options.league.id if @options.league
         $.get url, {cache: false}, (data) -> histogramData = data
       ).then =>
@@ -279,7 +280,10 @@ module.exports = class LadderTabView extends CocoView
   consolidateFriends: ->
     allFriendSessions = (@facebookFriendSessions or []).concat(@gplusFriendSessions or [])
     sessions = _.uniq allFriendSessions, false, (session) -> session._id
-    sessions = _.sortBy sessions, 'totalScore'
+    if @options.league
+      sessions = _.sortBy sessions, (session) -> _.find(session.leagues, leagueID: @options.league.id)?.stats.totalScore ? (session.totalScore / 2)
+    else
+      sessions = _.sortBy sessions, 'totalScore'
     sessions.reverse()
     sessions
 

@@ -12,10 +12,14 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     multiplayer: "マルチプレイヤー" # Not currently shown on home page
     for_developers: "開発者向け" # Not currently shown on home page.
     or_ipad: "又はiPadでダウンロード"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "ゲームマップへ" # The top nav bar entry where players choose which levels to play
     community: "コミュニティー"
+#    courses: "Courses"
     editor: "レベルエディター"
     blog: "ブログ"
     forum: "掲示板"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 
   play:
     play_as: "としてプレー" # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "観戦" # Ladder page
     players: "プレイヤー" # Hover over a level on /play
     hours_played: "プレイ時間" # Hover over a level on /play
@@ -156,12 +161,12 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     body: "体"
     version: "バージョン"
     pending: "ペンディング"
-    accepted: "容認された"
-    rejected: "拒否された"
-    withdrawn: "取り下げられました"
-#    accept: "Accept"
-#    reject: "Reject"
-#    withdraw: "Withdraw"
+    accepted: "容認済み"
+    rejected: "拒否済み"
+    withdrawn: "取り下げ済み"
+    accept: "容認"
+    reject: "拒否"
+    withdraw: "取り下げ"
     submitter: "提出者"
     submitted: "提出されました"
     commit_msg: "コミットメッセージ"
@@ -216,9 +221,12 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     years: "年"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "完了"
-#    next_game: "Next game"
-#    show_menu: "Show game menu"
+#    next_level: "Next Level:"
+    next_game: "次のゲーム"
+    show_menu: "ゲームメニューを見る"
     home: "ホーム" # Not used any more, will be removed soon.
     level: "ゲームレベル" # Like "Level: Dungeons of Kithgard"
     skip: "スキップ"
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     victory_title_suffix: "クリア"
     victory_sign_up: "進行状況をセーブするにはアカウント登録をしてください"
     victory_sign_up_poke: "あなたのコードをセーブしてみませんか? 無料アカウント登録!"
-    victory_rate_the_level: "このレベルの評価: " # Only in old-style levels.
+    victory_rate_the_level: "このレベルの評価: " # {change}
     victory_return_to_ladder: "ラダーに戻る"
     victory_play_continue: "コンテニュー"
     victory_saving_progress: "セーブ中"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     victory_new_item: "ニューアイテム"
     victory_viking_code_school: "あなたはハードレベルのホーリー・スモークを打ち破りました! もしあなたが既にソフトウェア開発者でないなら, ぜひやってみましょう. あなたはちょうどViking Code Scoolで受け入れられるための出世街道にいます,そこでは次のレベルへのスキルを取得でき、14週間でプロのWeb開発者になれます。"
     victory_become_a_viking: "バイキングになる"
-    victory_bloc: "すばらしい偉業ですね！あなたのスキルは伸びています、そしてそれに注目している人もいます。もしあなたがソフトウェア開発者になろうと考えているなら今日は幸運な日です。Blocはエキスパートのメンターが一対一であなたをプロの開発者に訓練するブートキャンプです！Mayhem of Munchkinsを倒したあなたはコードにより500ドルの割引の対象となっています。: CCRULES"
-    victory_bloc_cta: "あなたのメンターに会う – Blockについて学ぶ"
     guide_title: "ガイド"
     tome_minion_spells: "操作できるキャラクターの呪文" # Only in old-style levels.
     tome_read_only_spells: "読込専用の呪文" # Only in old-style levels.
@@ -342,8 +348,8 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     tip_recurse: "繰り返しは人間、再帰は神。 - L・ピーター・ドイツ"
     tip_free_your_mind: "全ての雑念を捨てろ、恐怖、疑いも不信も 心を解き放つんだ - モーフィアス"
     tip_strong_opponents: "どんな強者にも弱点というものはあるんだ… - うちは　イタチ"
-    tip_paper_and_pen: "コーディングを始める前に, 必ず紙とペンを用意して計画を立てましょう。"
-#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
+    tip_paper_and_pen: "コーディングを始める前に、 必ず紙とペンを用意して計画を立てましょう。"
+    tip_solve_then_write: "まず、問題を解決しよう。それから、コードを書こう。 - ジョン・ジョンソン"
 
   game_menu:
     inventory_tab: "インベントリー"
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     auth_caption: "進行状況をセーブする"
 
   leaderboard:
-    leaderboard: "リーダーボード"
     view_other_solutions: "リーダーボードを見る"
     scores: "スコア"
     top_players: "上位プレイヤー順"
@@ -529,10 +534,10 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 
   skill_docs:
     writable: "書き込み可能な" # Hover over "attack" in Your Skills while playing a level to see most of this
-    read_only: "リードオンリー"
-#    action: "Action"
-#    spell: "Spell"
-    action_name: "ネーム"
+    read_only: "読み込み限定"
+    action: "アクション"
+    spell: "呪文"
+    action_name: "アクション名"
     action_cooldown: "テイク"
     action_specific_cooldown: "クールダウン"
     action_damage: "ダメージ"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     jose_blurb: "テークオフ"
     retrostyle_title: "イラスト"
     retrostyle_blurb: "レトロスタイルのゲーム"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
     more_info: "教育関係者へのお知らせ"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
     free_1: "CodeCombat は基本的に無料です！110以上のレベルが無料です。" # {change}
     free_2: "月々の課金をするとビデオのチュートリアルにアクセスでき、また追加のレベルが楽しめます。"
-    teacher_subs_title: "教育関係者は無料のサブスクリプションを得ることができます！"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+    teacher_subs_title: "教育関係者は無料のサブスクリプションを得ることができます！" # {change}
+#    teacher_subs_0: "We offer free trials to teachers."
     teacher_subs_1: "" # {change}
     teacher_subs_2: "に連絡して無料の月々のサブスクリプションを得ましょう。" # {change}
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
     sub_includes_title: "サブスクリプションの内容について"
     sub_includes_1: "110以上の基本レベルに加えて、生徒は月々のサブスクリプションを得て次の機能が使えます:" # {change}
     sub_includes_2: "70以上の練習レベル" # {change}
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,13 +740,16 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     wrong_password: "間違ったパスワード"
     upload_picture: "画像をアップロード"
     delete_this_account: "アカウントを完全削除する"
+    reset_progress_tab: "すべての進捗をリセットする"
+    reset_your_progress: "すべての進捗をリセットしやり直す"
     god_mode: "ゴッドモード"
     password_tab: "パスワード"
     emails_tab: "メール"
     admin: "管理者"
     new_password: "新パスワード"
     new_password_verify: "新パスワードを再入力"
-    type_in_email: "アカウントの削除を確認するために、メールアドレスを入力して下さい"
+    type_in_email: "アカウントの削除を確認するために、メールアドレスを入力して下さい。"
+    type_in_email_progress: "進捗を消すために、メールアドレスを入力してください。"
     type_in_password: "そして、パスワードを入力してください。"
     email_subscriptions: "ニュースレターの購読"
     email_subscriptions_none: "No Email Subscriptions."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     social_facebook: "Facebook で CodeCombat にいいね！する"
     social_twitter: "Twitter の CodeCombat をフォローする"
     social_gplus: "Google+ の CodeCombat に参加する"
-    social_hipchat: "公開されている CodeCombat の HipChat ルームで私たちとチャットする"
+    social_hipchat: "公開されている CodeCombat の Slack ルームで私たちとチャットする"
     contribute_to_the_project: "プロジェクトに貢献する"
 
   clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -963,7 +982,7 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 
   editor:
     main_title: "CodeCombatエディター"
-#    article_title: "Article Editor"
+    article_title: "アーティクル エディター"
     thang_title: "サングエディター"
     level_title: "レベルエディター"
     achievement_title: "実績エディター"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     join_desc_3: "をするか、私たちの"
     join_desc_4: "で私たちに連絡してください！"
     join_url_email: "メール"
-    join_url_hipchat: "公開の HipChat のルーム"
+    join_url_hipchat: "公開の Slack のルーム"
     archmage_subscribe_desc: "コーディングの機会やアナウンスをメールで受け取る"
     artisan_introduction_pref: "私たちは、追加のレベルを建設しなければなりません！皆さんはもっとコンテンツを、と叫んでいますが、私達がつくれるのは自分たちの分だけです。今、あなたのワークステーションはレベル１です。私達のレベルエディタをつかえばそんなクリエイターでもギリギリ使えます、そう警戒しないで。あなたがfor-loopにまたがるキャンペーンのビジョンを"
     artisan_introduction_suf: "にもっているなら、このクラスはあなたにピッタリです。"
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     artisan_join_desc: "レベルエディタを使うために以下のステップを利用してください。"
     artisan_join_step1: "ドキュメントを読む"
     artisan_join_step2: "新しいレベルを作成し、すでにあるレベルか探す"
-    artisan_join_step3: "ヘルプが必要なとき公開HipChatルームで私達を探す"
+    artisan_join_step3: "ヘルプが必要なとき公開Slackルームで私達を探す"
     artisan_join_step4: "フィードバックのためフォーラムにあなたのレベルを投稿する"
     artisan_subscribe_desc: "レベルエディタアップデートやアナウンスをメールで受け取る"
     adventurer_introduction: "あなたの役割をはっきりしましょう。あなたは戦車です。あなたには大きなダメージを負ってもらいます。私たちには新しいレベルを試し、どう改善するか見分けるの役立つ人が必要です。その苦痛は大きなものです。よいゲームを作ることは長い道のりで、最初から正しく動くものなどないのです。もしあなたが耐えることができ、高い生命力を持っているならこのクラスはあなたにピッタリでしょう。"
@@ -1144,22 +1163,22 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
     summary_wins: " 勝利数, "
     summary_losses: " 敗北数"
     rank_no_code: "新しいコードがランクにありません"
-#    rank_my_game: "Rank My Game!"
+    rank_my_game: "試合をランキングに送信!"
     rank_submitting: "送信中..."
     rank_submitted: "ランキングに送信されました。"
-#    rank_failed: "Failed to Rank"
-#    rank_being_ranked: "Game Being Ranked"
+    rank_failed: "ランキングに送信できませんでした。"
+    rank_being_ranked: "ランキングにのっています"
 #    rank_last_submitted: "submitted "
 #    help_simulate: "Help simulate games?"
 #    code_being_simulated: "Your new code is being simulated by other players for ranking. This will refresh as new matches come in."
 #    no_ranked_matches_pre: "No ranked matches for the "
 #    no_ranked_matches_post: " team! Play against some competitors and then come back here to get your game ranked."
-#    choose_opponent: "Choose an Opponent"
+    choose_opponent: "相手を選んでください"
     select_your_language: "使う言語を選んでください！"
     tutorial_play: "チュートリアルで遊ぶ"
     tutorial_recommended: "はじめて遊ぶ人におすすめ"
     tutorial_skip: "チュートリアルをスキップする"
-#    tutorial_not_sure: "Not sure what's going on?"
+    tutorial_not_sure: "なにが起きているのかわかりませんか？"
     tutorial_play_first: "はじめからチュートリアルを遊ぶ"
     simple_ai: "単純なAI"
     warmup: "ウォームアップ"
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 #    last_earned: "Last Earned"
 #    amount_achieved: "Amount"
 #    achievement: "Achievement"
-#    category_contributor: "Contributor"
-#    category_ladder: "Ladder"
-#    category_level: "Level"
-#    category_miscellaneous: "Miscellaneous"
-#    category_levels: "Levels"
-#    category_undefined: "Uncategorized"
 #    current_xp_prefix: ""
 #    current_xp_postfix: " in total"
 #    new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 #    left_xp_postfix: ""
 
 #  account:
-#    recently_played: "Recently Played"
-#    no_recent_games: "No games played during the past two weeks."
 #    payments: "Payments"
 #    prepaid_codes: "Prepaid Codes"
 #    purchased: "Purchased"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "日本語", englishDescription: "Japanese",
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
 #  loading_error:
 #    could_not_load: "Error loading from server"

@@ -17,10 +17,6 @@ UserSchema = new mongoose.Schema({
   dateCreated:
     type: Date
     'default': Date.now
-  currentCourse: {
-    courseID: mongoose.Schema.Types.ObjectId
-    courseInstanceID: mongoose.Schema.Types.ObjectId
-  }
 }, {strict: false})
 
 UserSchema.index({'dateCreated': 1})
@@ -192,7 +188,14 @@ UserSchema.statics.incrementStat = (id, statName, done, inc=1) ->
     user.incrementStat statName, done, inc
 
 UserSchema.methods.incrementStat = (statName, done, inc=1) ->
-  @set statName, (@get(statName) or 0) + inc
+  if /^concepts\./.test statName
+    # Concept stats are nested a level deeper.
+    concepts = @get('concepts') or {}
+    concept = statName.split('.')[1]
+    concepts[concept] = (concepts[concept] or 0) + inc
+    @set 'concepts', concepts
+  else
+    @set statName, (@get(statName) or 0) + inc
   @save (err) -> done?(err)
 
 UserSchema.statics.unconflictName = unconflictName = (name, done) ->
@@ -316,7 +319,7 @@ UserSchema.statics.editableProperties = [
   'firstName', 'lastName', 'gender', 'ageRange', 'facebookID', 'gplusID', 'emails',
   'testGroupNumber', 'music', 'hourOfCode', 'hourOfCodeComplete', 'preferredLanguage',
   'wizard', 'aceConfig', 'autocastDelay', 'lastLevel', 'jobProfile', 'savedEmployerFilterAlerts',
-  'heroConfig', 'iosIdentifierForVendor', 'siteref', 'referrer', 'currentCourse'
+  'heroConfig', 'iosIdentifierForVendor', 'siteref', 'referrer'
 ]
 
 UserSchema.plugin plugins.NamedPlugin

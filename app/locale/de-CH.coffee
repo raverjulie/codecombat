@@ -12,10 +12,14 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
     multiplayer: "Multiplayer" # Not currently shown on home page
     for_developers: "Für Entwickler" # Not currently shown on home page.
     or_ipad: "Oder lads fürs iPad abä"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Levels" # The top nav bar entry where players choose which levels to play
     community: "Community"
+#    courses: "Courses"
     editor: "Editor"
     blog: "Blog"
     forum: "Forum"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 
   play:
     play_as: "Spiel als" # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Zueluege" # Ladder page
     players: "Spieler" # Hover over a level on /play
     hours_played: "Stunde gspilt" # Hover over a level on /play
@@ -216,7 +221,10 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
     years: "Johr"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Fertig"
+#    next_level: "Next Level:"
 #    next_game: "Next game"
 #    show_menu: "Show game menu"
     home: "Home" # Not used any more, will be removed soon.
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
     victory_title_suffix: " Vollständig"
     victory_sign_up: "Meld dich ah zum din Fortschritt speichere"
     victory_sign_up_poke: "Wötsch din Code speichere? Erstell gratis en Account!"
-    victory_rate_the_level: "Bewerte das Level: " # Only in old-style levels.
+    victory_rate_the_level: "Bewerte das Level: " # {change}
     victory_return_to_ladder: "Zrugg zum letzte Level"
     victory_play_continue: "Wiiter spile"
     victory_saving_progress: "Fortschritt abspaicherä"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    victory_new_item: "New Item"
     victory_viking_code_school: "Oh mein Gott, dass isch aber es stregs Level gsi und du heschs gschafft! Also wen du nu kei Software-Entwickler bisch, sötsch eine sii! Du hesch en Iiladig becho um at Viking Code Schuel zgha wodu dini Fähigkeite chasch wiiterentwickle und en professionele Entwickel in nur 14 Täg werde!"
     victory_become_a_viking: "Werd en Vikinger!"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Handbuech"
     tome_minion_spells: "Zaubersprüch vo dine Minions" # Only in old-style levels.
     tome_read_only_spells: "Read-Only Zaubersprüch" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
     auth_caption: "Speichere din Fortschritt."
 
   leaderboard:
-    leaderboard: "Ranglischte"
     view_other_solutions: "Lueg der dRanglischte aa!"
     scores: "Pünkt"
     top_players: "Beschti Speiler"
@@ -601,20 +606,30 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    jose_blurb: "Taking Off"
 #    retrostyle_title: "Illustration"
 #    retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
     more_info: "Info für Lehrer"
 #    intro_1: "CodeCombat is an online game that teaches programming. Students write code in real programming languages."
 #    intro_2: "No experience required!"
-#    free_title: "How much does it cost?"
+    free_title: "Wie fill choschtets?"
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
 #    free_1: "There are 110+ FREE levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+#    teacher_subs_title: "Teachers get a free trial!"
+#    teacher_subs_0: "We offer free trials to teachers."
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -639,7 +654,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    material_premium_server: "Approximately 50 hours of gameplay spread over 190+ subscriber-only levels so far."
 #    material_1: "Approximately 25 hours of free content and an additional 15 hours of subscriber content."
 #    concepts_title: "What concepts are covered?"
-#    how_much_title: "How much does a monthly subscription cost?"
+    how_much_title: "Wievil choschtet es monatlichs Abo?"
 #    how_much_1: "A"
 #    how_much_2: "monthly subscription"
 #    how_much_3: "costs $9.99, and can be cancelled anytime."
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    title: "Teacher Survey"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    wrong_password: "Wrong Password"
     upload_picture: "Es Bild ufelade"
     delete_this_account: "Dä Account für immer Lösche"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
     god_mode: "Gott Modus"
     password_tab: "Passwort"
     emails_tab: "E-Mails"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
     new_password: "Neus Passwort"
     new_password_verify: "Bestätige"
 #    type_in_email: "Type in your email to confirm account deletion."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
 #    type_in_password: "Also, type in your password."
     email_subscriptions: "E-Mail Abos"
 #    email_subscriptions_none: "No Email Subscriptions."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    social_facebook: "Like CodeCombat on Facebook"
 #    social_twitter: "Follow CodeCombat on Twitter"
 #    social_gplus: "Join CodeCombat on Google+"
-#    social_hipchat: "Chat with us in the public CodeCombat HipChat room"
+#    social_hipchat: "Chat with us in the public CodeCombat Slack channel"
 #    contribute_to_the_project: "Contribute to the project"
 
 #  clans:
@@ -892,9 +914,6 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    send_invites: "Send Invites"
 #    title: "Title"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    join_desc_3: ", or find us in our "
 #    join_desc_4: "and we'll go from there!"
 #    join_url_email: "Email us"
-#    join_url_hipchat: "public HipChat room"
+#    join_url_hipchat: "public Slack channel"
 #    archmage_subscribe_desc: "Get emails on new coding opportunities and announcements."
 #    artisan_introduction_pref: "We must construct additional levels! People be clamoring for more content, and we can only build so many ourselves. Right now your workstation is level one; our level editor is barely usable even by its creators, so be wary. If you have visions of campaigns spanning for-loops to"
 #    artisan_introduction_suf: ", then this class might be for you."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    artisan_join_desc: "Use the Level Editor in these steps, give or take:"
 #    artisan_join_step1: "Read the documentation."
 #    artisan_join_step2: "Create a new level and explore existing levels."
-#    artisan_join_step3: "Find us in our public HipChat room for help."
+#    artisan_join_step3: "Find us in our public Slack channel for help."
 #    artisan_join_step4: "Post your levels on the forum for feedback."
 #    artisan_subscribe_desc: "Get emails on level editor updates and announcements."
 #    adventurer_introduction: "Let's be clear about your role: you are the tank. You're going to take heavy damage. We need people to try out brand-new levels and help identify how to make things better. The pain will be enormous; making good games is a long process and no one gets it right the first time. If you can endure and have a high constitution score, then this class might be for you."
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    last_earned: "Last Earned"
 #    amount_achieved: "Amount"
 #    achievement: "Achievement"
-#    category_contributor: "Contributor"
-#    category_ladder: "Ladder"
-#    category_level: "Level"
-#    category_miscellaneous: "Miscellaneous"
-#    category_levels: "Levels"
-#    category_undefined: "Uncategorized"
 #    current_xp_prefix: ""
 #    current_xp_postfix: " in total"
 #    new_xp_prefix: ""
@@ -1224,8 +1237,6 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    left_xp_postfix: ""
 
 #  account:
-#    recently_played: "Recently Played"
-#    no_recent_games: "No games played during the past two weeks."
 #    payments: "Payments"
 #    prepaid_codes: "Prepaid Codes"
 #    purchased: "Purchased"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "Dütsch (Schwiiz)", englishDescription: "Ge
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
 #  loading_error:
 #    could_not_load: "Error loading from server"

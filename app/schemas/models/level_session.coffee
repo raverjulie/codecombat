@@ -79,15 +79,15 @@ _.extend LevelSessionSchema.properties,
       currentScriptOffset:
         type: 'number'
 
-    selected:
+    selected:  # Not tracked any more, delete with old level types
       type: [
         'null'
         'string'
       ]
     playing:
-      type: 'boolean'  # Not tracked any more
+      type: 'boolean'  # Not tracked any more, delete with old level types
     frame:
-      type: 'number'  # Not tracked any more
+      type: 'number'  # Not tracked any more, delete with old level types
     thangs:   # ... what is this? Is this used?
       type: 'object'
       additionalProperties:
@@ -168,6 +168,11 @@ _.extend LevelSessionSchema.properties,
 
   chat:
     type: 'array'
+
+  ladderAchievementDifficulty:
+    type: 'integer'
+    minimum: 0
+    description: 'What ogre AI difficulty, 0-4, this human session has beaten in a multiplayer arena.'
 
   meanStrength:
     type: 'number'

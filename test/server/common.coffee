@@ -2,6 +2,8 @@
 # and common libraries are available
 
 console.log 'IT BEGINS'
+if process.env.COCO_MONGO_HOST
+  throw Error('Tests may not run with production environment')
 
 require 'jasmine-spec-reporter'
 jasmine.getEnv().defaultTimeoutInterval = 300000
@@ -30,6 +32,7 @@ models_path = [
   '../../server/articles/Article'
   '../../server/campaigns/Campaign'
   '../../server/clans/Clan'
+  '../../server/classrooms/Classroom'
   '../../server/courses/Course'
   '../../server/courses/CourseInstance'
   '../../server/levels/Level'
@@ -161,8 +164,6 @@ GLOBAL.purchasePrepaid = (type, properties, maxRedeemers, token, done) ->
   options.json.stripe.token = token if token?
   if type is 'terminal_subscription'
     options.json.months = properties.months
-  else if type is 'course'
-    options.json.courseID = properties.courseID if properties?.courseID
   request.post options, done
 
 GLOBAL.subscribeWithPrepaid = (ppc, done) =>

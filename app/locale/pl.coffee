@@ -12,10 +12,14 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     multiplayer: "Multiplayer" # Not currently shown on home page
     for_developers: "Dla developerów" # Not currently shown on home page.
     or_ipad: "Albo ściągnij na swojego iPada"
+#    hoc_class_code: "I Have a Class Code"
+#    hoc_enter: "Enter"
+#    hoc_title: "Hour of Code?"
 
   nav:
     play: "Poziomy" # The top nav bar entry where players choose which levels to play
     community: "Społeczność"
+#    courses: "Courses"
     editor: "Edytor"
     blog: "Blog"
     forum: "Forum"
@@ -31,7 +35,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     contact: "Kontakt"
     twitter_follow: "Subskrybuj"
     teachers: "Nauczyciele"
-#    careers: "Careers"
+    careers: "Kariera"
 
   modal:
     close: "Zamknij"
@@ -50,6 +54,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 
   play:
     play_as: "Graj jako " # Ladder page
+#    compete: "Compete!" # Course details page
     spectate: "Oglądaj" # Ladder page
     players: "graczy" # Hover over a level on /play
     hours_played: "rozegranych godzin" # Hover over a level on /play
@@ -159,9 +164,9 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     accepted: "Przyjęto"
     rejected: "Odrzucono"
     withdrawn: "Wycofano"
-#    accept: "Accept"
-#    reject: "Reject"
-#    withdraw: "Withdraw"
+    accept: "Akceptuj"
+    reject: "Odrzuć"
+    withdraw: "Wycofaj"
     submitter: "Przesyłający"
     submitted: "Przesłano"
     commit_msg: "Wiadomość do commitu"
@@ -216,9 +221,12 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     years: "lat"
 
   play_level:
+#    completed_level: "Completed Level:"
+#    course: "Course:"
     done: "Zrobione"
-#    next_game: "Next game"
-#    show_menu: "Show game menu"
+#    next_level: "Next Level:"
+    next_game: "Następna gra"
+    show_menu: "Pokaż menu gry"
     home: "Strona główna" # Not used any more, will be removed soon.
     level: "Poziom" # Like "Level: Dungeons of Kithgard"
     skip: "Pomiń"
@@ -245,7 +253,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     victory_title_suffix: " ukończony"
     victory_sign_up: "Zarejestruj się, by zapisać postępy"
     victory_sign_up_poke: "Chcesz zapisać swój kod? Stwórz bezpłatne konto!"
-    victory_rate_the_level: "Oceń poziom: " # Only in old-style levels.
+    victory_rate_the_level: "Oceń poziom: " # {change}
     victory_return_to_ladder: "Powrót do drabinki"
     victory_play_continue: "Dalej"
     victory_saving_progress: "Zapisywanie postępów"
@@ -259,8 +267,6 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     victory_new_item: "Nowy przedmiot"
     victory_viking_code_school: "O jejku, trudny był ten poziom, co? Jeśli jeszcze nie jesteś twórcą oprogramowania, możesz nim już zostać. Złóż swoje podanie o przyjęcie do Viking Code School, a z ich pomocą w zostaniesz na pewno w pełni profesjonalnym programistą."
     victory_become_a_viking: "Zostań wikingiem"
-#    victory_bloc: "Great work! Your skills are improving, and someone's taking notice. If you've considered becoming a software developer, this may be your lucky day. Bloc is an online bootcamp that pairs you 1-on-1 with an expert mentor who will help train you into a professional developer! By beating A Mayhem of Munchkins, you're now eligible for a $500 price reduction with the code: CCRULES"
-#    victory_bloc_cta: "Meet your mentor – learn about Bloc"
     guide_title: "Przewodnik"
     tome_minion_spells: "Czary twojego podopiecznego" # Only in old-style levels.
     tome_read_only_spells: "Czary tylko do odczytu" # Only in old-style levels.
@@ -363,7 +369,6 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     auth_caption: "Zapisz swój postęp."
 
   leaderboard:
-    leaderboard: "Najlepsze wyniki"
     view_other_solutions: "Pokaż tablicę wyników"
     scores: "Wyniki"
     top_players: "Najlepsi gracze"
@@ -530,8 +535,8 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
   skill_docs:
     writable: "zapisywalny" # Hover over "attack" in Your Skills while playing a level to see most of this
     read_only: "tylko do odczytu"
-#    action: "Action"
-#    spell: "Spell"
+    action: "Akcja"
+    spell: "Zaklęcie"
     action_name: "nazwa"
     action_cooldown: "Zajmuje"
     action_specific_cooldown: "Odpoczynek"
@@ -601,6 +606,12 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     jose_blurb: "Odnosi Sukces"
     retrostyle_title: "Ilustracje"
     retrostyle_blurb: "RetroStyle Games"
+#    rob_title: "Compiler Engineer"
+#    rob_blurb: "Codes things and stuff"
+#    josh_c_title: "Game Designer"
+#    josh_c_blurb: "Designs games"
+#    carlos_title: "Region Manager, Brazil"
+#    carlos_blurb: "Celery Man"
 
   teachers:
     more_info: "Informacja dla nauczycieli"
@@ -610,11 +621,15 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    cost_premium_server: "CodeCombat is free for the first five levels, after which it costs $9.99 USD per month for access to our other 190+ levels on our exclusive country-specific servers."
 #    free_1: "There are 110+ FREE levels which cover every concept."
 #    free_2: "A monthly subscription provides access to video tutorials and extra practice levels."
-#    teacher_subs_title: "Teachers get free subscriptions!"
-#    teacher_subs_0: "We offer free subscriptions to teachers for evaluation purposes."
+#    free_3: "The CodeCombat content is divided into"
+#    free_4: "courses"
+#    free_5: ".  The first course is free, and about an hour of material."
+#    free_6: "Access to the additional courses can be unlocked with a one-time purchase."
+#    teacher_subs_title: "Teachers get a free trial!"
+#    teacher_subs_0: "We offer free trials to teachers."
 #    teacher_subs_1: "Please fill out our"
 #    teacher_subs_2: "Teacher Survey"
-#    teacher_subs_3: "to set up your subscription."
+#    teacher_subs_3: "to try out the paid courses."
 #    sub_includes_title: "What is included in the subscription?"
 #    sub_includes_1: "In addition to the 110+ basic levels, students with a monthly subscription get access to these additional features:"
 #    sub_includes_2: "80+ practice levels"
@@ -658,16 +673,20 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     title: "Ankieta dla nauczycieli"
 #    must_be_logged: "You must be logged in first. Please create an account or log in from the menu above."
 #    retrieving: "Retrieving information..."
-#    being_reviewed_1: "Your application for a free trial subscription is being"
+#    being_reviewed_1: "Your application for a free trial is being"
 #    being_reviewed_2: "reviewed."
-#    approved_1: "Your application for a free trial subscription was"
+#    approved_1: "Your application for a free trial was"
 #    approved_2: "approved."
 #    approved_3: "Further instructions have been sent to"
-#    denied_1: "Your application for a free trial subscription has been"
+#    approved_4: "Enroll your students on the"
+#    approved_5: "courses"
+#    approved_6: "page."
+#    denied_1: "Your application for a free trial has been"
 #    denied_2: "denied."
 #    contact_1: "Please contact"
 #    contact_2: "if you have further questions."
-#    description_1: "We offer free subscriptions to teachers for evaluation purposes. You can find more information on our"
+#    description_1: "We offer free trials to teachers.  You will be given 2 free enrollments which can be used to enroll students in paid courses."
+#    description_1b: "You can find more information on our"
 #    description_2: "teachers"
 #    description_3: "page."
 #    description_4: "Please fill out this quick survey and we’ll email you setup instructions."
@@ -721,6 +740,8 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     wrong_password: "Błędne zdjęcie"
     upload_picture: "Wgraj zdjęcie"
     delete_this_account: "Usuń to konto całkowicie"
+#    reset_progress_tab: "Reset All Progress"
+#    reset_your_progress: "Clear all your progress and start over"
     god_mode: "TRYB BOGA"
     password_tab: "Hasło"
     emails_tab: "Powiadomienia"
@@ -728,6 +749,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     new_password: "Nowe hasło"
     new_password_verify: "Zweryfikuj"
     type_in_email: "Wpisz swój email, aby potwierdzić usunięcie konta."
+#    type_in_email_progress: "Type in your email to confirm deleting your progress."
     type_in_password: "Wpisz również swoje hasło."
     email_subscriptions: "Powiadomienia email"
     email_subscriptions_none: "Brak powiadomień e-mail."
@@ -792,7 +814,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     social_facebook: "Polub CodeCombat na Facebooku"
     social_twitter: "Obserwuj CodeCombat na Twitterze"
     social_gplus: "Dołącz do CodeCombat na Google+"
-    social_hipchat: "Pogadaj z nami na pblicznym czacie HipChat"
+    social_hipchat: "Pogadaj z nami na pblicznym czacie Slack"
     contribute_to_the_project: "Zostań współtwórcą CodeCombat"
 
   clans:
@@ -853,9 +875,9 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    track_concepts8: "to join"
 #    private_require_sub: "Private clans require a subscription to create or join."
 
-#  courses:
-#    course: "Course"
-#    courses: "courses"
+  courses:
+    course: "Kurs"
+    courses: "kursy"
 #    not_enrolled: "You are not enrolled in this course."
 #    visit_pref: "Please visit the"
 #    visit_suf: "page to enroll."
@@ -866,8 +888,8 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    edit_settings: "edit class settings"
 #    edit_settings1: "Edit Class Settings"
 #    progress: "Class Progress"
-#    add_students: "Add Students"
-#    stats: "Statistics"
+    add_students: "Dodaj Studentów"
+    stats: "Statystyki"
 #    total_students: "Total students:"
 #    average_time: "Average level play time:"
 #    total_time: "Total play time:"
@@ -875,8 +897,8 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    total_levels: "Total levels completed:"
 #    furthest_level: "Furthest level completed:"
 #    concepts_covered: "Concepts Covered"
-#    students: "Students"
-#    students1: "students"
+    students: "Studenci"
+    students1: "studenci"
 #    expand_details: "Expand details"
 #    concepts: "Concepts"
 #    levels: "levels"
@@ -890,11 +912,8 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    capacity_used: "Course slots used:"
 #    enter_emails: "Enter student emails to invite, one per line"
 #    send_invites: "Send Invites"
-#    title: "Title"
+    title: "Tytuł"
 #    description: "Description"
-#    languages_available: "Select programming languages available to the class:"
-#    all_lang: "All Languages"
-#    show_progress: "Show student progress to everyone in the class"
 #    creating_class: "Creating class..."
 #    purchasing_course: "Purchasing course..."
 #    buy_course: "Buy Course"
@@ -935,9 +954,9 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    enter_code1: "Enter unlock code"
 #    enroll: "Enroll"
 #    pick_from_classes: "Pick from your current classes"
-#    enter: "Enter"
-#    or: "Or"
-#    topics: "Topics"
+    enter: "Enter"
+    or: "Lub"
+    topics: "Tematy"
 #    hours_content: "Hours of content:"
 #    get_free: "Get FREE course"
 
@@ -1072,7 +1091,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     join_desc_3: " lub zajrzyj do naszego "
     join_desc_4: ", a dowiesz się wszystkiego!"
     join_url_email: "Napisz do nas"
-    join_url_hipchat: "publicznego pokoju HipChat"
+    join_url_hipchat: "publicznego pokoju Slack"
     archmage_subscribe_desc: "Otrzymuj e-maile dotyczące nowych okazji programistycznych oraz ogłoszeń."
     artisan_introduction_pref: "Musimy stworzyć dodatkowe poziomy! Ludzie będą oczekiwać nowych zasobów, a my mamy ograniczone możliwości co do naszych mocy przerobowych. Obecnie, twoja stacja robocza jest na poziomie pierwszym; nasz edytor poziomów jest ledwo używalny nawet przez jego twórców - bądź tego świadom. Jeśli masz wizję nowych kampanii, od pętli typu for do"
     artisan_introduction_suf: ", ta klasa może być dla ciebie."
@@ -1082,7 +1101,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     artisan_join_desc: "Używaj Edytora Poziomów mniej-więcej zgodnie z poniższymi krokami:"
     artisan_join_step1: "Przeczytaj dokumentację."
     artisan_join_step2: "Stwórz nowy poziom i przejrzyj istniejące poziomy."
-    artisan_join_step3: "Zajrzyj do naszego publicznego pokoju HipChat, aby uzyskać pomoc."
+    artisan_join_step3: "Zajrzyj do naszego publicznego pokoju Slack, aby uzyskać pomoc."
     artisan_join_step4: "Pokaż swoje poziomy na forum, aby uzyskać opinie."
     artisan_subscribe_desc: "Otrzymuj e-maile dotyczące aktualności w tworzeniu poziomów i ogłoszeń."
     adventurer_introduction: "Bądźmy szczerzy co do twojej roli: jesteś tankiem. Będziesz przyjmował ciężkie obrażenia. Potrzebujemy ludzi do testowania nowych poziomów i pomocy w rozpoznawaniu ulepszeń, które będzie można do nich zastosować. Będzie to bolesny proces; tworzenie dobrych gier to długi proces i nikt nie trafia w dziesiątkę za pierwszym razem. Jeśli jesteś wytrzymały i masz wysoki wskaźnik constitution (D&D), ta klasa jest dla ciebie."
@@ -1182,12 +1201,12 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    tournament_blurb_blog: "on our blog"
     rules: "Zasady"
     winners: "Zwycięzcy"
-#    league: "League"
+    league: "Liga"
 #    red_ai: "Red AI" # "Red AI Wins", at end of multiplayer match playback
 #    blue_ai: "Blue AI"
 #    wins: "Wins" # At end of multiplayer match playback
-#    humans: "Red" # Ladder page display team name
-#    ogres: "Blue"
+    humans: "Czerwoni" # Ladder page display team name
+    ogres: "Niebiescy"
 
   user:
     stats: "Statystyki"
@@ -1209,12 +1228,6 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     last_earned: "Ostatnio zdobyty"
     amount_achieved: "Ilość"
     achievement: "Osiągnięcie"
-    category_contributor: "Współtwórca"
-    category_ladder: "Drabinka"
-    category_level: "Poziom"
-    category_miscellaneous: "Różne"
-    category_levels: "Poziomy"
-    category_undefined: "Poza kategorią"
 #    current_xp_prefix: ""
 #    current_xp_postfix: " in total"
     new_xp_prefix: "zdobyto "
@@ -1224,15 +1237,13 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     left_xp_postfix: ""
 
   account:
-    recently_played: "Ostatnio grane"
-#    no_recent_games: "No games played during the past two weeks."
     payments: "Płatności"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Zakupiono"
 #    sale: "Sale"
     subscription: "Subskrypcje"
     invoices: "Faktury"
-#    service_apple: "Apple"
+    service_apple: "Apple"
 #    service_web: "Web"
 #    paid_on: "Paid On"
 #    service: "Service"
@@ -1276,6 +1287,9 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
 #    quantity: "Quantity"
 #    redeemed: "Redeemed"
 #    no_codes: "No codes yet!"
+#    you_can1: "You can"
+#    you_can2: "purchase a prepaid code"
+#    you_can3: "that can be applied to your own account or given to others."
 
   loading_error:
     could_not_load: "Błąd podczas ładowania danych z serwera"
@@ -1289,7 +1303,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     bad_input: "Złe dane wejściowe."
     server_error: "Błąd serwera."
     unknown: "Nieznany błąd."
-#    error: "ERROR"
+    error: "BŁĄD"
 
   resources:
     sessions: "Sesje"
@@ -1308,7 +1322,7 @@ module.exports = nativeDescription: "polski", englishDescription: "Polish", tran
     patches: "Łatki"
     patched_model: "Dokument źródłowy"
     model: "Model"
-#    system: "System"
+    system: "System"
 #    systems: "Systems"
     component: "Komponent"
     components: "Komponenty"

@@ -8,6 +8,7 @@ compressible = require 'compressible'
 geoip = require 'geoip-lite'
 
 database = require './server/commons/database'
+perfmon = require './server/commons/perfmon'
 baseRoute = require './server/routes/base'
 user = require './server/users/user_handler'
 logging = require './server/commons/logging'
@@ -80,14 +81,13 @@ setupPassportMiddleware = (app) ->
 
 setupCountryRedirectMiddleware = (app, country="china", countryCode="CN", languageCode="zh", serverID="tokyo") ->
   shouldRedirectToCountryServer = (req) ->
-    firstLanguage = req.acceptedLanguages[0]
-    speaksLanguage = firstLanguage and firstLanguage.indexOf(languageCode) isnt -1
+    speaksLanguage = _.any req.acceptedLanguages, (language) -> language.indexOf languageCode isnt -1
     unless config[serverID]
       ip = req.headers['x-forwarded-for'] or req.connection.remoteAddress
       ip = ip?.split(/,? /)[0]  # If there are two IP addresses, say because of CloudFlare, we just take the first.
       geo = geoip.lookup(ip)
       #if speaksLanguage or geo?.country is countryCode
-      #  log.info("Should we redirect to #{serverID} server? speaksLanguage: #{speaksLanguage}, firstLanguage: #{firstLanguage}, ip: #{ip}, geo: #{geo} -- so redirecting? #{geo?.country is 'CN' and speaksLanguage}")
+      #  log.info("Should we redirect to #{serverID} server? speaksLanguage: #{speaksLanguage}, acceptedLanguages: #{req.acceptedLanguages}, ip: #{ip}, geo: #{geo} -- so redirecting? #{geo?.country is 'CN' and speaksLanguage}")
       return geo?.country is countryCode and speaksLanguage
     else
       #log.info("We are on #{serverID} server. speaksLanguage: #{speaksLanguage}, acceptedLanguages: #{req.acceptedLanguages[0]}")
@@ -128,8 +128,11 @@ setupRedirectMiddleware = (app) ->
     nameOrID = req.path.split('/')[3]
     res.redirect 301, "/user/#{nameOrID}/profile"
 
+setupPerfMonMiddleware = (app) ->
+  app.use perfmon.middleware
 
 exports.setupMiddleware = (app) ->
+  setupPerfMonMiddleware app
   setupCountryRedirectMiddleware app, "china", "CN", "zh", "tokyo"
   setupCountryRedirectMiddleware app, "brazil", "BR", "pt-BR", "saoPaulo"
   setupMiddlewareToSendOldBrowserWarningWhenPlayersViewLevelDirectly app

@@ -10,6 +10,7 @@ CocoClass = require 'core/CocoClass'
 AudioPlayer = require 'lib/AudioPlayer'
 app = require 'core/application'
 World = require 'lib/world/world'
+utils = require 'core/utils'
 
 # This is an initial stab at unifying loading and setup into a single place which can
 # monitor everything and keep a LoadingScreen visible overall progress.
@@ -34,6 +35,7 @@ module.exports = class LevelLoader extends CocoClass
     @sessionless = options.sessionless
     @spectateMode = options.spectateMode ? false
     @observing = options.observing
+    @courseID = options.courseID
 
     @worldNecessities = []
     @listenTo @supermodel, 'resource-loaded', @onWorldNecessityLoaded
@@ -56,6 +58,12 @@ module.exports = class LevelLoader extends CocoClass
       @listenToOnce @level, 'sync', @onLevelLoaded
 
   onLevelLoaded: ->
+    if @courseID and @level.get('type', true) not in ['course', 'course-ladder']
+      # Because we now use original hero levels for both hero and course levels, we fake being a course level in this context.
+      originalGet = @level.get
+      @level.get = ->
+        return 'course' if arguments[0] is 'type'
+        originalGet.apply @, arguments
     @loadSession() unless @sessionless
     @populateLevel()
 
@@ -70,6 +78,7 @@ module.exports = class LevelLoader extends CocoClass
     else
       url = "/db/level/#{@levelID}/session"
       url += "?team=#{@team}" if @team
+      url += "?course=#{@courseID}" if @courseID
 
     session = new LevelSession().setURL url
     session.project = ['creator', 'team', 'heroConfig', 'codeLanguage', 'submittedCodeLanguage', 'state'] if @headless
@@ -97,6 +106,8 @@ module.exports = class LevelLoader extends CocoClass
   loadDependenciesForSession: (session) ->
     if me.id isnt session.get 'creator'
       session.patch = session.save = -> console.error "Not saving session, since we didn't create it."
+    else if codeLanguage = utils.getQueryVariable 'codeLanguage'
+      session.set 'codeLanguage', codeLanguage
     @loadCodeLanguagesForSession session
     if session is @session
       @addSessionBrowserInfo session
