@@ -343,7 +343,7 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
     tip_free_your_mind: "放下一切私心雜念，丟棄害怕、疑問和拒信，解放您的思維。 - 莫菲斯《駭客任務》"
     tip_strong_opponents: "即使是最强大的對手也有弱点的。 - 宇智波鼬《火影忍者》"
     tip_paper_and_pen: "在您開始編碼之前，您可以隨時用一張紙和一支筆作計劃。"
-#    solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
+#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
 
   game_menu:
     inventory_tab: "倉庫"
@@ -485,7 +485,7 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
     users_subscribed: "用戶訂閱："
     no_users_subscribed: "沒有用戶訂閱，請仔細檢查您的電子郵件地址。"
     current_recipients: "當前收件人"
-    unsubscribing: "取消訂閱中・・・"
+    unsubscribing: "取消訂閱中・・・" # {change}
     subscribe_prepaid: "點擊訂閱來使用預付代碼"
     using_prepaid: "使用預付費代碼進行每月訂閱"
 
@@ -603,7 +603,7 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
     retrostyle_blurb: "復古風格的遊戲"
 
   teachers:
-    title: "CodeCombat致教師的說明"
+    more_info: "致教師的說明"
     intro_1: "CodeCombat 是一個教編程的網上游戲。學生會用編程語言寫代碼。"
     intro_2: "無需經驗！"
     free_title: "要多少錢？"
@@ -839,6 +839,19 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
     playtime: "遊戲時間"
     last_played: "最後玩了"
     leagues_explanation: "在部落裡與其他成員組成聯盟一起參加下面的多人競技場。"
+#    track_concepts1: "Track concepts"
+#    track_concepts2a: "learned by each student"
+#    track_concepts2b: "learned by each member"
+#    track_concepts3a: "Track levels completed for each student"
+#    track_concepts3b: "Track levels completed for each member"
+#    track_concepts4a: "See your students'"
+#    track_concepts4b: "See your members'"
+#    track_concepts5: "solutions"
+#    track_concepts6a: "Sort students by name or progress"
+#    track_concepts6b: "Sort members by name or progress"
+#    track_concepts7: "Requires invitation"
+#    track_concepts8: "to join"
+#    private_require_sub: "Private clans require a subscription to create or join."
 
   courses:
     course: "課程"
@@ -1214,7 +1227,6 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
     recently_played: "最近玩過"
     no_recent_games: "在過去兩個星期沒有玩過遊戲。"
     payments: "付款"
-    prepaid: "充值"
     prepaid_codes: "充值碼"
     purchased: "已購買"
     sale: "促銷"
@@ -1248,11 +1260,22 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
 
   account_prepaid:
     purchase_code: "購買訂閱碼"
-    purchase_amount: "數量"
+#    purchase_code1: "Subscription Codes can be redeemed to add premium subscription time to one or more CodeCombat accounts."
+#    purchase_code2: "Each CodeCombat account can only redeem a particular Subscription Code once."
+#    purchase_code3: "Subscription Code months will be added to the end of any existing subscription on the account."
+#    users: "Users"
+#    months: "Months"
     purchase_total: "總共"
     purchase_button: "提交購買"
-    your_codes: "你的訂閱碼："
+    your_codes: "你的訂閱碼：" # {change}
     redeem_codes: "兌換訂閱碼"
+#    prepaid_code: "Prepaid Code"
+#    lookup_code: "Lookup prepaid code"
+#    apply_account: "Apply to your account"
+#    copy_link: "You can copy the code's link and send it to someone."
+#    quantity: "Quantity"
+#    redeemed: "Redeemed"
+#    no_codes: "No codes yet!"
 
   loading_error:
     could_not_load: "從伺服器載入失敗"
@@ -1353,9 +1376,6 @@ module.exports = nativeDescription: "繁體中文", englishDescription: "Chinese
     text_diff: "文本變化"
     merge_conflict_with: "合併衝突出現在"
     no_changes: "沒有改變"
-
-#  temp:
-#    ace_of_coders_tournament: "New: play in the Ace of Coders tournament now!"
 
   multiplayer:
     multiplayer_title: "多人遊戲設定" # We'll be changing this around significantly soon. Until then, it's not important to translate.

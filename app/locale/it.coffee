@@ -343,7 +343,7 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
     tip_free_your_mind: "Devi liberarti di tutto questo, Neo. Paura, dubbio, sfiducia. Libera la tua mente. - Morpheus"
     tip_strong_opponents: "Anche il più tenace degli avversari ha sempre una debolezza. - Itachi Uchiha"
 #    tip_paper_and_pen: "Before you start coding, you can always plan with a sheet of paper and a pen."
-#    solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
+#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
 
   game_menu:
     inventory_tab: "Inventario"
@@ -485,7 +485,7 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
     users_subscribed: "Utenti sottoscritti:"
 #    no_users_subscribed: "No users subscribed, please double check your email addresses."
 #    current_recipients: "Current Recipients"
-#    unsubscribing: "Unsubscribing..."
+#    unsubscribing: "Unsubscribing"
 #    subscribe_prepaid: "Click Subscribe to use prepaid code"
 #    using_prepaid: "Using prepaid code for monthly subscription"
 
@@ -603,7 +603,7 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
     retrostyle_blurb: "Giochi retrò"
 
   teachers:
-    title: "CodeCombat: Informazzione per Professori"
+    more_info: "Informazzione per Professori"
 #    intro_1: "CodeCombat is an online game that teaches programming. Students write code in real programming languages."
 #    intro_2: "No experience required!"
 #    free_title: "How much does it cost?"
@@ -839,6 +839,19 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
 #    playtime: "Playtime"
 #    last_played: "Last played"
 #    leagues_explanation: "Play in a league against other clan members in these multiplayer arena instances."
+#    track_concepts1: "Track concepts"
+#    track_concepts2a: "learned by each student"
+#    track_concepts2b: "learned by each member"
+#    track_concepts3a: "Track levels completed for each student"
+#    track_concepts3b: "Track levels completed for each member"
+#    track_concepts4a: "See your students'"
+#    track_concepts4b: "See your members'"
+#    track_concepts5: "solutions"
+#    track_concepts6a: "Sort students by name or progress"
+#    track_concepts6b: "Sort members by name or progress"
+#    track_concepts7: "Requires invitation"
+#    track_concepts8: "to join"
+#    private_require_sub: "Private clans require a subscription to create or join."
 
   courses:
 #    course: "Course"
@@ -1214,7 +1227,6 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
     recently_played: "Giocati di recente"
     no_recent_games: "Nessuna partita nelle ultime due settimane."
     payments: "Pagamenti"
-#    prepaid: "Prepaid"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Acquistato"
 #    sale: "Sale"
@@ -1248,11 +1260,22 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
 
 #  account_prepaid:
 #    purchase_code: "Purchase a Subscription Code"
-#    purchase_amount: "Amount"
+#    purchase_code1: "Subscription Codes can be redeemed to add premium subscription time to one or more CodeCombat accounts."
+#    purchase_code2: "Each CodeCombat account can only redeem a particular Subscription Code once."
+#    purchase_code3: "Subscription Code months will be added to the end of any existing subscription on the account."
+#    users: "Users"
+#    months: "Months"
 #    purchase_total: "Total"
 #    purchase_button: "Submit Purchase"
-#    your_codes: "Your Codes:"
+#    your_codes: "Your Codes"
 #    redeem_codes: "Redeem a Subscription Code"
+#    prepaid_code: "Prepaid Code"
+#    lookup_code: "Lookup prepaid code"
+#    apply_account: "Apply to your account"
+#    copy_link: "You can copy the code's link and send it to someone."
+#    quantity: "Quantity"
+#    redeemed: "Redeemed"
+#    no_codes: "No codes yet!"
 
   loading_error:
     could_not_load: "Errore nel caricamento dal server"
@@ -1353,9 +1376,6 @@ module.exports = nativeDescription: "Italiano", englishDescription: "Italian", t
 #    text_diff: "Text Diff"
 #    merge_conflict_with: "MERGE CONFLICT WITH"
 #    no_changes: "No Changes"
-
-#  temp:
-#    ace_of_coders_tournament: "New: play in the Ace of Coders tournament now!"
 
   multiplayer:
     multiplayer_title: "Impostazioni multigiocatore" # We'll be changing this around significantly soon. Until then, it's not important to translate.

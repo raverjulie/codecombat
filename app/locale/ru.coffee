@@ -343,7 +343,7 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     tip_free_your_mind: "Отвлекись от всего, Нео. Страх, неверие, сомнения отбрось — очисти свой разум. - Morpheus"
     tip_strong_opponents: "Даже сильнейший противник имеет слабость. - Itachi Uchiha"
     tip_paper_and_pen: "Прежде чем начать программировать, вы всегда можете попробовать с листом бумаги и ручкой."
-    solve_then_write: "Сначала найдите решение, а потом пишите код. - Джон Джонсон"
+#    tip_solve_then_write: "First, solve the problem. Then, write the code. - John Johnson"
 
   game_menu:
     inventory_tab: "Инвентарь"
@@ -485,7 +485,7 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     users_subscribed: "Подписанные пользователи:"
     no_users_subscribed: "Нет подписанных пользователей. Пожалуйста, проверьте список email-адресов еще раз."
     current_recipients: "Текущие получатели"
-    unsubscribing: "Отписываемся..."
+    unsubscribing: "Отписываемся..." # {change}
     subscribe_prepaid: "Нажмите 'Подпишись', чтобы использовать предоплаченный код"
     using_prepaid: "Использовать предоплаченный код для месячной подписки"
 
@@ -603,7 +603,7 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     retrostyle_blurb: "Игры в стиле ретро"
 
   teachers:
-    title: "CodeCombat: Информация для учителей"
+    more_info: "Информация для учителей"
     intro_1: "CodeCombat - это онлайн игра, которая обучает программированию. Ученики пишут код на реальных языках программирования."
     intro_2: "Опыт не обязателен!"
     free_title: "Сколько это стоит?"
@@ -839,6 +839,19 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     playtime: "Время игры"
     last_played: "Последняя игра"
     leagues_explanation: "Играйте в лиге против других членов клана на мультиплеерной арене."
+#    track_concepts1: "Track concepts"
+#    track_concepts2a: "learned by each student"
+#    track_concepts2b: "learned by each member"
+#    track_concepts3a: "Track levels completed for each student"
+#    track_concepts3b: "Track levels completed for each member"
+#    track_concepts4a: "See your students'"
+#    track_concepts4b: "See your members'"
+#    track_concepts5: "solutions"
+#    track_concepts6a: "Sort students by name or progress"
+#    track_concepts6b: "Sort members by name or progress"
+#    track_concepts7: "Requires invitation"
+#    track_concepts8: "to join"
+#    private_require_sub: "Private clans require a subscription to create or join."
 
   courses:
     course: "Курс"
@@ -918,7 +931,7 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     see_the: "Смотрите"
     more_info: "для дополнительной информации."
     choose_course: "Выберите ваш курс:"
-    enter_code: "Введите код разблокировки, чтобы присоединиться к существующему классу" 
+    enter_code: "Введите код разблокировки, чтобы присоединиться к существующему классу"
     enter_code1: "Введите код разблокировки"
     enroll: "Записаться"
     pick_from_classes: "Выбрать из вашего класса"
@@ -1214,7 +1227,6 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     recently_played: "Недавно сыграно"
     no_recent_games: "Нет сыгранных игр за последние две недели."
     payments: "Платежи"
-    prepaid: "Предоплата"
 #    prepaid_codes: "Prepaid Codes"
     purchased: "Куплено"
     sale: "Распродажа"
@@ -1248,11 +1260,22 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
 
 #  account_prepaid:
 #    purchase_code: "Purchase a Subscription Code"
-#    purchase_amount: "Amount"
+#    purchase_code1: "Subscription Codes can be redeemed to add premium subscription time to one or more CodeCombat accounts."
+#    purchase_code2: "Each CodeCombat account can only redeem a particular Subscription Code once."
+#    purchase_code3: "Subscription Code months will be added to the end of any existing subscription on the account."
+#    users: "Users"
+#    months: "Months"
 #    purchase_total: "Total"
 #    purchase_button: "Submit Purchase"
-#    your_codes: "Your Codes:"
+#    your_codes: "Your Codes"
 #    redeem_codes: "Redeem a Subscription Code"
+#    prepaid_code: "Prepaid Code"
+#    lookup_code: "Lookup prepaid code"
+#    apply_account: "Apply to your account"
+#    copy_link: "You can copy the code's link and send it to someone."
+#    quantity: "Quantity"
+#    redeemed: "Redeemed"
+#    no_codes: "No codes yet!"
 
   loading_error:
     could_not_load: "Ошибка загрузки с сервера"
@@ -1353,9 +1376,6 @@ module.exports = nativeDescription: "русский", englishDescription: "Russi
     text_diff: "Разница"
     merge_conflict_with: "КОНФЛИКТ СЛИЯНИЯ С"
     no_changes: "Нет изменений"
-
-#  temp:
-#    ace_of_coders_tournament: "New: play in the Ace of Coders tournament now!"
 
   multiplayer:
     multiplayer_title: "Настройки мультиплеера" # We'll be changing this around significantly soon. Until then, it's not important to translate.
