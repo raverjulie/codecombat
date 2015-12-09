@@ -5,9 +5,9 @@
         "path": "/v1/tokens",
         "status": 200,
         "response": {
-            "id": "tok_17FvcEKaReE7xLUdVW4ooiNb",
+            "id": "tok_17GCVXKaReE7xLUdOVrQZisx",
             "card": {
-                "id": "card_17FvcEKaReE7xLUdJqow9wEc"
+                "id": "card_17GCVXKaReE7xLUdFEluXOeu"
             },
             "type": "card"
         }
@@ -18,37 +18,25 @@
         "path": "/v1/customers",
         "status": 200,
         "response": {
-            "id": "cus_7UvTOdV4sqI6uG",
+            "id": "cus_7VCvUi50nXhjWn",
+            "alipay_accounts": {
+                "has_more": false
+            },
+            "email": "user89@me.com",
             "metadata": {
                 "id": "000000000000000000000081"
             },
             "sources": {
                 "data": [
                     {
-                        "id": "card_17FvcEKaReE7xLUdJqow9wEc",
-                        "customer": "cus_7UvTOdV4sqI6uG"
+                        "id": "card_17GCVXKaReE7xLUdFEluXOeu",
+                        "customer": "cus_7VCvUi50nXhjWn"
                     }
-                ]
-            }
-        }
-    },
-    {
-        "scope": "https://api.stripe.com:443",
-        "method": "POST",
-        "path": "/v1/customers/cus_7UvTOdV4sqI6uG",
-        "status": 200,
-        "response": {
-            "id": "cus_7UvTOdV4sqI6uG",
-            "metadata": {
-                "id": "000000000000000000000081"
+                ],
+                "has_more": false
             },
-            "sources": {
-                "data": [
-                    {
-                        "id": "card_17FvcEKaReE7xLUdJqow9wEc",
-                        "customer": "cus_7UvTOdV4sqI6uG"
-                    }
-                ]
+            "subscriptions": {
+                "has_more": false
             }
         }
     },
@@ -58,17 +46,21 @@
         "path": "/v1/charges",
         "status": 200,
         "response": {
-            "id": "ch_17FvcFKaReE7xLUdmyRPMYrZ",
+            "id": "ch_17GCVYKaReE7xLUdstf63Kol",
             "amount": 1200,
-            "customer": "cus_7UvTOdV4sqI6uG",
+            "customer": "cus_7VCvUi50nXhjWn",
             "metadata": {
                 "type": "course",
-                "timestamp": "1449620130471"
+                "timestamp": "1449685063457",
+                "productID": "prepaid course"
             },
             "paid": true,
+            "refunds": {
+                "has_more": false
+            },
             "source": {
-                "id": "card_17FvcEKaReE7xLUdJqow9wEc",
-                "customer": "cus_7UvTOdV4sqI6uG"
+                "id": "card_17GCVXKaReE7xLUdFEluXOeu",
+                "customer": "cus_7VCvUi50nXhjWn"
             }
         }
     }

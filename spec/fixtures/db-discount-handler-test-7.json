@@ -11,40 +11,49 @@
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7UwS0XcfYQqfeV",
+        "path": "/v1/customers/cus_7VCuNWxO5eWsQG",
         "status": 200,
         "response": {
-            "id": "cus_7UwS0XcfYQqfeV",
+            "id": "cus_7VCuNWxO5eWsQG",
+            "alipay_accounts": {
+                "has_more": false
+            },
             "discount": {
                 "coupon": {
                     "id": "20pct"
                 },
-                "customer": "cus_7UwS0XcfYQqfeV"
+                "customer": "cus_7VCuNWxO5eWsQG"
             },
+            "email": "normal@jo.com",
             "metadata": {
-                "id": "000000000000000000000000"
+                "id": "00000000000000000000005d"
             },
             "sources": {
                 "data": [
                     {
-                        "id": "card_17FwZTKaReE7xLUdWY0N67f0",
-                        "customer": "cus_7UwS0XcfYQqfeV"
+                        "id": "card_17GCUnKaReE7xLUdZ8FpRcR5",
+                        "customer": "cus_7VCuNWxO5eWsQG"
                     }
-                ]
+                ],
+                "has_more": false
             },
             "subscriptions": {
                 "data": [
                     {
-                        "id": "sub_7UwS39KGIPMdBL",
-                        "customer": "cus_7UwS0XcfYQqfeV",
+                        "id": "sub_7VCuZWrSt0bF8c",
+                        "cancel_at_period_end": false,
+                        "current_period_end": 1452363418,
+                        "current_period_start": 1449685018,
+                        "customer": "cus_7VCuNWxO5eWsQG",
                         "discount": {
                             "coupon": {
                                 "id": "500off"
                             },
-                            "customer": "cus_7UwS0XcfYQqfeV"
+                            "customer": "cus_7VCuNWxO5eWsQG",
+                            "subscription": "sub_7VCuZWrSt0bF8c"
                         },
                         "metadata": {
-                            "id": "000000000000000000000000"
+                            "id": "00000000000000000000005d"
                         },
                         "plan": {
                             "id": "basic",
@@ -52,47 +61,57 @@
                         },
                         "quantity": 1
                     }
-                ]
+                ],
+                "has_more": false
             }
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/customers/cus_7UwS0XcfYQqfeV",
+        "path": "/v1/customers/cus_7VCuNWxO5eWsQG",
         "status": 200,
         "response": {
-            "id": "cus_7UwS0XcfYQqfeV",
+            "id": "cus_7VCuNWxO5eWsQG",
+            "alipay_accounts": {
+                "has_more": false
+            },
             "discount": {
                 "coupon": {
                     "id": "20pct"
                 },
-                "customer": "cus_7UwS0XcfYQqfeV"
+                "customer": "cus_7VCuNWxO5eWsQG"
             },
+            "email": "normal@jo.com",
             "metadata": {
-                "id": "000000000000000000000000"
+                "id": "00000000000000000000005d"
             },
             "sources": {
                 "data": [
                     {
-                        "id": "card_17FwZTKaReE7xLUdWY0N67f0",
-                        "customer": "cus_7UwS0XcfYQqfeV"
+                        "id": "card_17GCUnKaReE7xLUdZ8FpRcR5",
+                        "customer": "cus_7VCuNWxO5eWsQG"
                     }
-                ]
+                ],
+                "has_more": false
             },
             "subscriptions": {
                 "data": [
                     {
-                        "id": "sub_7UwS39KGIPMdBL",
-                        "customer": "cus_7UwS0XcfYQqfeV",
+                        "id": "sub_7VCuZWrSt0bF8c",
+                        "cancel_at_period_end": false,
+                        "current_period_end": 1452363418,
+                        "current_period_start": 1449685018,
+                        "customer": "cus_7VCuNWxO5eWsQG",
                         "discount": {
                             "coupon": {
                                 "id": "500off"
                             },
-                            "customer": "cus_7UwS0XcfYQqfeV"
+                            "customer": "cus_7VCuNWxO5eWsQG",
+                            "subscription": "sub_7VCuZWrSt0bF8c"
                         },
                         "metadata": {
-                            "id": "000000000000000000000000"
+                            "id": "00000000000000000000005d"
                         },
                         "plan": {
                             "id": "basic",
@@ -100,7 +119,8 @@
                         },
                         "quantity": 1
                     }
-                ]
+                ],
+                "has_more": false
             }
         }
     }

@@ -3,85 +3,24 @@
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/tokens",
-        "body": "card%5Bnumber%5D=4000000000000002&card%5Bexp_month%5D=12&card%5Bexp_year%5D=2020&card%5Bcvc%5D=123",
         "status": 200,
         "response": {
-            "id": "tok_177ukMKaReE7xLUdttdnoXJz",
-            "object": "token",
+            "id": "tok_17GCVmKaReE7xLUd3TTueitH",
             "card": {
-                "id": "card_177ukMKaReE7xLUd9bjp0Vrw",
-                "object": "card",
-                "address_city": null,
-                "address_country": null,
-                "address_line1": null,
-                "address_line1_check": null,
-                "address_line2": null,
-                "address_state": null,
-                "address_zip": null,
-                "address_zip_check": null,
-                "brand": "Visa",
-                "country": "US",
-                "cvc_check": "unchecked",
-                "dynamic_last4": null,
-                "exp_month": 12,
-                "exp_year": 2020,
-                "fingerprint": "RtqnjGk4fjcJtdeu",
-                "funding": "credit",
-                "last4": "0002",
-                "metadata": {},
-                "name": null,
-                "tokenization_method": null
+                "id": "card_17GCVmKaReE7xLUdErwdQ45K"
             },
-            "client_ip": "184.23.19.118",
-            "created": 1447710166,
-            "livemode": false,
-            "type": "card",
-            "used": false
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 21:42:46 GMT",
-            "content-type": "application/json",
-            "content-length": "781",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7Me2fKFgQvHTEm",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "type": "card"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/customers",
-        "body": "email=normal%40jo.com&metadata%5Bid%5D=0000000000000000000186a1&metadata%5Bslug%5D=joe&card=tok_177ukMKaReE7xLUdttdnoXJz",
         "status": 402,
         "response": {
             "error": {
-                "message": "Your card was declined.",
-                "type": "card_error",
-                "param": "",
-                "code": "card_declined",
-                "decline_code": "generic_decline"
+                "type": "card_error"
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 21:42:48 GMT",
-            "content-type": "application/json",
-            "content-length": "173",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7Me2ixV6iN1ftP",
-            "stripe-version": "2015-02-18"
         }
     }
 ]

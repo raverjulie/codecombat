@@ -85,7 +85,7 @@ customerSubscriptionDeletedSampleEvent = {
 }
 
 
-xdescribe '/db/user, editing stripe property', ->
+describe '/db/user, editing stripe property', ->
   afterEach nockUtils.teardownNock
 
   stripe = require('stripe')(config.stripe.secretKey)
@@ -169,7 +169,7 @@ xdescribe '/db/user, editing stripe property', ->
               done()
 
   it 'schedules the stripe subscription to be cancelled when stripe.planID is removed from the user', (done) ->
-    nockUtils.setupNock 'db-user-sub-test-4.json', (err, nockDone) ->
+    nockUtils.setupNock 'db-user-sub-test-4.json', {keep: {cancel_at_period_end: true}}, (err, nockDone) ->
       delete joeData.stripe.planID
       request.put {uri: userURL, json: joeData, headers: headers }, (err, res, body) ->
         joeData = body
@@ -228,7 +228,7 @@ xdescribe '/db/user, editing stripe property', ->
             done()
 
   it "updates the customer's email when you change the user's email", (done) ->
-    nockUtils.setupNock 'db-user-sub-test-8.json', (err, nockDone) ->
+    nockUtils.setupNock 'db-user-sub-test-8.json', {keep: {email: true}}, (err, nockDone) ->
       joeData.email = 'newEmail@gmail.com'
       request.put {uri: userURL, json: joeData, headers: headers }, (err, res, body) ->
         f = -> stripe.customers.retrieve joeData.stripe.customerID, (err, customer) ->
@@ -238,7 +238,7 @@ xdescribe '/db/user, editing stripe property', ->
         setTimeout(f, 500) # bit of a race condition here, response returns before stripe has been updated
 
 
-xdescribe 'Subscriptions', ->
+describe 'Subscriptions', ->
   # TODO: Test recurring billing via webhooks
   # TODO: Test error rollbacks, Stripe is authority
 

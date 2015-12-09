@@ -8,16 +8,14 @@ module.exports.setupNock = (fixtureFilename, options, done) ->
     options = {}
     
   keep = {
-    # properties used in specific tests
-#    has_more: true
-#    email: true
-#    subscription: true
-#    description: true
-#    current_period_end: true
-#    current_period_start: true
-#    cancel_at_period_end: true
-#    productID: true
-    
+    has_more: true
+    email: true
+    subscription: true
+    description: true
+    current_period_end: true
+    current_period_start: true
+    cancel_at_period_end: true
+    productID: true
     amount: true
     customer: true
     gems: true
@@ -30,6 +28,7 @@ module.exports.setupNock = (fixtureFilename, options, done) ->
     total: true
     transaction_id: true
     type: true
+    months: true
   }
     
   if options.keep

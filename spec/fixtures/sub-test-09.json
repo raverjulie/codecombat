@@ -3,646 +3,238 @@
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/customers",
-        "body": "email=user9%40me.com&metadata%5Bid%5D=0000000000000000000186ab&metadata%5Bslug%5D=user9",
         "status": 200,
         "response": {
-            "id": "cus_7Mevbm60jLtqsO",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDMFarU7W8Gmy",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447713499,
-            "currency": null,
-            "default_source": null,
-            "default_source_type": null,
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user9@me.com",
-            "livemode": false,
+            "email": "user109@me.com",
             "metadata": {
-                "id": "0000000000000000000186ab",
-                "slug": "user9"
+                "id": "0000000000000000000186ab"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:19 GMT",
-            "content-type": "application/json",
-            "content-length": "895",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MevYEGLnKH8dm",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7Mevbm60jLtqsO",
-        "body": "email=user9%40me.com",
+        "path": "/v1/customers/cus_7VDMFarU7W8Gmy/subscriptions",
         "status": 200,
         "response": {
-            "id": "cus_7Mevbm60jLtqsO",
-            "object": "customer",
-            "account_balance": 0,
-            "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/alipay_accounts"
-            },
-            "created": 1447713499,
-            "currency": null,
-            "default_source": null,
-            "default_source_type": null,
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user9@me.com",
-            "livemode": false,
-            "metadata": {
-                "id": "0000000000000000000186ab",
-                "slug": "user9"
-            },
-            "shipping": null,
-            "sources": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/sources"
-            },
-            "subscriptions": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/subscriptions"
-            }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:20 GMT",
-            "content-type": "application/json",
-            "content-length": "895",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MevakMeoB32mI",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
-        }
-    },
-    {
-        "scope": "https://api.stripe.com:443",
-        "method": "POST",
-        "path": "/v1/customers/cus_7Mevbm60jLtqsO/subscriptions",
-        "body": "plan=basic&metadata%5Bid%5D=0000000000000000000186ab&coupon=free",
-        "status": 200,
-        "response": {
-            "id": "sub_7MewLRzrxaokXv",
-            "object": "subscription",
-            "application_fee_percent": null,
+            "id": "sub_7VDMw3MAJ41tta",
             "cancel_at_period_end": false,
-            "canceled_at": null,
-            "current_period_end": 1450305500,
-            "current_period_start": 1447713500,
-            "customer": "cus_7Mevbm60jLtqsO",
+            "current_period_end": 1452365105,
+            "current_period_start": 1449686705,
+            "customer": "cus_7VDMFarU7W8Gmy",
             "discount": {
-                "object": "discount",
                 "coupon": {
-                    "id": "free",
-                    "object": "coupon",
-                    "amount_off": null,
-                    "created": 1424120193,
-                    "currency": null,
-                    "duration": "forever",
-                    "duration_in_months": null,
-                    "livemode": false,
-                    "max_redemptions": null,
-                    "metadata": {},
-                    "percent_off": 100,
-                    "redeem_by": null,
-                    "times_redeemed": 47238,
-                    "valid": true
+                    "id": "free"
                 },
-                "customer": "cus_7Mevbm60jLtqsO",
-                "end": null,
-                "start": 1447713500,
-                "subscription": "sub_7MewLRzrxaokXv"
+                "customer": "cus_7VDMFarU7W8Gmy",
+                "subscription": "sub_7VDMw3MAJ41tta"
             },
-            "ended_at": null,
             "metadata": {
                 "id": "0000000000000000000186ab"
             },
             "plan": {
                 "id": "basic",
-                "object": "plan",
-                "amount": 999,
-                "created": 1417561271,
-                "currency": "usd",
-                "interval": "month",
-                "interval_count": 1,
-                "livemode": false,
-                "metadata": {},
-                "name": "Basic",
-                "statement_descriptor": "CODECOMBAT.COM",
-                "trial_period_days": null
+                "amount": 999
             },
-            "quantity": 1,
-            "start": 1447713500,
-            "status": "active",
-            "tax_percent": null,
-            "trial_end": null,
-            "trial_start": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:20 GMT",
-            "content-type": "application/json",
-            "content-length": "1345",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MevQfYS8wxgeg",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "quantity": 1
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/customers",
-        "body": "email=user10%40me.com&metadata%5Bid%5D=0000000000000000000186ac&metadata%5Bslug%5D=user10",
         "status": 200,
         "response": {
-            "id": "cus_7MewyRwEuTDHrN",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDMJCH5sXus78",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MewyRwEuTDHrN/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447713501,
-            "currency": null,
-            "default_source": null,
-            "default_source_type": null,
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user10@me.com",
-            "livemode": false,
+            "email": "user110@me.com",
             "metadata": {
-                "id": "0000000000000000000186ac",
-                "slug": "user10"
+                "id": "0000000000000000000186ac"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MewyRwEuTDHrN/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MewyRwEuTDHrN/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:22 GMT",
-            "content-type": "application/json",
-            "content-length": "897",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7Mew5I32IzxxHt",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7Mevbm60jLtqsO",
-        "body": "email=user9%40me.com",
+        "path": "/v1/customers/cus_7VDMFarU7W8Gmy",
         "status": 200,
         "response": {
-            "id": "cus_7Mevbm60jLtqsO",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDMFarU7W8Gmy",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447713499,
-            "currency": "usd",
-            "default_source": null,
-            "default_source_type": null,
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user9@me.com",
-            "livemode": false,
+            "email": "user109@me.com",
             "metadata": {
-                "id": "0000000000000000000186ab",
-                "slug": "user9"
+                "id": "0000000000000000000186ab"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MewLRzrxaokXv",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDMw3MAJ41tta",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450305500,
-                        "current_period_start": 1447713500,
-                        "customer": "cus_7Mevbm60jLtqsO",
+                        "current_period_end": 1452365105,
+                        "current_period_start": 1449686705,
+                        "customer": "cus_7VDMFarU7W8Gmy",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47238,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7Mevbm60jLtqsO",
-                            "end": null,
-                            "start": 1447713500,
-                            "subscription": "sub_7MewLRzrxaokXv"
+                            "customer": "cus_7VDMFarU7W8Gmy",
+                            "subscription": "sub_7VDMw3MAJ41tta"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ab"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447713500,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:22 GMT",
-            "content-type": "application/json",
-            "content-length": "2588",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MewZAtcpnjrSQ",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7Mevbm60jLtqsO",
-        "body": "email=user9%40me.com",
+        "path": "/v1/customers/cus_7VDMFarU7W8Gmy",
         "status": 200,
         "response": {
-            "id": "cus_7Mevbm60jLtqsO",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDMFarU7W8Gmy",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447713499,
-            "currency": "usd",
-            "default_source": null,
-            "default_source_type": null,
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user9@me.com",
-            "livemode": false,
+            "email": "user109@me.com",
             "metadata": {
-                "id": "0000000000000000000186ab",
-                "slug": "user9"
+                "id": "0000000000000000000186ab"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MewLRzrxaokXv",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDMw3MAJ41tta",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450305500,
-                        "current_period_start": 1447713500,
-                        "customer": "cus_7Mevbm60jLtqsO",
+                        "current_period_end": 1452365105,
+                        "current_period_start": 1449686705,
+                        "customer": "cus_7VDMFarU7W8Gmy",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47238,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7Mevbm60jLtqsO",
-                            "end": null,
-                            "start": 1447713500,
-                            "subscription": "sub_7MewLRzrxaokXv"
+                            "customer": "cus_7VDMFarU7W8Gmy",
+                            "subscription": "sub_7VDMw3MAJ41tta"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ab"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447713500,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7Mevbm60jLtqsO/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:22 GMT",
-            "content-type": "application/json",
-            "content-length": "2588",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7Mew6CAO7erN8A",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MewyRwEuTDHrN",
-        "body": "email=user10%40me.com",
+        "path": "/v1/customers/cus_7VDMFarU7W8Gmy",
         "status": 200,
         "response": {
-            "id": "cus_7MewyRwEuTDHrN",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDMFarU7W8Gmy",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MewyRwEuTDHrN/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447713501,
-            "currency": null,
-            "default_source": null,
-            "default_source_type": null,
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user10@me.com",
-            "livemode": false,
+            "email": "user109@me.com",
             "metadata": {
-                "id": "0000000000000000000186ac",
-                "slug": "user10"
+                "id": "0000000000000000000186ab"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MewyRwEuTDHrN/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MewyRwEuTDHrN/subscriptions"
+                "data": [
+                    {
+                        "id": "sub_7VDMw3MAJ41tta",
+                        "cancel_at_period_end": false,
+                        "current_period_end": 1452365105,
+                        "current_period_start": 1449686705,
+                        "customer": "cus_7VDMFarU7W8Gmy",
+                        "discount": {
+                            "coupon": {
+                                "id": "free"
+                            },
+                            "customer": "cus_7VDMFarU7W8Gmy",
+                            "subscription": "sub_7VDMw3MAJ41tta"
+                        },
+                        "metadata": {
+                            "id": "0000000000000000000186ab"
+                        },
+                        "plan": {
+                            "id": "basic",
+                            "amount": 999
+                        },
+                        "quantity": 1
+                    }
+                ],
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:23 GMT",
-            "content-type": "application/json",
-            "content-length": "897",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7Mewzguxqhm9Fl",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MewyRwEuTDHrN/subscriptions",
-        "body": "plan=basic&metadata%5Bid%5D=0000000000000000000186ac&coupon=free",
+        "path": "/v1/customers/cus_7VDMJCH5sXus78/subscriptions",
         "status": 200,
         "response": {
-            "id": "sub_7MewO2DmZ703AX",
-            "object": "subscription",
-            "application_fee_percent": null,
+            "id": "sub_7VDMnCRwJSWFrg",
             "cancel_at_period_end": false,
-            "canceled_at": null,
-            "current_period_end": 1450305503,
-            "current_period_start": 1447713503,
-            "customer": "cus_7MewyRwEuTDHrN",
+            "current_period_end": 1452365106,
+            "current_period_start": 1449686706,
+            "customer": "cus_7VDMJCH5sXus78",
             "discount": {
-                "object": "discount",
                 "coupon": {
-                    "id": "free",
-                    "object": "coupon",
-                    "amount_off": null,
-                    "created": 1424120193,
-                    "currency": null,
-                    "duration": "forever",
-                    "duration_in_months": null,
-                    "livemode": false,
-                    "max_redemptions": null,
-                    "metadata": {},
-                    "percent_off": 100,
-                    "redeem_by": null,
-                    "times_redeemed": 47239,
-                    "valid": true
+                    "id": "free"
                 },
-                "customer": "cus_7MewyRwEuTDHrN",
-                "end": null,
-                "start": 1447713503,
-                "subscription": "sub_7MewO2DmZ703AX"
+                "customer": "cus_7VDMJCH5sXus78",
+                "subscription": "sub_7VDMnCRwJSWFrg"
             },
-            "ended_at": null,
             "metadata": {
                 "id": "0000000000000000000186ac"
             },
             "plan": {
                 "id": "basic",
-                "object": "plan",
-                "amount": 999,
-                "created": 1417561271,
-                "currency": "usd",
-                "interval": "month",
-                "interval_count": 1,
-                "livemode": false,
-                "metadata": {},
-                "name": "Basic",
-                "statement_descriptor": "CODECOMBAT.COM",
-                "trial_period_days": null
+                "amount": 999
             },
-            "quantity": 1,
-            "start": 1447713503,
-            "status": "active",
-            "tax_percent": null,
-            "trial_end": null,
-            "trial_start": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Mon, 16 Nov 2015 22:38:24 GMT",
-            "content-type": "application/json",
-            "content-length": "1345",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MewVYOz6q88K4",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "quantity": 1
         }
     }
 ]

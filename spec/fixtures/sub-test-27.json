@@ -3,3772 +3,1338 @@
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/tokens",
-        "body": "card%5Bnumber%5D=4242424242424242&card%5Bexp_month%5D=12&card%5Bexp_year%5D=2020&card%5Bcvc%5D=123",
         "status": 200,
         "response": {
-            "id": "tok_177xA2KaReE7xLUdrsrMuPu7",
-            "object": "token",
+            "id": "tok_17GCylKaReE7xLUdQxifWaYp",
             "card": {
-                "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                "object": "card",
-                "address_city": null,
-                "address_country": null,
-                "address_line1": null,
-                "address_line1_check": null,
-                "address_line2": null,
-                "address_state": null,
-                "address_zip": null,
-                "address_zip_check": null,
-                "brand": "Visa",
-                "country": "US",
-                "cvc_check": "unchecked",
-                "dynamic_last4": null,
-                "exp_month": 12,
-                "exp_year": 2020,
-                "fingerprint": "lURQLEXF5AOMW942",
-                "funding": "credit",
-                "last4": "4242",
-                "metadata": {},
-                "name": null,
-                "tokenization_method": null
+                "id": "card_17GCylKaReE7xLUd4WnpSJTw"
             },
-            "client_ip": "184.23.19.118",
-            "created": 1447719446,
-            "livemode": false,
-            "type": "card",
-            "used": false
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:26 GMT",
-            "content-type": "application/json",
-            "content-length": "781",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgX7xK6jEeaRB",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "type": "card"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/customers",
-        "body": "email=user45%40me.com&metadata%5Bid%5D=0000000000000000000186cf&metadata%5Bslug%5D=user45&card=tok_177xA2KaReE7xLUdrsrMuPu7",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": null,
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:27 GMT",
-            "content-type": "application/json",
-            "content-length": "1659",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXNbkD8taiUH",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+        }
+    },
+    {
+        "scope": "https://api.stripe.com:443",
+        "method": "POST",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
+        "status": 200,
+        "response": {
+            "id": "cus_7VDPUDYQvLGYc6",
+            "alipay_accounts": {
+                "has_more": false
+            },
+            "email": "user145@me.com",
+            "metadata": {
+                "id": "0000000000000000000186cf"
+            },
+            "sources": {
+                "data": [
+                    {
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
+                    }
+                ],
+                "has_more": false
+            },
+            "subscriptions": {
+                "has_more": false
+            }
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions",
-        "body": "limit=100",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions",
         "status": 200,
         "response": {
-            "object": "list",
-            "data": [],
-            "has_more": false,
-            "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:28 GMT",
-            "content-type": "application/json",
-            "content-length": "117",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXhirKmekn9U",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "has_more": false
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "email=user45%40me.com",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
-            "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
-            },
-            "created": 1447719446,
-            "currency": null,
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
-            "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
-            },
-            "shipping": null,
-            "sources": {
-                "object": "list",
-                "data": [
-                    {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
-                    }
-                ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
-            },
-            "subscriptions": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
-            }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:28 GMT",
-            "content-type": "application/json",
-            "content-length": "1659",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXtDahTDolcX",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
-        }
-    },
-    {
-        "scope": "https://api.stripe.com:443",
-        "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions",
-        "body": "plan=basic&coupon=free&metadata%5Bid%5D=0000000000000000000186ce",
-        "status": 200,
-        "response": {
-            "id": "sub_7MgXIHuxxXtOID",
-            "object": "subscription",
-            "application_fee_percent": null,
+            "id": "sub_7VDP47YSQKI8ud",
             "cancel_at_period_end": false,
-            "canceled_at": null,
-            "current_period_end": 1450311448,
-            "current_period_start": 1447719448,
-            "customer": "cus_7MgXejcIJysKv4",
+            "current_period_end": 1452365277,
+            "current_period_start": 1449686877,
+            "customer": "cus_7VDPUDYQvLGYc6",
             "discount": {
-                "object": "discount",
                 "coupon": {
-                    "id": "free",
-                    "object": "coupon",
-                    "amount_off": null,
-                    "created": 1424120193,
-                    "currency": null,
-                    "duration": "forever",
-                    "duration_in_months": null,
-                    "livemode": false,
-                    "max_redemptions": null,
-                    "metadata": {},
-                    "percent_off": 100,
-                    "redeem_by": null,
-                    "times_redeemed": 47290,
-                    "valid": true
+                    "id": "free"
                 },
-                "customer": "cus_7MgXejcIJysKv4",
-                "end": null,
-                "start": 1447719448,
-                "subscription": "sub_7MgXIHuxxXtOID"
+                "customer": "cus_7VDPUDYQvLGYc6",
+                "subscription": "sub_7VDP47YSQKI8ud"
             },
-            "ended_at": null,
             "metadata": {
                 "id": "0000000000000000000186ce"
             },
             "plan": {
                 "id": "basic",
-                "object": "plan",
-                "amount": 999,
-                "created": 1417561271,
-                "currency": "usd",
-                "interval": "month",
-                "interval_count": 1,
-                "livemode": false,
-                "metadata": {},
-                "name": "Basic",
-                "statement_descriptor": "CODECOMBAT.COM",
-                "trial_period_days": null
+                "amount": 999
             },
-            "quantity": 1,
-            "start": 1447719448,
-            "status": "active",
-            "tax_percent": null,
-            "trial_end": null,
-            "trial_start": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:29 GMT",
-            "content-type": "application/json",
-            "content-length": "1345",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXkNtJuwlv1y",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "quantity": 1
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "email=user45%40me.com",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDP47YSQKI8ud",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47290,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:30 GMT",
-            "content-type": "application/json",
-            "content-length": "3352",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXHBv7THZJBy",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions",
-        "body": "plan=incremental&metadata%5Bid%5D=0000000000000000000186cf&quantity=999",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions",
         "status": 200,
         "response": {
-            "id": "sub_7MgXVobQ6OnkeU",
-            "object": "subscription",
-            "application_fee_percent": null,
+            "id": "sub_7VDPabDqWaXXl4",
             "cancel_at_period_end": false,
-            "canceled_at": null,
-            "current_period_end": 1450311451,
-            "current_period_start": 1447719451,
-            "customer": "cus_7MgXejcIJysKv4",
-            "discount": null,
-            "ended_at": null,
+            "current_period_end": 1452365279,
+            "current_period_start": 1449686879,
+            "customer": "cus_7VDPUDYQvLGYc6",
             "metadata": {
                 "id": "0000000000000000000186cf"
             },
             "plan": {
                 "id": "incremental",
-                "object": "plan",
-                "amount": 1,
-                "created": 1424120484,
-                "currency": "usd",
-                "interval": "month",
-                "interval_count": 1,
-                "livemode": false,
-                "metadata": {},
-                "name": "Incremental",
-                "statement_descriptor": "CODECOMBAT.COM",
-                "trial_period_days": null
+                "amount": 1
             },
-            "quantity": 999,
-            "start": 1447719451,
-            "status": "active",
-            "tax_percent": null,
-            "trial_end": null,
-            "trial_start": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:32 GMT",
-            "content-type": "application/json",
-            "content-length": "818",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXmJMSPFM5Es",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "quantity": 999
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
         "path": "/v1/invoices",
-        "body": "customer=cus_7MgXejcIJysKv4&limit=100",
         "status": 200,
         "response": {
-            "object": "list",
             "data": [
                 {
-                    "id": "in_177xA7KaReE7xLUdT7oN0wcH",
-                    "object": "invoice",
-                    "amount_due": 999,
-                    "application_fee": null,
-                    "attempt_count": 1,
-                    "attempted": true,
-                    "charge": "ch_177xA7KaReE7xLUdqiYYPypZ",
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719451,
-                    "description": null,
-                    "discount": null,
-                    "ending_balance": 0,
-                    "forgiven": false,
+                    "id": "in_17GCypKaReE7xLUd2ptZ1BhX",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXVobQ6OnkeU",
-                                "object": "line_item",
+                                "id": "sub_7VDPabDqWaXXl4",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186cf"
                                 },
-                                "period": {
-                                    "start": 1447719451,
-                                    "end": 1450311451
-                                },
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": false,
                                 "quantity": 999,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xA7KaReE7xLUdT7oN0wcH/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719451,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXVobQ6OnkeU",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 999,
-                    "webhooks_delivered_at": 1447719452,
-                    "payment": "ch_177xA7KaReE7xLUdqiYYPypZ"
+                    "subscription": "sub_7VDPabDqWaXXl4",
+                    "total": 999
                 },
                 {
-                    "id": "in_177xA4KaReE7xLUdvAcrU2n3",
-                    "object": "invoice",
-                    "amount_due": 0,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": true,
-                    "charge": null,
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719448,
-                    "description": null,
+                    "id": "in_17GCynKaReE7xLUdhjiRodmo",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47290,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719448,
-                        "subscription": "sub_7MgXIHuxxXtOID"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDP47YSQKI8ud"
                     },
-                    "ending_balance": 0,
-                    "forgiven": false,
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXIHuxxXtOID",
-                                "object": "line_item",
+                                "id": "sub_7VDP47YSQKI8ud",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186ce"
                                 },
-                                "period": {
-                                    "start": 1447719448,
-                                    "end": 1450311448
-                                },
                                 "plan": {
                                     "id": "basic",
-                                    "object": "plan",
-                                    "amount": 999,
-                                    "created": 1417561271,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Basic",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 999
                                 },
                                 "proration": false,
                                 "quantity": 1,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xA4KaReE7xLUdvAcrU2n3/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719448,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXIHuxxXtOID",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 0,
-                    "webhooks_delivered_at": 1447719449,
-                    "payment": null
+                    "subscription": "sub_7VDP47YSQKI8ud",
+                    "total": 0
                 }
             ],
-            "has_more": false,
-            "url": "/v1/invoices"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:33 GMT",
-            "content-type": "application/json",
-            "content-length": "5014",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXKlGS0ApNfr",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "has_more": false
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "email=user45%40me.com",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPabDqWaXXl4",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311451,
-                        "current_period_start": 1447719451,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": null,
-                        "ended_at": null,
+                        "current_period_end": 1452365279,
+                        "current_period_start": 1449686879,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "metadata": {
                             "id": "0000000000000000000186cf"
                         },
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
-                        "quantity": 999,
-                        "start": 1447719451,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 999
                     },
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDP47YSQKI8ud",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47290,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 2,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:34 GMT",
-            "content-type": "application/json",
-            "content-length": "4381",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXAqkewzLLIE",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+        }
+    },
+    {
+        "scope": "https://api.stripe.com:443",
+        "method": "POST",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
+        "status": 200,
+        "response": {
+            "id": "cus_7VDPUDYQvLGYc6",
+            "alipay_accounts": {
+                "has_more": false
+            },
+            "email": "user145@me.com",
+            "metadata": {
+                "id": "0000000000000000000186cf"
+            },
+            "sources": {
+                "data": [
+                    {
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
+                    }
+                ],
+                "has_more": false
+            },
+            "subscriptions": {
+                "data": [
+                    {
+                        "id": "sub_7VDPabDqWaXXl4",
+                        "cancel_at_period_end": false,
+                        "current_period_end": 1452365279,
+                        "current_period_start": 1449686879,
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "metadata": {
+                            "id": "0000000000000000000186cf"
+                        },
+                        "plan": {
+                            "id": "incremental",
+                            "amount": 1
+                        },
+                        "quantity": 999
+                    },
+                    {
+                        "id": "sub_7VDP47YSQKI8ud",
+                        "cancel_at_period_end": false,
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "discount": {
+                            "coupon": {
+                                "id": "free"
+                            },
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
+                        },
+                        "metadata": {
+                            "id": "0000000000000000000186ce"
+                        },
+                        "plan": {
+                            "id": "basic",
+                            "amount": 999
+                        },
+                        "quantity": 1
+                    }
+                ],
+                "has_more": false
+            }
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/invoices/in_177xA7KaReE7xLUdT7oN0wcH",
-        "body": "",
+        "path": "/v1/invoices/in_17GCypKaReE7xLUd2ptZ1BhX",
         "status": 200,
         "response": {
-            "id": "in_177xA7KaReE7xLUdT7oN0wcH",
-            "object": "invoice",
-            "amount_due": 999,
-            "application_fee": null,
-            "attempt_count": 1,
-            "attempted": true,
-            "charge": "ch_177xA7KaReE7xLUdqiYYPypZ",
-            "closed": true,
-            "currency": "usd",
-            "customer": "cus_7MgXejcIJysKv4",
-            "date": 1447719451,
-            "description": null,
-            "discount": null,
-            "ending_balance": 0,
-            "forgiven": false,
+            "id": "in_17GCypKaReE7xLUd2ptZ1BhX",
+            "customer": "cus_7VDPUDYQvLGYc6",
             "lines": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "line_item",
+                        "id": "sub_7VDPabDqWaXXl4",
                         "amount": 999,
-                        "currency": "usd",
-                        "description": null,
-                        "discountable": true,
-                        "livemode": false,
                         "metadata": {
                             "id": "0000000000000000000186cf"
                         },
-                        "period": {
-                            "start": 1447719451,
-                            "end": 1450311451
-                        },
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
                         "proration": false,
                         "quantity": 999,
-                        "subscription": null,
                         "type": "subscription"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/invoices/in_177xA7KaReE7xLUdT7oN0wcH/lines"
+                "has_more": false
             },
-            "livemode": false,
-            "metadata": {},
-            "next_payment_attempt": null,
             "paid": true,
-            "period_end": 1447719451,
-            "period_start": 1447719448,
-            "receipt_number": null,
-            "starting_balance": 0,
-            "statement_descriptor": null,
-            "subscription": "sub_7MgXVobQ6OnkeU",
-            "subtotal": 999,
-            "tax": null,
-            "tax_percent": null,
-            "total": 999,
-            "webhooks_delivered_at": 1447719452,
-            "payment": "ch_177xA7KaReE7xLUdqiYYPypZ"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:34 GMT",
-            "content-type": "application/json",
-            "content-length": "1883",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXnWIOrEUt5h",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
-        }
-    },
-    {
-        "scope": "https://api.stripe.com:443",
-        "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "email=user45%40me.com",
-        "status": 200,
-        "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
-            "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
-            },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
-            "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
-            },
-            "shipping": null,
-            "sources": {
-                "object": "list",
-                "data": [
-                    {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
-                    }
-                ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
-            },
-            "subscriptions": {
-                "object": "list",
-                "data": [
-                    {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "subscription",
-                        "application_fee_percent": null,
-                        "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311451,
-                        "current_period_start": 1447719451,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": null,
-                        "ended_at": null,
-                        "metadata": {
-                            "id": "0000000000000000000186cf"
-                        },
-                        "plan": {
-                            "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
-                        },
-                        "quantity": 999,
-                        "start": 1447719451,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
-                    },
-                    {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
-                        "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": {
-                            "object": "discount",
-                            "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47290,
-                                "valid": true
-                            },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
-                        },
-                        "ended_at": null,
-                        "metadata": {
-                            "id": "0000000000000000000186ce"
-                        },
-                        "plan": {
-                            "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
-                        },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
-                    }
-                ],
-                "has_more": false,
-                "total_count": 2,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
-            }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:34 GMT",
-            "content-type": "application/json",
-            "content-length": "4381",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXIzrcyUTfn1",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "subscription": "sub_7VDPabDqWaXXl4",
+            "total": 999
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPabDqWaXXl4",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311451,
-                        "current_period_start": 1447719451,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": null,
-                        "ended_at": null,
+                        "current_period_end": 1452365279,
+                        "current_period_start": 1449686879,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "metadata": {
                             "id": "0000000000000000000186cf"
                         },
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
-                        "quantity": 999,
-                        "start": 1447719451,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 999
                     },
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDP47YSQKI8ud",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47290,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 2,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:34 GMT",
-            "content-type": "application/json",
-            "content-length": "4381",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXW2LHAUgpHn",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/invoices/in_177xA4KaReE7xLUdvAcrU2n3",
-        "body": "",
+        "path": "/v1/invoices/in_17GCynKaReE7xLUdhjiRodmo",
         "status": 200,
         "response": {
-            "id": "in_177xA4KaReE7xLUdvAcrU2n3",
-            "object": "invoice",
-            "amount_due": 0,
-            "application_fee": null,
-            "attempt_count": 0,
-            "attempted": true,
-            "charge": null,
-            "closed": true,
-            "currency": "usd",
-            "customer": "cus_7MgXejcIJysKv4",
-            "date": 1447719448,
-            "description": null,
+            "id": "in_17GCynKaReE7xLUdhjiRodmo",
+            "customer": "cus_7VDPUDYQvLGYc6",
             "discount": {
-                "object": "discount",
                 "coupon": {
-                    "id": "free",
-                    "object": "coupon",
-                    "amount_off": null,
-                    "created": 1424120193,
-                    "currency": null,
-                    "duration": "forever",
-                    "duration_in_months": null,
-                    "livemode": false,
-                    "max_redemptions": null,
-                    "metadata": {},
-                    "percent_off": 100,
-                    "redeem_by": null,
-                    "times_redeemed": 47290,
-                    "valid": true
+                    "id": "free"
                 },
-                "customer": "cus_7MgXejcIJysKv4",
-                "end": null,
-                "start": 1447719448,
-                "subscription": "sub_7MgXIHuxxXtOID"
+                "customer": "cus_7VDPUDYQvLGYc6",
+                "subscription": "sub_7VDP47YSQKI8ud"
             },
-            "ending_balance": 0,
-            "forgiven": false,
             "lines": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "line_item",
+                        "id": "sub_7VDP47YSQKI8ud",
                         "amount": 999,
-                        "currency": "usd",
-                        "description": null,
-                        "discountable": true,
-                        "livemode": false,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
-                        "period": {
-                            "start": 1447719448,
-                            "end": 1450311448
-                        },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
                         "proration": false,
                         "quantity": 1,
-                        "subscription": null,
                         "type": "subscription"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/invoices/in_177xA4KaReE7xLUdvAcrU2n3/lines"
+                "has_more": false
             },
-            "livemode": false,
-            "metadata": {},
-            "next_payment_attempt": null,
             "paid": true,
-            "period_end": 1447719448,
-            "period_start": 1447719448,
-            "receipt_number": null,
-            "starting_balance": 0,
-            "statement_descriptor": null,
-            "subscription": "sub_7MgXIHuxxXtOID",
-            "subtotal": 999,
-            "tax": null,
-            "tax_percent": null,
-            "total": 0,
-            "webhooks_delivered_at": 1447719449,
-            "payment": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:35 GMT",
-            "content-type": "application/json",
-            "content-length": "2356",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXCi7hr4vpKc",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "subscription": "sub_7VDP47YSQKI8ud",
+            "total": 0
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPabDqWaXXl4",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311451,
-                        "current_period_start": 1447719451,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": null,
-                        "ended_at": null,
+                        "current_period_end": 1452365279,
+                        "current_period_start": 1449686879,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "metadata": {
                             "id": "0000000000000000000186cf"
                         },
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
-                        "quantity": 999,
-                        "start": 1447719451,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 999
                     },
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDP47YSQKI8ud",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47290,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 2,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:35 GMT",
-            "content-type": "application/json",
-            "content-length": "4381",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXanwQIzJBi8",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions",
-        "body": "limit=100",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions",
         "status": 200,
         "response": {
-            "object": "list",
             "data": [
                 {
-                    "id": "sub_7MgXVobQ6OnkeU",
-                    "object": "subscription",
-                    "application_fee_percent": null,
+                    "id": "sub_7VDPabDqWaXXl4",
                     "cancel_at_period_end": false,
-                    "canceled_at": null,
-                    "current_period_end": 1450311451,
-                    "current_period_start": 1447719451,
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "discount": null,
-                    "ended_at": null,
+                    "current_period_end": 1452365279,
+                    "current_period_start": 1449686879,
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "metadata": {
                         "id": "0000000000000000000186cf"
                     },
                     "plan": {
                         "id": "incremental",
-                        "object": "plan",
-                        "amount": 1,
-                        "created": 1424120484,
-                        "currency": "usd",
-                        "interval": "month",
-                        "interval_count": 1,
-                        "livemode": false,
-                        "metadata": {},
-                        "name": "Incremental",
-                        "statement_descriptor": "CODECOMBAT.COM",
-                        "trial_period_days": null
+                        "amount": 1
                     },
-                    "quantity": 999,
-                    "start": 1447719451,
-                    "status": "active",
-                    "tax_percent": null,
-                    "trial_end": null,
-                    "trial_start": null
+                    "quantity": 999
                 },
                 {
-                    "id": "sub_7MgXIHuxxXtOID",
-                    "object": "subscription",
-                    "application_fee_percent": null,
+                    "id": "sub_7VDP47YSQKI8ud",
                     "cancel_at_period_end": false,
-                    "canceled_at": null,
-                    "current_period_end": 1450311448,
-                    "current_period_start": 1447719448,
-                    "customer": "cus_7MgXejcIJysKv4",
+                    "current_period_end": 1452365277,
+                    "current_period_start": 1449686877,
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47290,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719448,
-                        "subscription": "sub_7MgXIHuxxXtOID"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDP47YSQKI8ud"
                     },
-                    "ended_at": null,
                     "metadata": {
                         "id": "0000000000000000000186ce"
                     },
                     "plan": {
                         "id": "basic",
-                        "object": "plan",
-                        "amount": 999,
-                        "created": 1417561271,
-                        "currency": "usd",
-                        "interval": "month",
-                        "interval_count": 1,
-                        "livemode": false,
-                        "metadata": {},
-                        "name": "Basic",
-                        "statement_descriptor": "CODECOMBAT.COM",
-                        "trial_period_days": null
+                        "amount": 999
                     },
-                    "quantity": 1,
-                    "start": 1447719448,
-                    "status": "active",
-                    "tax_percent": null,
-                    "trial_end": null,
-                    "trial_start": null
+                    "quantity": 1
                 }
             ],
-            "has_more": false,
-            "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:36 GMT",
-            "content-type": "application/json",
-            "content-length": "2652",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXxoS7PixkV0",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "has_more": false
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions",
-        "body": "plan=basic&coupon=free&metadata%5Bid%5D=0000000000000000000186cd",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions",
         "status": 200,
         "response": {
-            "id": "sub_7MgXe1Nt30hYCa",
-            "object": "subscription",
-            "application_fee_percent": null,
+            "id": "sub_7VDPI1RlxQ4P8P",
             "cancel_at_period_end": false,
-            "canceled_at": null,
-            "current_period_end": 1450311457,
-            "current_period_start": 1447719457,
-            "customer": "cus_7MgXejcIJysKv4",
+            "current_period_end": 1452365282,
+            "current_period_start": 1449686882,
+            "customer": "cus_7VDPUDYQvLGYc6",
             "discount": {
-                "object": "discount",
                 "coupon": {
-                    "id": "free",
-                    "object": "coupon",
-                    "amount_off": null,
-                    "created": 1424120193,
-                    "currency": null,
-                    "duration": "forever",
-                    "duration_in_months": null,
-                    "livemode": false,
-                    "max_redemptions": null,
-                    "metadata": {},
-                    "percent_off": 100,
-                    "redeem_by": null,
-                    "times_redeemed": 47291,
-                    "valid": true
+                    "id": "free"
                 },
-                "customer": "cus_7MgXejcIJysKv4",
-                "end": null,
-                "start": 1447719457,
-                "subscription": "sub_7MgXe1Nt30hYCa"
+                "customer": "cus_7VDPUDYQvLGYc6",
+                "subscription": "sub_7VDPI1RlxQ4P8P"
             },
-            "ended_at": null,
             "metadata": {
                 "id": "0000000000000000000186cd"
             },
             "plan": {
                 "id": "basic",
-                "object": "plan",
-                "amount": 999,
-                "created": 1417561271,
-                "currency": "usd",
-                "interval": "month",
-                "interval_count": 1,
-                "livemode": false,
-                "metadata": {},
-                "name": "Basic",
-                "statement_descriptor": "CODECOMBAT.COM",
-                "trial_period_days": null
+                "amount": 999
             },
-            "quantity": 1,
-            "start": 1447719457,
-            "status": "active",
-            "tax_percent": null,
-            "trial_end": null,
-            "trial_start": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1345",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXKCxBvX9leo",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "quantity": 1
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "email=user45%40me.com",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXe1Nt30hYCa",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPI1RlxQ4P8P",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311457,
-                        "current_period_start": 1447719457,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365282,
+                        "current_period_start": 1449686882,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47291,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719457,
-                            "subscription": "sub_7MgXe1Nt30hYCa"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDPI1RlxQ4P8P"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186cd"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719457,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     },
                     {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPabDqWaXXl4",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311451,
-                        "current_period_start": 1447719451,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": null,
-                        "ended_at": null,
+                        "current_period_end": 1452365279,
+                        "current_period_start": 1449686879,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "metadata": {
                             "id": "0000000000000000000186cf"
                         },
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
-                        "quantity": 999,
-                        "start": 1447719451,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 999
                     },
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDP47YSQKI8ud",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47291,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 3,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "6069",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgX6LwhzyrOF9",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions",
-        "body": "limit=100",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions",
         "status": 200,
         "response": {
-            "object": "list",
             "data": [
                 {
-                    "id": "sub_7MgXe1Nt30hYCa",
-                    "object": "subscription",
-                    "application_fee_percent": null,
+                    "id": "sub_7VDPI1RlxQ4P8P",
                     "cancel_at_period_end": false,
-                    "canceled_at": null,
-                    "current_period_end": 1450311457,
-                    "current_period_start": 1447719457,
-                    "customer": "cus_7MgXejcIJysKv4",
+                    "current_period_end": 1452365282,
+                    "current_period_start": 1449686882,
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47291,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719457,
-                        "subscription": "sub_7MgXe1Nt30hYCa"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDPI1RlxQ4P8P"
                     },
-                    "ended_at": null,
                     "metadata": {
                         "id": "0000000000000000000186cd"
                     },
                     "plan": {
                         "id": "basic",
-                        "object": "plan",
-                        "amount": 999,
-                        "created": 1417561271,
-                        "currency": "usd",
-                        "interval": "month",
-                        "interval_count": 1,
-                        "livemode": false,
-                        "metadata": {},
-                        "name": "Basic",
-                        "statement_descriptor": "CODECOMBAT.COM",
-                        "trial_period_days": null
+                        "amount": 999
                     },
-                    "quantity": 1,
-                    "start": 1447719457,
-                    "status": "active",
-                    "tax_percent": null,
-                    "trial_end": null,
-                    "trial_start": null
+                    "quantity": 1
                 },
                 {
-                    "id": "sub_7MgXVobQ6OnkeU",
-                    "object": "subscription",
-                    "application_fee_percent": null,
+                    "id": "sub_7VDPabDqWaXXl4",
                     "cancel_at_period_end": false,
-                    "canceled_at": null,
-                    "current_period_end": 1450311451,
-                    "current_period_start": 1447719451,
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "discount": null,
-                    "ended_at": null,
+                    "current_period_end": 1452365279,
+                    "current_period_start": 1449686879,
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "metadata": {
                         "id": "0000000000000000000186cf"
                     },
                     "plan": {
                         "id": "incremental",
-                        "object": "plan",
-                        "amount": 1,
-                        "created": 1424120484,
-                        "currency": "usd",
-                        "interval": "month",
-                        "interval_count": 1,
-                        "livemode": false,
-                        "metadata": {},
-                        "name": "Incremental",
-                        "statement_descriptor": "CODECOMBAT.COM",
-                        "trial_period_days": null
+                        "amount": 1
                     },
-                    "quantity": 999,
-                    "start": 1447719451,
-                    "status": "active",
-                    "tax_percent": null,
-                    "trial_end": null,
-                    "trial_start": null
+                    "quantity": 999
                 },
                 {
-                    "id": "sub_7MgXIHuxxXtOID",
-                    "object": "subscription",
-                    "application_fee_percent": null,
+                    "id": "sub_7VDP47YSQKI8ud",
                     "cancel_at_period_end": false,
-                    "canceled_at": null,
-                    "current_period_end": 1450311448,
-                    "current_period_start": 1447719448,
-                    "customer": "cus_7MgXejcIJysKv4",
+                    "current_period_end": 1452365277,
+                    "current_period_start": 1449686877,
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47291,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719448,
-                        "subscription": "sub_7MgXIHuxxXtOID"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDP47YSQKI8ud"
                     },
-                    "ended_at": null,
                     "metadata": {
                         "id": "0000000000000000000186ce"
                     },
                     "plan": {
                         "id": "basic",
-                        "object": "plan",
-                        "amount": 999,
-                        "created": 1417561271,
-                        "currency": "usd",
-                        "interval": "month",
-                        "interval_count": 1,
-                        "livemode": false,
-                        "metadata": {},
-                        "name": "Basic",
-                        "statement_descriptor": "CODECOMBAT.COM",
-                        "trial_period_days": null
+                        "amount": 999
                     },
-                    "quantity": 1,
-                    "start": 1447719448,
-                    "status": "active",
-                    "tax_percent": null,
-                    "trial_end": null,
-                    "trial_start": null
+                    "quantity": 1
                 }
             ],
-            "has_more": false,
-            "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:40 GMT",
-            "content-type": "application/json",
-            "content-length": "4226",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXaeg5wRvh9x",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "has_more": false
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions/sub_7MgXVobQ6OnkeU",
-        "body": "quantity=1798",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6/subscriptions/sub_7VDPabDqWaXXl4",
         "status": 200,
         "response": {
-            "id": "sub_7MgXVobQ6OnkeU",
-            "object": "subscription",
-            "application_fee_percent": null,
+            "id": "sub_7VDPabDqWaXXl4",
             "cancel_at_period_end": false,
-            "canceled_at": null,
-            "current_period_end": 1450311451,
-            "current_period_start": 1447719451,
-            "customer": "cus_7MgXejcIJysKv4",
-            "discount": null,
-            "ended_at": null,
+            "current_period_end": 1452365279,
+            "current_period_start": 1449686879,
+            "customer": "cus_7VDPUDYQvLGYc6",
             "metadata": {
                 "id": "0000000000000000000186cf"
             },
             "plan": {
                 "id": "incremental",
-                "object": "plan",
-                "amount": 1,
-                "created": 1424120484,
-                "currency": "usd",
-                "interval": "month",
-                "interval_count": 1,
-                "livemode": false,
-                "metadata": {},
-                "name": "Incremental",
-                "statement_descriptor": "CODECOMBAT.COM",
-                "trial_period_days": null
+                "amount": 1
             },
-            "quantity": 1798,
-            "start": 1447719460,
-            "status": "active",
-            "tax_percent": null,
-            "trial_end": null,
-            "trial_start": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:41 GMT",
-            "content-type": "application/json",
-            "content-length": "819",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXNNmxfQpQ4n",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "quantity": 1798
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
         "path": "/v1/invoices",
-        "body": "customer=cus_7MgXejcIJysKv4",
         "status": 200,
         "response": {
-            "id": "in_177xAIKaReE7xLUdwzyY0fuz",
-            "object": "invoice",
-            "amount_due": 799,
-            "application_fee": null,
-            "attempt_count": 0,
-            "attempted": false,
-            "charge": null,
-            "closed": false,
-            "currency": "usd",
-            "customer": "cus_7MgXejcIJysKv4",
-            "date": 1447719462,
-            "description": null,
-            "discount": null,
-            "ending_balance": null,
-            "forgiven": false,
+            "id": "in_17GCywKaReE7xLUdKZ3PKEqr",
+            "customer": "cus_7VDPUDYQvLGYc6",
             "lines": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "ii_177xAGKaReE7xLUdqbtWkNnt",
-                        "object": "line_item",
+                        "id": "ii_17GCyvKaReE7xLUd2Bcm0Z0X",
                         "amount": -999,
-                        "currency": "usd",
-                        "description": "Unused time on 999 x Incremental after 17 Nov 2015",
-                        "discountable": false,
-                        "livemode": false,
-                        "metadata": {},
-                        "period": {
-                            "start": 1447719460,
-                            "end": 1447719460
-                        },
+                        "description": "Unused time on 999 x Incremental after 09 Dec 2015",
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
                         "proration": true,
                         "quantity": 999,
-                        "subscription": "sub_7MgXVobQ6OnkeU",
+                        "subscription": "sub_7VDPabDqWaXXl4",
                         "type": "invoiceitem"
                     },
                     {
-                        "id": "ii_177xAGKaReE7xLUd2ArDO7le",
-                        "object": "line_item",
+                        "id": "ii_17GCyvKaReE7xLUdd78npVMx",
                         "amount": 1798,
-                        "currency": "usd",
-                        "description": "Remaining time on 1798 x Incremental after 17 Nov 2015",
-                        "discountable": false,
-                        "livemode": false,
-                        "metadata": {},
-                        "period": {
-                            "start": 1447719460,
-                            "end": 1447719460
-                        },
+                        "description": "Remaining time on 1798 x Incremental after 09 Dec 2015",
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
                         "proration": true,
                         "quantity": 1798,
-                        "subscription": "sub_7MgXVobQ6OnkeU",
+                        "subscription": "sub_7VDPabDqWaXXl4",
                         "type": "invoiceitem"
                     }
                 ],
-                "has_more": false,
-                "total_count": 2,
-                "url": "/v1/invoices/in_177xAIKaReE7xLUdwzyY0fuz/lines"
+                "has_more": false
             },
-            "livemode": false,
-            "metadata": {},
-            "next_payment_attempt": 1447723062,
             "paid": false,
-            "period_end": 1447719462,
-            "period_start": 1447719448,
-            "receipt_number": null,
-            "starting_balance": 0,
-            "statement_descriptor": null,
-            "subscription": null,
-            "subtotal": 799,
-            "tax": null,
-            "tax_percent": null,
-            "total": 799,
-            "webhooks_delivered_at": null,
-            "payment": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:43 GMT",
-            "content-type": "application/json",
-            "content-length": "2781",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXLtF6SYVYc5",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "total": 799
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
         "path": "/v1/invoices",
-        "body": "customer=cus_7MgXejcIJysKv4&limit=100",
         "status": 200,
         "response": {
-            "object": "list",
             "data": [
                 {
-                    "id": "in_177xAIKaReE7xLUdwzyY0fuz",
-                    "object": "invoice",
-                    "amount_due": 799,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": false,
-                    "charge": null,
-                    "closed": false,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719462,
-                    "description": null,
-                    "discount": null,
-                    "ending_balance": null,
-                    "forgiven": false,
+                    "id": "in_17GCywKaReE7xLUdKZ3PKEqr",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "ii_177xAGKaReE7xLUdqbtWkNnt",
-                                "object": "line_item",
+                                "id": "ii_17GCyvKaReE7xLUd2Bcm0Z0X",
                                 "amount": -999,
-                                "currency": "usd",
-                                "description": "Unused time on 999 x Incremental after 17 Nov 2015",
-                                "discountable": false,
-                                "livemode": false,
-                                "metadata": {},
-                                "period": {
-                                    "start": 1447719460,
-                                    "end": 1447719460
-                                },
+                                "description": "Unused time on 999 x Incremental after 09 Dec 2015",
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": true,
                                 "quantity": 999,
-                                "subscription": "sub_7MgXVobQ6OnkeU",
+                                "subscription": "sub_7VDPabDqWaXXl4",
                                 "type": "invoiceitem"
                             },
                             {
-                                "id": "ii_177xAGKaReE7xLUd2ArDO7le",
-                                "object": "line_item",
+                                "id": "ii_17GCyvKaReE7xLUdd78npVMx",
                                 "amount": 1798,
-                                "currency": "usd",
-                                "description": "Remaining time on 1798 x Incremental after 17 Nov 2015",
-                                "discountable": false,
-                                "livemode": false,
-                                "metadata": {},
-                                "period": {
-                                    "start": 1447719460,
-                                    "end": 1447719460
-                                },
+                                "description": "Remaining time on 1798 x Incremental after 09 Dec 2015",
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": true,
                                 "quantity": 1798,
-                                "subscription": "sub_7MgXVobQ6OnkeU",
+                                "subscription": "sub_7VDPabDqWaXXl4",
                                 "type": "invoiceitem"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 2,
-                        "url": "/v1/invoices/in_177xAIKaReE7xLUdwzyY0fuz/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": 1447723062,
                     "paid": false,
-                    "period_end": 1447719462,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": null,
-                    "subtotal": 799,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 799,
-                    "webhooks_delivered_at": 1447719463,
-                    "payment": null
+                    "total": 799
                 },
                 {
-                    "id": "in_177xADKaReE7xLUd0Lr8TOIL",
-                    "object": "invoice",
-                    "amount_due": 0,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": true,
-                    "charge": null,
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719457,
-                    "description": null,
+                    "id": "in_17GCysKaReE7xLUdAVJS5v5H",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47291,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719457,
-                        "subscription": "sub_7MgXe1Nt30hYCa"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDPI1RlxQ4P8P"
                     },
-                    "ending_balance": 0,
-                    "forgiven": false,
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXe1Nt30hYCa",
-                                "object": "line_item",
+                                "id": "sub_7VDPI1RlxQ4P8P",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186cd"
                                 },
-                                "period": {
-                                    "start": 1447719457,
-                                    "end": 1450311457
-                                },
                                 "plan": {
                                     "id": "basic",
-                                    "object": "plan",
-                                    "amount": 999,
-                                    "created": 1417561271,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Basic",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 999
                                 },
                                 "proration": false,
                                 "quantity": 1,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xADKaReE7xLUd0Lr8TOIL/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719457,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXe1Nt30hYCa",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 0,
-                    "webhooks_delivered_at": 1447719458,
-                    "payment": null
+                    "subscription": "sub_7VDPI1RlxQ4P8P",
+                    "total": 0
                 },
                 {
-                    "id": "in_177xA7KaReE7xLUdT7oN0wcH",
-                    "object": "invoice",
-                    "amount_due": 999,
-                    "application_fee": null,
-                    "attempt_count": 1,
-                    "attempted": true,
-                    "charge": "ch_177xA7KaReE7xLUdqiYYPypZ",
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719451,
-                    "description": null,
-                    "discount": null,
-                    "ending_balance": 0,
-                    "forgiven": false,
+                    "id": "in_17GCypKaReE7xLUd2ptZ1BhX",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXVobQ6OnkeU",
-                                "object": "line_item",
+                                "id": "sub_7VDPabDqWaXXl4",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186cf"
                                 },
-                                "period": {
-                                    "start": 1447719451,
-                                    "end": 1450311451
-                                },
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": false,
                                 "quantity": 999,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xA7KaReE7xLUdT7oN0wcH/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719451,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXVobQ6OnkeU",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 999,
-                    "webhooks_delivered_at": 1447719452,
-                    "payment": "ch_177xA7KaReE7xLUdqiYYPypZ"
+                    "subscription": "sub_7VDPabDqWaXXl4",
+                    "total": 999
                 },
                 {
-                    "id": "in_177xA4KaReE7xLUdvAcrU2n3",
-                    "object": "invoice",
-                    "amount_due": 0,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": true,
-                    "charge": null,
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719448,
-                    "description": null,
+                    "id": "in_17GCynKaReE7xLUdhjiRodmo",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47291,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719448,
-                        "subscription": "sub_7MgXIHuxxXtOID"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDP47YSQKI8ud"
                     },
-                    "ending_balance": 0,
-                    "forgiven": false,
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXIHuxxXtOID",
-                                "object": "line_item",
+                                "id": "sub_7VDP47YSQKI8ud",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186ce"
                                 },
-                                "period": {
-                                    "start": 1447719448,
-                                    "end": 1450311448
-                                },
                                 "plan": {
                                     "id": "basic",
-                                    "object": "plan",
-                                    "amount": 999,
-                                    "created": 1417561271,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Basic",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 999
                                 },
                                 "proration": false,
                                 "quantity": 1,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xA4KaReE7xLUdvAcrU2n3/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719448,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXIHuxxXtOID",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 0,
-                    "webhooks_delivered_at": 1447719449,
-                    "payment": null
+                    "subscription": "sub_7VDP47YSQKI8ud",
+                    "total": 0
                 }
             ],
-            "has_more": false,
-            "url": "/v1/invoices"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:44 GMT",
-            "content-type": "application/json",
-            "content-length": "10967",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXwDZFraizrP",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "has_more": false
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7MgXejcIJysKv4",
-        "body": "email=user45%40me.com",
+        "path": "/v1/customers/cus_7VDPUDYQvLGYc6",
         "status": 200,
         "response": {
-            "id": "cus_7MgXejcIJysKv4",
-            "object": "customer",
-            "account_balance": 0,
+            "id": "cus_7VDPUDYQvLGYc6",
             "alipay_accounts": {
-                "object": "list",
-                "data": [],
-                "has_more": false,
-                "total_count": 0,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/alipay_accounts"
+                "has_more": false
             },
-            "created": 1447719446,
-            "currency": "usd",
-            "default_source": "card_177xA2KaReE7xLUdYwuflpuw",
-            "default_source_type": "card",
-            "delinquent": false,
-            "description": null,
-            "discount": null,
-            "email": "user45@me.com",
-            "livemode": false,
+            "email": "user145@me.com",
             "metadata": {
-                "id": "0000000000000000000186cf",
-                "slug": "user45"
+                "id": "0000000000000000000186cf"
             },
-            "shipping": null,
             "sources": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "card_177xA2KaReE7xLUdYwuflpuw",
-                        "object": "card",
-                        "address_city": null,
-                        "address_country": null,
-                        "address_line1": null,
-                        "address_line1_check": null,
-                        "address_line2": null,
-                        "address_state": null,
-                        "address_zip": null,
-                        "address_zip_check": null,
-                        "brand": "Visa",
-                        "country": "US",
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "cvc_check": "pass",
-                        "dynamic_last4": null,
-                        "exp_month": 12,
-                        "exp_year": 2020,
-                        "fingerprint": "lURQLEXF5AOMW942",
-                        "funding": "credit",
-                        "last4": "4242",
-                        "metadata": {},
-                        "name": null,
-                        "tokenization_method": null
+                        "id": "card_17GCylKaReE7xLUd4WnpSJTw",
+                        "customer": "cus_7VDPUDYQvLGYc6"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/sources"
+                "has_more": false
             },
             "subscriptions": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXVobQ6OnkeU",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPabDqWaXXl4",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311451,
-                        "current_period_start": 1447719451,
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "discount": null,
-                        "ended_at": null,
+                        "current_period_end": 1452365279,
+                        "current_period_start": 1449686879,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "metadata": {
                             "id": "0000000000000000000186cf"
                         },
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
-                        "quantity": 1798,
-                        "start": 1447719460,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1798
                     },
                     {
-                        "id": "sub_7MgXe1Nt30hYCa",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDPI1RlxQ4P8P",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311457,
-                        "current_period_start": 1447719457,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365282,
+                        "current_period_start": 1449686882,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47291,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719457,
-                            "subscription": "sub_7MgXe1Nt30hYCa"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDPI1RlxQ4P8P"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186cd"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719457,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     },
                     {
-                        "id": "sub_7MgXIHuxxXtOID",
-                        "object": "subscription",
-                        "application_fee_percent": null,
+                        "id": "sub_7VDP47YSQKI8ud",
                         "cancel_at_period_end": false,
-                        "canceled_at": null,
-                        "current_period_end": 1450311448,
-                        "current_period_start": 1447719448,
-                        "customer": "cus_7MgXejcIJysKv4",
+                        "current_period_end": 1452365277,
+                        "current_period_start": 1449686877,
+                        "customer": "cus_7VDPUDYQvLGYc6",
                         "discount": {
-                            "object": "discount",
                             "coupon": {
-                                "id": "free",
-                                "object": "coupon",
-                                "amount_off": null,
-                                "created": 1424120193,
-                                "currency": null,
-                                "duration": "forever",
-                                "duration_in_months": null,
-                                "livemode": false,
-                                "max_redemptions": null,
-                                "metadata": {},
-                                "percent_off": 100,
-                                "redeem_by": null,
-                                "times_redeemed": 47291,
-                                "valid": true
+                                "id": "free"
                             },
-                            "customer": "cus_7MgXejcIJysKv4",
-                            "end": null,
-                            "start": 1447719448,
-                            "subscription": "sub_7MgXIHuxxXtOID"
+                            "customer": "cus_7VDPUDYQvLGYc6",
+                            "subscription": "sub_7VDP47YSQKI8ud"
                         },
-                        "ended_at": null,
                         "metadata": {
                             "id": "0000000000000000000186ce"
                         },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
-                        "quantity": 1,
-                        "start": 1447719448,
-                        "status": "active",
-                        "tax_percent": null,
-                        "trial_end": null,
-                        "trial_start": null
+                        "quantity": 1
                     }
                 ],
-                "has_more": false,
-                "total_count": 3,
-                "url": "/v1/customers/cus_7MgXejcIJysKv4/subscriptions"
+                "has_more": false
             }
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:44 GMT",
-            "content-type": "application/json",
-            "content-length": "6070",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXp3Y1GdKi4C",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/invoices/in_177xAIKaReE7xLUdwzyY0fuz",
-        "body": "",
+        "path": "/v1/invoices/in_17GCywKaReE7xLUdKZ3PKEqr",
         "status": 200,
         "response": {
-            "id": "in_177xAIKaReE7xLUdwzyY0fuz",
-            "object": "invoice",
-            "amount_due": 799,
-            "application_fee": null,
-            "attempt_count": 0,
-            "attempted": false,
-            "charge": null,
-            "closed": false,
-            "currency": "usd",
-            "customer": "cus_7MgXejcIJysKv4",
-            "date": 1447719462,
-            "description": null,
-            "discount": null,
-            "ending_balance": null,
-            "forgiven": false,
+            "id": "in_17GCywKaReE7xLUdKZ3PKEqr",
+            "customer": "cus_7VDPUDYQvLGYc6",
             "lines": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "ii_177xAGKaReE7xLUdqbtWkNnt",
-                        "object": "line_item",
+                        "id": "ii_17GCyvKaReE7xLUd2Bcm0Z0X",
                         "amount": -999,
-                        "currency": "usd",
-                        "description": "Unused time on 999 x Incremental after 17 Nov 2015",
-                        "discountable": false,
-                        "livemode": false,
-                        "metadata": {},
-                        "period": {
-                            "start": 1447719460,
-                            "end": 1447719460
-                        },
+                        "description": "Unused time on 999 x Incremental after 09 Dec 2015",
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
                         "proration": true,
                         "quantity": 999,
-                        "subscription": "sub_7MgXVobQ6OnkeU",
+                        "subscription": "sub_7VDPabDqWaXXl4",
                         "type": "invoiceitem"
                     },
                     {
-                        "id": "ii_177xAGKaReE7xLUd2ArDO7le",
-                        "object": "line_item",
+                        "id": "ii_17GCyvKaReE7xLUdd78npVMx",
                         "amount": 1798,
-                        "currency": "usd",
-                        "description": "Remaining time on 1798 x Incremental after 17 Nov 2015",
-                        "discountable": false,
-                        "livemode": false,
-                        "metadata": {},
-                        "period": {
-                            "start": 1447719460,
-                            "end": 1447719460
-                        },
+                        "description": "Remaining time on 1798 x Incremental after 09 Dec 2015",
                         "plan": {
                             "id": "incremental",
-                            "object": "plan",
-                            "amount": 1,
-                            "created": 1424120484,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Incremental",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 1
                         },
                         "proration": true,
                         "quantity": 1798,
-                        "subscription": "sub_7MgXVobQ6OnkeU",
+                        "subscription": "sub_7VDPabDqWaXXl4",
                         "type": "invoiceitem"
                     }
                 ],
-                "has_more": false,
-                "total_count": 2,
-                "url": "/v1/invoices/in_177xAIKaReE7xLUdwzyY0fuz/lines"
+                "has_more": false
             },
-            "livemode": false,
-            "metadata": {},
-            "next_payment_attempt": 1447723062,
             "paid": false,
-            "period_end": 1447719462,
-            "period_start": 1447719448,
-            "receipt_number": null,
-            "starting_balance": 0,
-            "statement_descriptor": null,
-            "subscription": null,
-            "subtotal": 799,
-            "tax": null,
-            "tax_percent": null,
-            "total": 799,
-            "webhooks_delivered_at": 1447719463,
-            "payment": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:44 GMT",
-            "content-type": "application/json",
-            "content-length": "2787",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXDA65Hlzx4M",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "total": 799
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
-        "path": "/v1/invoices/in_177xADKaReE7xLUd0Lr8TOIL",
-        "body": "",
+        "path": "/v1/invoices/in_17GCysKaReE7xLUdAVJS5v5H",
         "status": 200,
         "response": {
-            "id": "in_177xADKaReE7xLUd0Lr8TOIL",
-            "object": "invoice",
-            "amount_due": 0,
-            "application_fee": null,
-            "attempt_count": 0,
-            "attempted": true,
-            "charge": null,
-            "closed": true,
-            "currency": "usd",
-            "customer": "cus_7MgXejcIJysKv4",
-            "date": 1447719457,
-            "description": null,
+            "id": "in_17GCysKaReE7xLUdAVJS5v5H",
+            "customer": "cus_7VDPUDYQvLGYc6",
             "discount": {
-                "object": "discount",
                 "coupon": {
-                    "id": "free",
-                    "object": "coupon",
-                    "amount_off": null,
-                    "created": 1424120193,
-                    "currency": null,
-                    "duration": "forever",
-                    "duration_in_months": null,
-                    "livemode": false,
-                    "max_redemptions": null,
-                    "metadata": {},
-                    "percent_off": 100,
-                    "redeem_by": null,
-                    "times_redeemed": 47291,
-                    "valid": true
+                    "id": "free"
                 },
-                "customer": "cus_7MgXejcIJysKv4",
-                "end": null,
-                "start": 1447719457,
-                "subscription": "sub_7MgXe1Nt30hYCa"
+                "customer": "cus_7VDPUDYQvLGYc6",
+                "subscription": "sub_7VDPI1RlxQ4P8P"
             },
-            "ending_balance": 0,
-            "forgiven": false,
             "lines": {
-                "object": "list",
                 "data": [
                     {
-                        "id": "sub_7MgXe1Nt30hYCa",
-                        "object": "line_item",
+                        "id": "sub_7VDPI1RlxQ4P8P",
                         "amount": 999,
-                        "currency": "usd",
-                        "description": null,
-                        "discountable": true,
-                        "livemode": false,
                         "metadata": {
                             "id": "0000000000000000000186cd"
                         },
-                        "period": {
-                            "start": 1447719457,
-                            "end": 1450311457
-                        },
                         "plan": {
                             "id": "basic",
-                            "object": "plan",
-                            "amount": 999,
-                            "created": 1417561271,
-                            "currency": "usd",
-                            "interval": "month",
-                            "interval_count": 1,
-                            "livemode": false,
-                            "metadata": {},
-                            "name": "Basic",
-                            "statement_descriptor": "CODECOMBAT.COM",
-                            "trial_period_days": null
+                            "amount": 999
                         },
                         "proration": false,
                         "quantity": 1,
-                        "subscription": null,
                         "type": "subscription"
                     }
                 ],
-                "has_more": false,
-                "total_count": 1,
-                "url": "/v1/invoices/in_177xADKaReE7xLUd0Lr8TOIL/lines"
+                "has_more": false
             },
-            "livemode": false,
-            "metadata": {},
-            "next_payment_attempt": null,
             "paid": true,
-            "period_end": 1447719457,
-            "period_start": 1447719448,
-            "receipt_number": null,
-            "starting_balance": 0,
-            "statement_descriptor": null,
-            "subscription": "sub_7MgXe1Nt30hYCa",
-            "subtotal": 999,
-            "tax": null,
-            "tax_percent": null,
-            "total": 0,
-            "webhooks_delivered_at": 1447719458,
-            "payment": null
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:44 GMT",
-            "content-type": "application/json",
-            "content-length": "2356",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXXyPdNY2ffL",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "subscription": "sub_7VDPI1RlxQ4P8P",
+            "total": 0
         }
     },
     {
         "scope": "https://api.stripe.com:443",
         "method": "GET",
         "path": "/v1/invoices",
-        "body": "customer=cus_7MgXejcIJysKv4",
         "status": 200,
         "response": {
-            "object": "list",
             "data": [
                 {
-                    "id": "in_177xAIKaReE7xLUdwzyY0fuz",
-                    "object": "invoice",
-                    "amount_due": 799,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": false,
-                    "charge": null,
-                    "closed": false,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719462,
-                    "description": null,
-                    "discount": null,
-                    "ending_balance": null,
-                    "forgiven": false,
+                    "id": "in_17GCywKaReE7xLUdKZ3PKEqr",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "ii_177xAGKaReE7xLUdqbtWkNnt",
-                                "object": "line_item",
+                                "id": "ii_17GCyvKaReE7xLUd2Bcm0Z0X",
                                 "amount": -999,
-                                "currency": "usd",
-                                "description": "Unused time on 999 x Incremental after 17 Nov 2015",
-                                "discountable": false,
-                                "livemode": false,
-                                "metadata": {},
-                                "period": {
-                                    "start": 1447719460,
-                                    "end": 1447719460
-                                },
+                                "description": "Unused time on 999 x Incremental after 09 Dec 2015",
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": true,
                                 "quantity": 999,
-                                "subscription": "sub_7MgXVobQ6OnkeU",
+                                "subscription": "sub_7VDPabDqWaXXl4",
                                 "type": "invoiceitem"
                             },
                             {
-                                "id": "ii_177xAGKaReE7xLUd2ArDO7le",
-                                "object": "line_item",
+                                "id": "ii_17GCyvKaReE7xLUdd78npVMx",
                                 "amount": 1798,
-                                "currency": "usd",
-                                "description": "Remaining time on 1798 x Incremental after 17 Nov 2015",
-                                "discountable": false,
-                                "livemode": false,
-                                "metadata": {},
-                                "period": {
-                                    "start": 1447719460,
-                                    "end": 1447719460
-                                },
+                                "description": "Remaining time on 1798 x Incremental after 09 Dec 2015",
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": true,
                                 "quantity": 1798,
-                                "subscription": "sub_7MgXVobQ6OnkeU",
+                                "subscription": "sub_7VDPabDqWaXXl4",
                                 "type": "invoiceitem"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 2,
-                        "url": "/v1/invoices/in_177xAIKaReE7xLUdwzyY0fuz/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": 1447723062,
                     "paid": false,
-                    "period_end": 1447719462,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": null,
-                    "subtotal": 799,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 799,
-                    "webhooks_delivered_at": 1447719463,
-                    "payment": null
+                    "total": 799
                 },
                 {
-                    "id": "in_177xADKaReE7xLUd0Lr8TOIL",
-                    "object": "invoice",
-                    "amount_due": 0,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": true,
-                    "charge": null,
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719457,
-                    "description": null,
+                    "id": "in_17GCysKaReE7xLUdAVJS5v5H",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47291,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719457,
-                        "subscription": "sub_7MgXe1Nt30hYCa"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDPI1RlxQ4P8P"
                     },
-                    "ending_balance": 0,
-                    "forgiven": false,
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXe1Nt30hYCa",
-                                "object": "line_item",
+                                "id": "sub_7VDPI1RlxQ4P8P",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186cd"
                                 },
-                                "period": {
-                                    "start": 1447719457,
-                                    "end": 1450311457
-                                },
                                 "plan": {
                                     "id": "basic",
-                                    "object": "plan",
-                                    "amount": 999,
-                                    "created": 1417561271,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Basic",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 999
                                 },
                                 "proration": false,
                                 "quantity": 1,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xADKaReE7xLUd0Lr8TOIL/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719457,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXe1Nt30hYCa",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 0,
-                    "webhooks_delivered_at": 1447719458,
-                    "payment": null
+                    "subscription": "sub_7VDPI1RlxQ4P8P",
+                    "total": 0
                 },
                 {
-                    "id": "in_177xA7KaReE7xLUdT7oN0wcH",
-                    "object": "invoice",
-                    "amount_due": 999,
-                    "application_fee": null,
-                    "attempt_count": 1,
-                    "attempted": true,
-                    "charge": "ch_177xA7KaReE7xLUdqiYYPypZ",
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719451,
-                    "description": null,
-                    "discount": null,
-                    "ending_balance": 0,
-                    "forgiven": false,
+                    "id": "in_17GCypKaReE7xLUd2ptZ1BhX",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXVobQ6OnkeU",
-                                "object": "line_item",
+                                "id": "sub_7VDPabDqWaXXl4",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186cf"
                                 },
-                                "period": {
-                                    "start": 1447719451,
-                                    "end": 1450311451
-                                },
                                 "plan": {
                                     "id": "incremental",
-                                    "object": "plan",
-                                    "amount": 1,
-                                    "created": 1424120484,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Incremental",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 1
                                 },
                                 "proration": false,
                                 "quantity": 999,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xA7KaReE7xLUdT7oN0wcH/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719451,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXVobQ6OnkeU",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 999,
-                    "webhooks_delivered_at": 1447719452,
-                    "payment": "ch_177xA7KaReE7xLUdqiYYPypZ"
+                    "subscription": "sub_7VDPabDqWaXXl4",
+                    "total": 999
                 },
                 {
-                    "id": "in_177xA4KaReE7xLUdvAcrU2n3",
-                    "object": "invoice",
-                    "amount_due": 0,
-                    "application_fee": null,
-                    "attempt_count": 0,
-                    "attempted": true,
-                    "charge": null,
-                    "closed": true,
-                    "currency": "usd",
-                    "customer": "cus_7MgXejcIJysKv4",
-                    "date": 1447719448,
-                    "description": null,
+                    "id": "in_17GCynKaReE7xLUdhjiRodmo",
+                    "customer": "cus_7VDPUDYQvLGYc6",
                     "discount": {
-                        "object": "discount",
                         "coupon": {
-                            "id": "free",
-                            "object": "coupon",
-                            "amount_off": null,
-                            "created": 1424120193,
-                            "currency": null,
-                            "duration": "forever",
-                            "duration_in_months": null,
-                            "livemode": false,
-                            "max_redemptions": null,
-                            "metadata": {},
-                            "percent_off": 100,
-                            "redeem_by": null,
-                            "times_redeemed": 47291,
-                            "valid": true
+                            "id": "free"
                         },
-                        "customer": "cus_7MgXejcIJysKv4",
-                        "end": null,
-                        "start": 1447719448,
-                        "subscription": "sub_7MgXIHuxxXtOID"
+                        "customer": "cus_7VDPUDYQvLGYc6",
+                        "subscription": "sub_7VDP47YSQKI8ud"
                     },
-                    "ending_balance": 0,
-                    "forgiven": false,
                     "lines": {
-                        "object": "list",
                         "data": [
                             {
-                                "id": "sub_7MgXIHuxxXtOID",
-                                "object": "line_item",
+                                "id": "sub_7VDP47YSQKI8ud",
                                 "amount": 999,
-                                "currency": "usd",
-                                "description": null,
-                                "discountable": true,
-                                "livemode": false,
                                 "metadata": {
                                     "id": "0000000000000000000186ce"
                                 },
-                                "period": {
-                                    "start": 1447719448,
-                                    "end": 1450311448
-                                },
                                 "plan": {
                                     "id": "basic",
-                                    "object": "plan",
-                                    "amount": 999,
-                                    "created": 1417561271,
-                                    "currency": "usd",
-                                    "interval": "month",
-                                    "interval_count": 1,
-                                    "livemode": false,
-                                    "metadata": {},
-                                    "name": "Basic",
-                                    "statement_descriptor": "CODECOMBAT.COM",
-                                    "trial_period_days": null
+                                    "amount": 999
                                 },
                                 "proration": false,
                                 "quantity": 1,
-                                "subscription": null,
                                 "type": "subscription"
                             }
                         ],
-                        "has_more": false,
-                        "total_count": 1,
-                        "url": "/v1/invoices/in_177xA4KaReE7xLUdvAcrU2n3/lines"
+                        "has_more": false
                     },
-                    "livemode": false,
-                    "metadata": {},
-                    "next_payment_attempt": null,
                     "paid": true,
-                    "period_end": 1447719448,
-                    "period_start": 1447719448,
-                    "receipt_number": null,
-                    "starting_balance": 0,
-                    "statement_descriptor": null,
-                    "subscription": "sub_7MgXIHuxxXtOID",
-                    "subtotal": 999,
-                    "tax": null,
-                    "tax_percent": null,
-                    "total": 0,
-                    "webhooks_delivered_at": 1447719449,
-                    "payment": null
+                    "subscription": "sub_7VDP47YSQKI8ud",
+                    "total": 0
                 }
             ],
-            "has_more": false,
-            "url": "/v1/invoices"
-        },
-        "headers": {
-            "server": "nginx",
-            "date": "Tue, 17 Nov 2015 00:17:45 GMT",
-            "content-type": "application/json",
-            "content-length": "10967",
-            "connection": "close",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-methods": "GET, POST, HEAD, OPTIONS, DELETE",
-            "access-control-allow-origin": "*",
-            "access-control-max-age": "300",
-            "cache-control": "no-cache, no-store",
-            "request-id": "req_7MgXPJfaBz4sLX",
-            "stripe-version": "2015-02-18",
-            "strict-transport-security": "max-age=31556926; includeSubDomains"
+            "has_more": false
         }
     }
 ]

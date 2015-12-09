@@ -2,7 +2,7 @@
     {
         "scope": "https://api.stripe.com:443",
         "method": "POST",
-        "path": "/v1/customers/cus_7Uw4qnUbAltm7t",
+        "path": "/v1/customers/cus_7VCubHuvGFt4nH",
         "status": 400,
         "response": {
             "error": {
@@ -18,20 +18,25 @@
         "response": {
             "data": [
                 {
-                    "id": "ch_17FwCHKaReE7xLUd9bKonuCX",
+                    "id": "ch_17GCUxKaReE7xLUddy1fN9Nl",
                     "amount": 499,
-                    "customer": "cus_7Uw4qnUbAltm7t",
+                    "customer": "cus_7VCubHuvGFt4nH",
                     "metadata": {
+                        "productID": "gems_5",
                         "gems": "5000",
                         "timestamp": "1447443579286"
                     },
                     "paid": true,
+                    "refunds": {
+                        "has_more": false
+                    },
                     "source": {
-                        "id": "card_17FwCEKaReE7xLUdienoEY88",
-                        "customer": "cus_7Uw4qnUbAltm7t"
+                        "id": "card_17GCUvKaReE7xLUdBp1HF9sT",
+                        "customer": "cus_7VCubHuvGFt4nH"
                     }
                 }
-            ]
+            ],
+            "has_more": false
         }
     }
 ]
