@@ -63,7 +63,7 @@ describe('Server Test Helper', function() {
   
   it('clears the db', function(done) {
     var mongoose = require('mongoose');
-    mongoose.connection.db.executeDbCommand({dropDatabase:1}, function(err, result) {
+    mongoose.connection.db.command({dropDatabase:1}, function(err, result) {
       if (err) { console.log(err); }
       done(); 
     });
