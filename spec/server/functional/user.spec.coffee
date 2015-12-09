@@ -365,7 +365,7 @@ describe 'Statistics', ->
   it 'recalculates games completed', (done) ->
     unittest.getNormalJoe (joe) ->
       loginAdmin ->
-        User.findByIdAndUpdate joe.get('id'), {$unset:'stats.gamesCompleted': ''}, (err, guy) ->
+        User.findByIdAndUpdate joe.get('id'), {$unset:'stats.gamesCompleted': ''}, {new: true}, (err, guy) ->
           expect(err).toBeNull()
           expect(guy.get 'stats.gamesCompleted').toBeUndefined()
 
@@ -407,7 +407,7 @@ describe 'Statistics', ->
 
   it 'recalculates article edits', (done) ->
     loginAdmin (carl) ->
-      User.findByIdAndUpdate carl.get('id'), {$unset:'stats.articleEdits': ''}, (err, guy) ->
+      User.findByIdAndUpdate carl.get('id'), {$unset:'stats.articleEdits': ''}, {new: true}, (err, guy) ->
         expect(err).toBeNull()
         expect(guy.get User.statsMapping.edits.article).toBeUndefined()
 
@@ -440,7 +440,7 @@ describe 'Statistics', ->
 
   it 'recalculates level edits', (done) ->
     unittest.getAdmin (jose) ->
-      User.findByIdAndUpdate jose.get('id'), {$unset:'stats.levelEdits':''}, (err, guy) ->
+      User.findByIdAndUpdate jose.get('id'), {$unset:'stats.levelEdits':''}, {new: true}, (err, guy) ->
         expect(err).toBeNull()
         expect(guy.get User.statsMapping.edits.level).toBeUndefined()
 
