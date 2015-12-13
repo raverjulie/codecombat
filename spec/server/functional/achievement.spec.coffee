@@ -38,7 +38,6 @@ diminishing =
 
 url = getURL('/db/achievement')
 
-
 describe 'Achievement', ->
   allowHeader = 'GET, POST, PUT, PATCH, DELETE'
 
@@ -252,7 +251,7 @@ describe 'Recalculate Achievements', ->
                   expect(guy.get 'points').toBe unlockable.worth
                   done()
 
-  xit 'can recalculate all achievements', (done) ->
+  it 'can recalculate all achievements', (done) ->
     loginAdmin ->
       Achievement.count {}, (err, count) ->
         expect(count).toBe 3

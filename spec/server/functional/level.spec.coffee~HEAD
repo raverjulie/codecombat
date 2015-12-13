@@ -68,7 +68,7 @@ describe 'GET /db/level/<id>/session', ->
               course.save (err) ->
 
                 expect(err).toBeNull()
-                
+
                 loginJoe (joe) ->
 
                   classroom = new Classroom({
@@ -78,7 +78,7 @@ describe 'GET /db/level/<id>/session', ->
                   })
 
                   classroom.save (err, classroom) ->
-                    
+
                     expect(err).toBeNull()
 
                     courseInstance = new CourseInstance({
@@ -89,11 +89,12 @@ describe 'GET /db/level/<id>/session', ->
                       courseID: ObjectId(course.id)
                       classroomID: ObjectId(classroom.id)
                     })
-  
+
                     courseInstance.save (err) ->
-  
+
                       expect(err).toBeNull()
                       done()
+
 
     it 'creates a new session if the user is in a course with that level', (done) ->
       loginJoe (joe) ->

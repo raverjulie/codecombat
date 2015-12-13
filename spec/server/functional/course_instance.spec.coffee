@@ -135,13 +135,13 @@ describe 'POST /db/course_instance/:id/members', ->
         request.post {uri: url, json: {userID: test.user.id}}, (err, res) ->
           expect(res.statusCode).toBe(402)
           cb()
-
+          
     ], makeTestIterator(@), done)
-
-
+          
+    
   it 'works if the course is not free and the user is in a prepaid', (done) ->
     async.eachSeries([
-
+    
       addTestUserToClassroom,
       makeTestCourseNotFree,
       addTestUserToPrepaid,
@@ -150,14 +150,14 @@ describe 'POST /db/course_instance/:id/members', ->
         request.post {uri: url, json: {userID: test.user.id}}, (err, res) ->
           expect(res.statusCode).toBe(200)
           cb()
-
+          
     ], makeTestIterator(@), done)
-
-
+    
+    
   makeTestCourseNotFree = (test, cb) ->
     test.course.set('free', false)
     test.course.save cb
-
+        
   addTestUserToClassroom = (test, cb) ->
     test.classroom.set('members', [test.user.get('_id')])
     test.classroom.save cb
@@ -190,7 +190,7 @@ describe 'DELETE /db/course_instance/:id/members', ->
           cb()
 
     ], makeTestIterator(@), done)
-
+    
   it 'removes the CourseInstance from the User.courseInstances', (done) ->
     async.eachSeries([
 
@@ -219,14 +219,14 @@ describe 'DELETE /db/course_instance/:id/members', ->
       expect(body.members.length).toBe(1)
       expect(body.members[0]).toBe(test.user.id)
       cb()
-
+      
   removeTestUserFromCourseInstance = (test, cb) ->
     url = getURL("/db/course_instance/#{test.courseInstance.id}/members")
     request.del {uri: url, json: {userID: test.user.id}}, (err, res, body) ->
       expect(res.statusCode).toBe(200)
       expect(body.members.length).toBe(0)
       cb()
-
+  
 
 makeTestIterator = (testObject) -> (func, callback) -> func(testObject, callback)
   

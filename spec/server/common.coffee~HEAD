@@ -5,24 +5,24 @@ console.log 'IT BEGINS'
 if process.env.COCO_MONGO_HOST
   throw Error('Tests may not run with production environment')
 
-require 'jasmine-spec-reporter'
-jasmine.getEnv().defaultTimeoutInterval = 300000
-jasmine.getEnv().reporter.subReporters_ = []
-jasmine.getEnv().addReporter(new jasmine.SpecReporter({
-  displayFailedSpec: true
-  displayPendingSpec: true
-  displaySpecDuration: true
-  displaySuccessfulSpec: true
-  }))
-
-rep = new jasmine.JsApiReporter()
-jasmine.getEnv().addReporter(rep)
+#require 'jasmine-spec-reporter'
+#jasmine.getEnv().defaultTimeoutInterval = 300000
+#jasmine.getEnv().reporter.subReporters_ = []
+#jasmine.getEnv().addReporter(new jasmine.SpecReporter({
+#  displayFailedSpec: true
+#  displayPendingSpec: true
+#  displaySpecDuration: true
+#  displaySuccessfulSpec: true
+#  }))
+#
+#rep = new jasmine.JsApiReporter()
+#jasmine.getEnv().addReporter(rep)
 
 GLOBAL._ = require 'lodash'
 _.str = require 'underscore.string'
 _.mixin(_.str.exports())
 GLOBAL.mongoose = require 'mongoose'
-mongoose.connect('mongodb://localhost/coco_unittest')
+#mongoose.connect('mongodb://localhost/coco_unittest')
 path = require 'path'
 GLOBAL.testing = true
 GLOBAL.tv4 = require 'tv4' # required for TreemaUtils to work
@@ -252,13 +252,17 @@ _drop = (done) ->
     chunks = mongoose.connection.db.collection('media.chunks')
     chunks.remove {}, ->
       done()
+      
+GLOBAL.resetUserIDCounter = (number=0) ->
+  auth = require '../../server/routes/auth'
+  auth.idCounter = number
 
-tickInterval = null
-tick = ->
-  # When you want jasmine-node to exit after running the tests,
-  # you have to close the connection first.
-  if rep.finished
-    mongoose.disconnect()
-    clearTimeout tickInterval
-
-tickInterval = setInterval tick, 1000
+#tickInterval = null
+#tick = ->
+#  # When you want jasmine-node to exit after running the tests,
+#  # you have to close the connection first.
+#  if rep.finished
+#    mongoose.disconnect()
+#    clearTimeout tickInterval
+#
+#tickInterval = setInterval tick, 1000

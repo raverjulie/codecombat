@@ -110,7 +110,7 @@ describe 'PUT /db/classroom', ->
             request.put { uri: url, json: data }, (err, res, body) ->
               expect(res.statusCode).toBe(403)
               done()
-            
+
 describe 'POST /db/classroom/~/members', ->
 
   it 'clears database users and classrooms', (done) ->

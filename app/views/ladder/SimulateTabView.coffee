@@ -26,8 +26,9 @@ module.exports = class SimulateTabView extends CocoView
   onLoaded: ->
     super()
     @render()
-    if (document.location.hash is '#simulate' or @options.level.get('type') is 'course-ladder') and not @simulator
-      @startSimulating()
+    # Save our MongoDB oplog!
+    #if (document.location.hash is '#simulate' or @options.level.get('type') is 'course-ladder') and not @simulator
+    #  @startSimulating()
 
   getRenderData: ->
     ctx = super()
@@ -64,6 +65,7 @@ module.exports = class SimulateTabView extends CocoView
       # Work around simulator getting super slow on Chrome
       fetchAndSimulateTaskOriginal = @simulator.fetchAndSimulateTask
       @simulator.fetchAndSimulateTask = =>
+        return if @destroyed
         if @simulator.simulatedByYou >= 20
           console.log '------------------- Destroying  Simulator and making a new one -----------------'
           @simulator.destroy()

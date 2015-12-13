@@ -4,9 +4,12 @@ mongoose = require 'mongoose'
 Grid = require 'gridfs-stream'
 mongooseCache = require 'mongoose-cache'
 
+<<<<<<< HEAD
 #global.testing = testing = '--unittest' in process.argv
 console.log 'global testing?', global.testing
 
+=======
+>>>>>>> refs/remotes/codecombat/master
 module.exports.connect = () ->
   address = module.exports.generateMongoConnectionString()
   winston.info "Connecting to Mongo with connection string #{address}"
