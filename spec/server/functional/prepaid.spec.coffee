@@ -565,7 +565,7 @@ describe '/db/prepaid', ->
           expect(err).toBeNull()
           expect(payments).not.toBeNull()
           expect(payments.length).toEqual(1)
-          expect(payments[0].get('amount')).toEqual(8991)
+          expect(payments[0].get('amount')).toEqual(900)
           done()
 
     it 'Anonymous cant redeem a prepaid code', (done) ->
@@ -717,10 +717,14 @@ describe '/db/prepaid', ->
           expect(res.statusCode).not.toEqual(200)
           done()
 
+<<<<<<< HEAD
 <<<<<<< HEAD:spec/server/functional/prepaid.spec.coffee
     # TODO: Fix this server test
           
     xit 'Test a bunch of people trying to redeem at once', (done) ->
+=======
+    it 'Test a bunch of people trying to redeem at once', (done) ->
+>>>>>>> refs/remotes/codecombat/master
       nockUtils.setupNock 'db-sub-redeem-test-3.json', (err, nockDone) ->
         doRedeem = (userX, code, testnum, retry, fnDone) =>
           loginUser userX, () =>
